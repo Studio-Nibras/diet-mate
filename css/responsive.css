@@ -82,3 +82,117 @@
 }
 
 }
+
+@media(max-width:991px){
+
+.section-title{
+
+    font-size:38px;
+
+}
+
+.feature-card{
+
+    padding:35px;
+
+}
+
+.feature-large{
+
+    min-height:auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.benefit-card{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    align-items:center;
+
+}
+
+}
+
+@media (max-width:992px){
+
+    .cta-wrapper{
+
+        padding:70px 40px;
+
+    }
+
+    .cta-wrapper h2{
+
+        font-size:44px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .cta-section{
+
+        padding:80px 0;
+
+    }
+
+    .cta-wrapper{
+
+        padding:50px 25px;
+
+        border-radius:28px;
+
+    }
+
+    .cta-wrapper h2{
+
+        font-size:34px;
+
+    }
+
+    .cta-wrapper p{
+
+        font-size:16px;
+
+    }
+
+    .btn-cta{
+
+        width:100%;
+
+        padding:16px 20px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .faq-section{
+
+        padding:80px 0;
+
+    }
+
+    .accordion-button{
+
+        font-size:16px;
+
+        padding:20px;
+
+    }
+
+    .accordion-body{
+
+        padding:0 20px 20px;
+
+    }
+
+}
