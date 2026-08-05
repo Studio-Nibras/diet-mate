@@ -1,0 +1,84 @@
+@media(max-width:991px){
+
+.hero{
+
+    text-align:center;
+
+    padding-top:160px;
+
+}
+
+.hero-title{
+
+    font-size:3rem;
+
+}
+
+.hero-description{
+
+    margin:auto;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-image-wrapper{
+
+    margin-top:70px;
+
+}
+
+.card-calories{
+
+    left:0;
+
+}
+
+.card-bmi{
+
+    right:0;
+
+}
+
+.card-progress{
+
+    left:0;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.hero-title{
+
+    font-size:2.4rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.btn-primary-custom,
+.btn-outline-custom{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.floating-card{
+
+    transform:scale(.85);
+
+}
+
+}

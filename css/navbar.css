@@ -1,0 +1,101 @@
+.custom-navbar{
+
+    padding:18px 0;
+
+    transition:.3s ease;
+
+    background:transparent;
+
+}
+
+.navbar-scrolled{
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+}
+
+.logo-text{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+
+    color:#6BAF5B;
+
+}
+
+.navbar-nav{
+
+    gap:18px;
+
+}
+
+.nav-link{
+
+    font-family:"Poppins",sans-serif;
+
+    color:#2C2C2C;
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#6BAF5B;
+
+}
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#6BAF5B;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover::after{
+
+    width:100%;
+
+}
+
+.btn-success{
+
+    background:#6BAF5B;
+
+    border:none;
+
+    padding:12px 24px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-success:hover{
+
+    background:#497C3A;
+
+}
