@@ -25,6 +25,19 @@ section{
 
 }
 
+.hero-image-container{
+
+    position:relative;
+
+    width:100%;
+    max-width:520px;
+
+    aspect-ratio:1/1;
+
+    margin:auto;
+
+}
+
 .hero{
 
     position:relative;
@@ -118,17 +131,13 @@ section{
     );
 
     border-radius:
-
-    58% 42% 63% 37% /
-    40% 56% 44% 60%;
+        58% 42% 63% 37% /
+        40% 56% 44% 60%;
 
     box-shadow:
+        0 40px 90px rgba(0,0,0,.08);
 
-    0 40px 90px rgba(0,0,0,.08);
-
-    animation:
-
-    blobMove 10s ease-in-out infinite;
+    animation:blobMove 10s ease-in-out infinite;
 
 }
 
@@ -184,7 +193,9 @@ section{
 
 .hero-image-wrapper{
 
-    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
 }
 
@@ -192,10 +203,9 @@ section{
 
     position:absolute;
 
-    width:90%;
+    width:82%;
 
     left:50%;
-
     top:50%;
 
     transform:translate(-50%,-50%);
@@ -211,24 +221,35 @@ section{
     position:absolute;
 
     display:flex;
-
     align-items:center;
+    gap:12px;
 
-    gap:15px;
+    padding:16px 20px;
 
-    padding:18px 22px;
-
-    border-radius:22px;
-
-    background:rgba(255,255,255,.72);
+    background:rgba(255,255,255,.78);
 
     backdrop-filter:blur(18px);
 
-    box-shadow:
+    border-radius:20px;
 
-    0 20px 50px rgba(0,0,0,.08);
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.08);
 
     z-index:3;
+
+    width:max-content;
+
+}
+
+.floating-card small{
+
+    display:block;
+
+    color:#777;
+
+    font-size:.75rem;
+
+    line-height:1.2;
 
 }
 
@@ -236,19 +257,18 @@ section{
 
     margin:0;
 
-}
+    line-height:1.2;
 
-.floating-card small{
+    font-size:1rem;
 
-    color:#777;
+    font-weight:600;
 
 }
 
 .card-calories{
 
-    top:8%;
-
-    left:-30px;
+    top:10%;
+    left:-25px;
 
     animation:floatOne 6s ease-in-out infinite;
 
@@ -256,9 +276,8 @@ section{
 
 .card-bmi{
 
+    top:42%;
     right:-20px;
-
-    top:38%;
 
     animation:floatTwo 7s ease-in-out infinite;
 
@@ -266,9 +285,8 @@ section{
 
 .card-score{
 
-    bottom:5%;
-
-    left:30px;
+    bottom:8%;
+    left:20px;
 
     animation:floatThree 8s ease-in-out infinite;
 

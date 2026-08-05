@@ -1,85 +1,162 @@
-@media(max-width:991px){
+@media (max-width:991px){
 
-.hero{
+    .hero{
 
-    text-align:center;
+        min-height:auto;
 
-    padding-top:160px;
+        padding:140px 0 80px;
 
-}
+        text-align:center;
 
-.hero-title{
+    }
 
-    font-size:3rem;
+    .hero-description{
 
-}
+        margin:auto;
 
-.hero-description{
+    }
 
-    margin:auto;
+    .hero-buttons{
 
-}
+        justify-content:center;
 
-.hero-buttons{
+    }
 
-    justify-content:center;
+    .hero-image-wrapper{
 
-}
+        margin-top:50px;
 
-.hero-image-wrapper{
+    }
 
-    margin-top:70px;
+    .hero-image-container{
 
-}
+        max-width:420px;
 
-.card-calories{
+    }
 
-    left:0;
+    .floating-card{
 
-}
+        transform:scale(.85);
 
-.card-bmi{
+    }
 
-    right:0;
+    .card-score{
 
-}
+        top:5%;
+        bottom:auto;
 
-.card-progress{
+        left:5%;
 
-    left:0;
+    }
 
-}
+    .card-calories{
 
-}
+        top:auto;
+        bottom:20%;
 
-@media(max-width:576px){
+        left:0;
 
-.hero-title{
+    }
 
-    font-size:2.4rem;
+    .card-bmi{
 
-}
+        top:auto;
+        bottom:18%;
 
-.hero-buttons{
+        right:0;
 
-    flex-direction:column;
-
-}
-
-.btn-primary-custom,
-.btn-outline-custom{
-
-    width:100%;
-
-    text-align:center;
+    }
 
 }
 
-.floating-card{
+@media (max-width:576px){
 
-    transform:scale(.85);
+    .hero{
 
-}
+        padding:120px 0 70px;
+
+    }
+
+    .hero-title{
+
+        font-size:2.5rem;
+
+    }
+
+    .hero-description{
+
+        font-size:16px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        gap:16px;
+
+    }
+
+    .btn-primary-custom,
+    .btn-outline-custom{
+
+        width:100%;
+
+    }
+
+    .hero-image-wrapper{
+
+        margin-top:40px;
+
+    }
+
+    .hero-image-container{
+
+        max-width:300px;
+
+    }
+
+    .hero-image{
+
+        width:80%;
+
+    }
+
+    .floating-card{
+
+        transform:scale(.72);
+
+        padding:10px 14px;
+
+        gap:8px;
+
+    }
+
+    /* Healthy Score disembunyikan */
+
+    .card-score{
+
+        display:none;
+
+    }
+
+    .card-calories{
+
+        top:30px;
+        bottom:auto;
+
+        left:-5px;
+
+    }
+
+    .card-bmi{
+
+        top:auto;
+        bottom:20px;
+
+        right:-5px;
+
+    }
 
 }
 
