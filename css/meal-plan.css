@@ -1,0 +1,167 @@
+/* ==========================
+   Hero Section
+========================== */
+
+.meal-hero{
+    background:#fff;
+    border-radius:24px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+/* ==========================
+   Target Calories Card
+========================== */
+
+.calorie-card{
+    background:linear-gradient(135deg,#6BAF5B,#87C97A);
+    color:#fff;
+    border-radius:22px;
+    padding:28px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(107,175,91,.25);
+}
+
+.calorie-card small{
+    opacity:.9;
+    font-size:.9rem;
+}
+
+.calorie-card h2{
+    margin:12px 0;
+    font-size:2.4rem;
+    font-weight:700;
+}
+
+.calorie-card span{
+    opacity:.9;
+}
+
+/* ==========================
+   Meal Card
+========================== */
+
+.meal-card{
+    background:#fff;
+    border-radius:22px;
+    padding:28px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+    transition:.3s;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+
+.meal-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+.meal-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    background:#EDF8E8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.meal-card h4{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.meal-calories{
+    font-size:2rem;
+    font-weight:700;
+    color:#6BAF5B;
+    margin-bottom:8px;
+}
+
+.meal-card .text-secondary{
+    flex:1;
+}
+
+.meal-card .btn{
+    margin-top:20px;
+    border-radius:14px;
+    padding:12px;
+    font-weight:600;
+}
+
+.breakfast{
+    border-top:5px solid #FFC107;
+}
+
+.breakfast .meal-icon{
+    background:#FFF8E1;
+}
+
+.lunch{
+    border-top:5px solid #4CAF50;
+}
+
+.snack{
+    border-top:5px solid #FF9800;
+}
+
+.dinner{
+    border-top:5px solid #7E57C2;
+}
+
+.meal-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.meal-item:last-child{
+
+    border:none;
+
+}
+
+.meal-item h5{
+
+    margin-bottom:6px;
+
+    font-weight:600;
+
+}
+
+.meal-item small{
+
+    color:#777;
+
+}
+
+.meal-item .badge{
+
+    font-size:14px;
+
+    padding:10px 14px;
+
+}
+
+@media(max-width:991.98px){
+
+    .meal-hero{
+        padding:28px;
+    }
+
+    .calorie-card{
+        margin-top:24px;
+    }
+
+}

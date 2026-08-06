@@ -1,0 +1,225 @@
+body{
+
+    background:#F8FAF7;
+
+}
+
+.dashboard{
+
+    padding:70px 0;
+
+}
+
+.greeting h2{
+
+    font-size:2.2rem;
+
+    font-weight:700;
+
+}
+
+.overview-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    min-height:220px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.06);
+
+    transition:.25s;
+
+    border-top:5px solid transparent;
+
+}
+
+.bmi-card{
+
+    border-top-color:#4CAF50;
+
+}
+
+.bmi-card i{
+
+    color:#4CAF50;
+
+}
+
+.calorie-card{
+
+    border-top-color:#FF9800;
+
+}
+
+.calorie-card i{
+
+    color:#FF9800;
+
+}
+
+.weight-card{
+
+    border-top-color:#2196F3;
+
+}
+
+.weight-card i{
+
+    color:#2196F3;
+
+}
+
+.goal-card{
+
+    border-top-color:#9C27B0;
+
+}
+
+.goal-card i{
+
+    color:#9C27B0;
+
+}
+
+.overview-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.overview-card i{
+
+    font-size:30px;
+
+    color:#6BAF5B;
+
+}
+
+.overview-card small{
+
+    display:block;
+
+    margin-top:15px;
+
+    color:#888;
+
+}
+
+.overview-card h3{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    margin:10px 0;
+
+}
+
+#bmiStatus{
+
+    display:inline-block;
+
+    width:fit-content;
+
+    padding:6px 14px;
+
+    border-radius:50px;
+
+    background:#E8F5E9;
+
+    color:#4CAF50;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.menu-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.06);
+
+    transition:.25s;
+
+    cursor:pointer;
+
+}
+
+.menu-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.menu-card{
+
+    font-size:18px;
+
+}
+
+.menu-card h5{
+
+    margin-top:20px;
+
+    font-weight:700;
+
+}
+
+.recommendation-card{
+
+    background:linear-gradient(
+        135deg,
+        #6BAF5B,
+        #8BCF7C
+    );
+
+    border-radius:24px;
+
+    padding:35px;
+
+    color:white;
+
+    margin-top:45px;
+
+    box-shadow:0 20px 45px rgba(107,175,91,.25);
+
+}
+
+.recommendation-card h3{
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.recommendation-card p{
+
+    max-width:600px;
+
+    opacity:.95;
+
+}
+
+.recommendation-card .btn{
+
+    border-radius:14px;
+
+}
