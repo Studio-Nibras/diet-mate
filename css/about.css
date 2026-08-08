@@ -1,0 +1,1178 @@
+/* ========================================
+   ABOUT PAGE
+======================================== */
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.about-hero {
+    position: relative;
+
+    padding: 130px 0 120px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8f8f2,
+            #edf8e8
+        );
+}
+
+.about-hero-decoration {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.about-decoration-one {
+    width: 220px;
+    height: 220px;
+
+    top: -80px;
+    left: -70px;
+
+    background: rgba(
+        107,
+        175,
+        91,
+        0.10
+    );
+}
+
+.about-decoration-two {
+    width: 190px;
+    height: 190px;
+
+    right: -70px;
+    bottom: -80px;
+
+    background: rgba(
+        244,
+        162,
+        97,
+        0.11
+    );
+}
+
+.about-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+
+    padding: 8px 15px;
+
+    border-radius: 999px;
+
+    background: rgba(
+        107,
+        175,
+        91,
+        0.10
+    );
+
+    color: #497c3a;
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+}
+
+.about-badge i {
+    color: #6baf5b;
+}
+
+.about-hero-title {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    color: #2c2c2c;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: clamp(
+        2.5rem,
+        5vw,
+        4.3rem
+    );
+
+    line-height: 1.08;
+
+    font-weight: 700;
+}
+
+.about-hero-title span {
+    display: block;
+
+    color: #6baf5b;
+}
+
+.about-hero-description {
+    max-width: 650px;
+
+    margin: 25px auto 0;
+
+    color: #666;
+
+    font-size: 0.9rem;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.about-intro {
+    background: #fff;
+}
+
+.about-intro-visual {
+    position: relative;
+
+    min-height: 370px;
+}
+
+.about-visual-circle {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: 35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #edf8e8;
+}
+
+.about-visual-circle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    top: 45px;
+    left: 45px;
+
+    border-radius: 50%;
+
+    background: #dcefd5;
+}
+
+.about-visual-card {
+    position: absolute;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border-radius: 22px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 40px rgba(
+            0,
+            0,
+            0,
+            0.09
+        );
+}
+
+.about-visual-card-main {
+    width: 210px;
+
+    top: 95px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    align-items: center;
+
+    padding: 28px 20px;
+
+    text-align: center;
+}
+
+.about-visual-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 18px;
+
+    background: #edf8e8;
+
+    color: #6baf5b;
+
+    font-size: 1.5rem;
+}
+
+.about-visual-card-main span {
+    color: #888;
+
+    font-size: 0.65rem;
+}
+
+.about-visual-card-main strong {
+    margin-top: 4px;
+
+    color: #2c2c2c;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.05rem;
+}
+
+.about-visual-card-small {
+    right: 5px;
+    bottom: 45px;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 15px;
+
+    color: #497c3a;
+
+    font-size: 0.6rem;
+
+    font-weight: 600;
+}
+
+.about-visual-card-small i {
+    color: #6baf5b;
+
+    font-size: 0.8rem;
+}
+
+.about-text {
+    max-width: 650px;
+
+    margin-bottom: 15px;
+
+    color: #777;
+
+    font-size: 0.76rem;
+
+    line-height: 1.9;
+}
+
+.about-highlight {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 22px;
+
+    padding: 15px 18px;
+
+    border-left: 3px solid #6baf5b;
+
+    border-radius: 0 14px 14px 0;
+
+    background: #f4f8f1;
+}
+
+.about-highlight i {
+    color: #6baf5b;
+
+    font-size: 1rem;
+}
+
+.about-highlight p {
+    margin: 0;
+
+    color: #527248;
+
+    font-size: 0.68rem;
+
+    line-height: 1.6;
+
+    font-weight: 500;
+}
+
+
+/* ========================================
+   MISSION
+======================================== */
+
+.about-mission {
+    background: #faf8f2;
+}
+
+.about-content-card {
+    padding: 50px;
+
+    border-radius: 28px;
+
+    background: #fff;
+
+    box-shadow:
+        0 12px 35px rgba(
+            0,
+            0,
+            0,
+            0.05
+        );
+}
+
+.about-section-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 16px;
+
+    background: #edf8e8;
+
+    color: #6baf5b;
+
+    font-size: 1.25rem;
+}
+
+.about-eyebrow {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #7b9472;
+
+    font-size: 0.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.about-content-card h2 {
+    max-width: 260px;
+
+    margin: 0;
+
+    color: #2c2c2c;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.9rem;
+
+    line-height: 1.2;
+}
+
+.about-content-card h2 span {
+    color: #6baf5b;
+}
+
+.about-large-text {
+    max-width: 650px;
+
+    margin-bottom: 16px;
+
+    color: #3f3f3f;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.25rem;
+
+    line-height: 1.5;
+}
+
+.about-muted-text {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 0.72rem;
+
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   VISION
+======================================== */
+
+.about-vision {
+    background: #fff;
+}
+
+.vision-card {
+    padding: 30px;
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f4f9f1,
+            #edf8e8
+        );
+
+    box-shadow:
+        0 12px 35px rgba(
+            0,
+            0,
+            0,
+            0.05
+        );
+}
+
+.vision-card-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.vision-card-top span {
+    color: #7b9472;
+
+    font-size: 0.58rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+}
+
+.vision-card-top i {
+    color: #6baf5b;
+
+    font-size: 0.9rem;
+}
+
+.vision-path {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.vision-step {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+.vision-step-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: white;
+
+    color: #6baf5b;
+
+    font-size: 0.85rem;
+
+    box-shadow:
+        0 5px 15px rgba(
+            0,
+            0,
+            0,
+            0.04
+        );
+}
+
+.vision-step span {
+    color: #4c6447;
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+}
+
+.vision-line {
+    width: 1px;
+
+    height: 25px;
+
+    margin: 3px 0 3px 20px;
+
+    background: #cfe1c9;
+}
+
+
+/* ========================================
+   WHY DIETMATE
+======================================== */
+
+.about-why {
+    background: #faf8f2;
+}
+
+.why-card {
+    height: 100%;
+
+    padding: 30px;
+
+    border-radius: 23px;
+
+    background: #fff;
+
+    box-shadow:
+        0 10px 30px rgba(
+            0,
+            0,
+            0,
+            0.05
+        );
+
+    transition:
+        transform 300ms ease,
+        box-shadow 300ms ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+.why-card-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 15px;
+
+    background: #edf8e8;
+
+    color: #6baf5b;
+
+    font-size: 1.1rem;
+}
+
+.why-card h3 {
+    margin-bottom: 10px;
+
+    color: #2c2c2c;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.15rem;
+}
+
+.why-card p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 0.68rem;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   APPROACH
+======================================== */
+
+.about-approach {
+    background: #fff;
+}
+
+.approach-wrapper {
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 55px;
+}
+
+.approach-step {
+    position: relative;
+
+    flex: 1;
+
+    max-width: 300px;
+
+    padding: 32px 27px;
+
+    border-radius: 24px;
+
+    background: #faf8f2;
+
+    text-align: center;
+
+    transition:
+        transform 300ms ease,
+        box-shadow 300ms ease;
+}
+
+.approach-step:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(
+            0,
+            0,
+            0,
+            0.07
+        );
+}
+
+.approach-number {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    color: #dcebd7;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.8rem;
+
+    font-weight: 700;
+}
+
+.approach-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 17px;
+
+    background: #edf8e8;
+
+    color: #6baf5b;
+
+    font-size: 1.2rem;
+}
+
+.approach-step h3 {
+    margin-bottom: 10px;
+
+    color: #2c2c2c;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.15rem;
+}
+
+.approach-step p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 0.66rem;
+
+    line-height: 1.8;
+}
+
+.approach-connector {
+    display: flex;
+
+    align-items: center;
+
+    color: #a8c49f;
+
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.about-cta {
+    background: #faf8f2;
+}
+
+.about-cta-card {
+    position: relative;
+
+    padding: 65px 35px;
+
+    overflow: hidden;
+
+    border-radius: 32px;
+
+    background: #2f5130;
+
+    color: white;
+
+    text-align: center;
+}
+
+.about-cta-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    top: -150px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.05
+    );
+}
+
+.about-cta-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    bottom: -120px;
+    left: -50px;
+
+    border-radius: 50%;
+
+    background: rgba(
+        185,
+        223,
+        169,
+        0.07
+    );
+}
+
+.about-cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 680px;
+
+    margin: auto;
+}
+
+.about-cta-content > span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #b7d7ad;
+
+    font-size: 0.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.about-cta h2 {
+    margin: 0;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3.1rem
+    );
+
+    line-height: 1.15;
+}
+
+.about-cta h2 span {
+    display: block;
+
+    color: #b9dfa9;
+}
+
+.about-cta p {
+    max-width: 520px;
+
+    margin: 18px auto 0;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.72
+    );
+
+    font-size: 0.73rem;
+
+    line-height: 1.8;
+}
+
+.about-cta-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+    padding: 12px 21px;
+
+    border-radius: 18px;
+
+    background: white;
+
+    color: #497c3a;
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+
+    transition: all 300ms ease;
+}
+
+.about-cta-button:hover {
+    background: #edf8e8;
+
+    color: #497c3a;
+
+    transform: translateY(-2px);
+}
+
+.about-cta-button i {
+    transition: transform 200ms ease;
+}
+
+.about-cta-button:hover i {
+    transform: translateX(3px);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 991px) {
+
+    .about-hero {
+        padding: 100px 0;
+    }
+
+    .about-content-card {
+        padding: 35px;
+    }
+
+    .approach-wrapper {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .approach-step {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .approach-connector {
+        transform: rotate(90deg);
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .about-hero {
+        padding: 80px 0;
+    }
+
+    .about-hero-title {
+        font-size: 2.45rem;
+    }
+
+    .about-hero-description {
+        font-size: 0.78rem;
+    }
+
+    .about-intro-visual {
+        min-height: 330px;
+    }
+
+    .about-visual-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .about-visual-circle::before {
+        width: 180px;
+        height: 180px;
+
+        top: 40px;
+        left: 40px;
+    }
+
+    .about-visual-card-main {
+        top: 75px;
+    }
+
+    .about-visual-card-small {
+        right: 0;
+        bottom: 35px;
+    }
+
+    .about-content-card {
+        padding: 28px;
+    }
+
+    .about-large-text {
+        font-size: 1.05rem;
+    }
+
+    .vision-card {
+        padding: 25px;
+    }
+
+    .about-cta-card {
+        padding: 50px 25px;
+
+        border-radius: 24px;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .about-hero {
+        padding: 120px 0;
+    }
+
+    .about-hero-title {
+        font-size: 2rem;
+    }
+
+    .about-badge {
+        font-size: 0.62rem;
+    }
+
+    .about-intro-visual {
+        min-height: 300px;
+    }
+
+    .about-visual-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .about-visual-circle::before {
+        width: 155px;
+        height: 155px;
+
+        top: 38px;
+        left: 38px;
+    }
+
+    .about-visual-card-main {
+        width: 185px;
+
+        top: 62px;
+
+        padding: 22px 15px;
+    }
+
+    .about-visual-card-small {
+        padding: 10px 12px;
+
+        font-size: 0.55rem;
+    }
+
+    .about-content-card {
+        padding: 23px;
+    }
+
+    .about-content-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .why-card {
+        padding: 25px;
+    }
+
+    .approach-step {
+        padding: 28px 22px;
+    }
+
+    .about-cta-card {
+        padding: 42px 20px;
+    }
+
+    .about-cta h2 {
+        font-size: 2rem;
+    }
+
+}
+
+/* ========================================
+   MOBILE HORIZONTAL OVERFLOW FIX
+======================================== */
+
+@media (max-width: 767px) {
+
+    /* Prevent About page sections from creating
+       horizontal scroll */
+    .about-intro,
+    .about-vision,
+    .about-mission,
+    .about-why,
+    .about-approach,
+    .about-cta {
+        overflow-x: hidden;
+    }
+
+
+    /* Reset Bootstrap row gutter on mobile */
+    .about-intro .row,
+    .about-vision .row,
+    .about-mission .row,
+    .about-why .row,
+    .about-approach .row {
+        --bs-gutter-x: 0;
+    }
+
+
+    /* Make columns stay inside viewport */
+    .about-intro .col-lg-5,
+    .about-intro .col-lg-7,
+    .about-vision .col-lg-5,
+    .about-vision .col-lg-7 {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+
+    /* Prevent text/content from expanding layout */
+    .about-intro .section-title,
+    .about-intro .about-text,
+    .about-intro .about-highlight,
+    .about-vision .section-title,
+    .about-vision .about-text {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+
+    /* Vision card */
+    .vision-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    .vision-card-top,
+    .vision-path {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+
+    /* Decorative circles must never affect
+       the document width */
+    .about-hero {
+        overflow: hidden;
+    }
+
+    .about-hero-decoration {
+        pointer-events: none;
+    }
+
+}

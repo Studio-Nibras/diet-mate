@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile | DietMate</title>
+
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Bootstrap Icons -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- Google Fonts -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Global -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/layout.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/sidebar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/topbar.css"
+    >
+
+
+    <!-- Profile -->
+
+    <link
+        rel="stylesheet"
+        href="../css/profile.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- Sidebar -->
+
+    <div id="appSidebar"></div>
+
+
+    <!-- Main -->
+
+    <div class="app-main">
+
+
+        <!-- Topbar -->
+
+        <div id="appTopbar"></div>
+
+
+        <!-- Content -->
+
+        <main class="app-content profile-page">
+
+
+            <!-- ========================================
+                 PAGE HEADER
+            ======================================== -->
+
+            <section class="profile-page-header">
+
+                <div>
+
+                    <span class="profile-section-label">
+                        MY JOURNEY
+                    </span>
+
+                    <h1>
+                        Profile
+                    </h1>
+
+                    <p>
+                        Kenali kembali informasi dan
+                        perjalanan kesehatanmu.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================
+                 PROFILE HERO
+            ======================================== -->
+
+            <section class="profile-hero">
+
+                <div class="profile-avatar">
+
+                    <span id="profileAvatar">
+                        U
+                    </span>
+
+                </div>
+
+
+                <div class="profile-hero-info">
+
+                    <h2 id="profileName">
+                        User
+                    </h2>
+
+                    <p id="profileGoal">
+                        Your health journey
+                    </p>
+
+                </div>
+
+
+                <div class="profile-hero-badge">
+
+                    <i class="bi bi-heart-pulse-fill"></i>
+
+                    <span>
+                        Health Journey
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================
+                 PERSONAL INFORMATION
+            ======================================== -->
+
+            <section class="profile-section">
+
+                <div class="profile-section-heading">
+
+                    <div class="profile-heading-icon">
+
+                        <i class="bi bi-person"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Personal Information
+                        </h3>
+
+                        <p>
+                            Informasi dasar yang kamu masukkan
+                            saat assessment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- Name -->
+
+                    <div class="col-md-4">
+
+                        <div class="profile-info-card">
+
+                            <span>
+                                Name
+                            </span>
+
+                            <strong id="profileInfoName">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Age -->
+
+                    <div class="col-md-4">
+
+                        <div class="profile-info-card">
+
+                            <span>
+                                Age
+                            </span>
+
+                            <strong id="profileAge">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Gender -->
+
+                    <div class="col-md-4">
+
+                        <div class="profile-info-card">
+
+                            <span>
+                                Gender
+                            </span>
+
+                            <strong id="profileGender">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================
+                 BODY INFORMATION
+            ======================================== -->
+
+            <section class="profile-section">
+
+                <div class="profile-section-heading">
+
+                    <div class="profile-heading-icon">
+
+                        <i class="bi bi-person-standing"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Body Information
+                        </h3>
+
+                        <p>
+                            Ringkasan informasi tubuhmu.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- Height -->
+
+                    <div class="col-md-4">
+
+                        <div class="profile-info-card">
+
+                            <span>
+                                Height
+                            </span>
+
+                            <strong id="profileHeight">
+                                -
+                            </strong>
+
+                            <small>
+                                cm
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Weight -->
+
+                    <div class="col-md-4">
+
+                        <div class="profile-info-card">
+
+                            <span>
+                                Weight
+                            </span>
+
+                            <strong id="profileWeight">
+                                -
+                            </strong>
+
+                            <small>
+                                kg
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BMI -->
+
+                    <div class="col-md-4">
+
+                        <div class="profile-info-card">
+
+                            <span>
+                                BMI
+                            </span>
+
+                            <strong id="profileBMI">
+                                -
+                            </strong>
+
+                            <small id="profileBMIStatus">
+                                -
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================
+                 HEALTH INFORMATION
+            ======================================== -->
+
+            <section class="profile-section">
+
+                <div class="profile-section-heading">
+
+                    <div class="profile-heading-icon">
+
+                        <i class="bi bi-activity"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Health Information
+                        </h3>
+
+                        <p>
+                            Hasil analisis kesehatan dari
+                            assessment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- BMR -->
+
+                    <div class="col-md-4">
+
+                        <div class="profile-health-card">
+
+                            <div class="profile-health-icon">
+
+                                <i class="bi bi-fire"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    BMR
+                                </span>
+
+                                <strong id="profileBMR">
+                                    -
+                                </strong>
+
+                                <small>
+                                    kcal/day
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Daily Calories -->
+
+                    <div class="col-md-4">
+
+                        <div class="profile-health-card">
+
+                            <div class="profile-health-icon">
+
+                                <i class="bi bi-lightning-charge"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Daily Calories
+                                </span>
+
+                                <strong id="profileCalories">
+                                    -
+                                </strong>
+
+                                <small>
+                                    kcal/day
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Activity -->
+
+                    <div class="col-md-4">
+
+                        <div class="profile-health-card">
+
+                            <div class="profile-health-icon">
+
+                                <i class="bi bi-person-walking"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Activity Level
+                                </span>
+
+                                <strong id="profileActivity">
+                                    -
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================
+                 GOAL
+            ======================================== -->
+
+            <section class="profile-goal-card">
+
+                <div class="profile-goal-icon">
+
+                    <i class="bi bi-bullseye"></i>
+
+                </div>
+
+
+                <div class="profile-goal-content">
+
+                    <span>
+                        YOUR CURRENT GOAL
+                    </span>
+
+                    <h3 id="profileGoalDetail">
+                        -
+                    </h3>
+
+                    <p>
+                        Tetap konsisten dan nikmati proses
+                        health journey-mu.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ========================================
+                 RESET JOURNEY
+            ======================================== -->
+
+            <section class="profile-danger-zone">
+
+                <div>
+
+                    <span>
+                        Reset Journey
+                    </span>
+
+                    <p>
+                        Hapus data assessment dan progress
+                        untuk memulai journey dari awal.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="resetJourneyBtn"
+                    class="profile-reset-btn"
+                >
+
+                    <i class="bi bi-arrow-counterclockwise"></i>
+
+                    Reset Journey
+
+                </button>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+</div>
+
+
+
+<!-- ========================================
+     RESET CONFIRMATION MODAL
+======================================== -->
+
+<div
+    class="modal fade"
+    id="resetJourneyModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div
+        class="modal-dialog modal-dialog-centered"
+    >
+
+        <div class="modal-content profile-modal">
+
+
+            <div class="profile-modal-icon">
+
+                <i class="bi bi-arrow-counterclockwise"></i>
+
+            </div>
+
+
+            <h3>
+                Reset Journey?
+            </h3>
+
+
+            <p>
+                Semua data assessment dan progress
+                akan dihapus. Kamu akan kembali ke
+                halaman awal.
+            </p>
+
+
+            <div class="profile-modal-actions">
+
+                <button
+                    type="button"
+                    class="profile-modal-cancel"
+                    data-bs-dismiss="modal"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="button"
+                    id="confirmResetBtn"
+                    class="profile-modal-confirm"
+                >
+                    Reset Journey
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- Bootstrap -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- Components -->
+
+<script src="../components/app-sidebar.js"></script>
+
+<script src="../components/app-topbar.js"></script>
+
+
+<!-- Storage -->
+
+<script src="../js/storage.js"></script>
+
+
+<!-- Profile -->
+
+<script src="../js/profile/profile.js"></script>
+
+
+</body>
+
+</html>

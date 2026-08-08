@@ -1,0 +1,902 @@
+/* ========================================
+   FEATURES PAGE
+======================================== */
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.features-hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: 130px 0 120px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8f8f2,
+            #edf8e8
+        );
+}
+
+.features-hero-decoration {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.features-decoration-one {
+    width: 220px;
+    height: 220px;
+
+    top: -80px;
+    left: -70px;
+
+    background: rgba(
+        107,
+        175,
+        91,
+        0.10
+    );
+}
+
+.features-decoration-two {
+    width: 180px;
+    height: 180px;
+
+    right: -60px;
+    bottom: -70px;
+
+    background: rgba(
+        244,
+        162,
+        97,
+        0.12
+    );
+}
+
+.features-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+
+    padding: 8px 15px;
+
+    border-radius: 999px;
+
+    background: rgba(
+        107,
+        175,
+        91,
+        0.10
+    );
+
+    color: #497c3a;
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+}
+
+.features-badge i {
+    color: #6baf5b;
+}
+
+.features-hero-title {
+    margin: 0 auto;
+
+    max-width: 850px;
+
+    color: #2c2c2c;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: clamp(
+        2.5rem,
+        5vw,
+        4.4rem
+    );
+
+    line-height: 1.08;
+
+    font-weight: 700;
+}
+
+.features-hero-title span {
+    display: block;
+
+    color: #6baf5b;
+}
+
+.features-hero-description {
+    max-width: 650px;
+
+    margin: 25px auto 0;
+
+    color: #666;
+
+    font-size: 0.9rem;
+
+    line-height: 1.8;
+}
+
+.features-hero-action {
+    margin-top: 28px;
+}
+
+
+/* ========================================
+   SHOWCASE
+======================================== */
+
+.features-showcase {
+    background: #faf8f2;
+}
+
+.features-card {
+    position: relative;
+
+    height: 100%;
+
+    padding: 32px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background: #fff;
+
+    box-shadow:
+        0 12px 35px rgba(
+            0,
+            0,
+            0,
+            0.06
+        );
+
+    transition:
+        transform 300ms ease,
+        box-shadow 300ms ease;
+}
+
+.features-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 50px rgba(
+            0,
+            0,
+            0,
+            0.10
+        );
+}
+
+.features-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    right: -55px;
+    bottom: -65px;
+
+    border-radius: 50%;
+
+    background: #edf8e8;
+
+    transition: transform 300ms ease;
+}
+
+.features-card:hover::after {
+    transform: scale(1.2);
+}
+
+.features-card-large {
+    min-height: 300px;
+}
+
+.features-card-icon {
+    position: relative;
+
+    z-index: 2;
+
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 24px;
+
+    border-radius: 16px;
+
+    background: #edf8e8;
+
+    color: #6baf5b;
+
+    font-size: 1.3rem;
+}
+
+.features-card-number {
+    position: absolute;
+
+    top: 27px;
+    right: 30px;
+
+    color: #e7efe3;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 2.8rem;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+.features-card h3 {
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 12px;
+
+    color: #2c2c2c;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+}
+
+.features-card p {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 520px;
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 0.76rem;
+
+    line-height: 1.8;
+}
+
+.features-output {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 24px;
+}
+
+.features-output span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 7px 11px;
+
+    border-radius: 999px;
+
+    background: #f4f8f1;
+
+    color: #497c3a;
+
+    font-size: 0.62rem;
+
+    font-weight: 600;
+}
+
+.features-output i {
+    font-size: 0.65rem;
+}
+
+.features-card-link {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 24px;
+
+    color: #6baf5b;
+
+    font-size: 0.65rem;
+
+    font-weight: 600;
+}
+
+.features-card-link i {
+    transition: transform 200ms ease;
+}
+
+.features-card:hover .features-card-link i {
+    transform: translate(
+        3px,
+        -3px
+    );
+}
+
+.features-mini-label {
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 7px 11px;
+
+    border-radius: 999px;
+
+    background: #f4f8f1;
+
+    color: #6baf5b;
+
+    font-size: 0.6rem;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   EDUCATION TOPICS
+======================================== */
+
+.education-topics {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 22px;
+}
+
+.education-topics span {
+    padding: 7px 10px;
+
+    border: 1px solid #e2eedf;
+
+    border-radius: 999px;
+
+    color: #6baf5b;
+
+    font-size: 0.58rem;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   RESET JOURNEY
+======================================== */
+
+.features-card-reset {
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #fff9f7
+        );
+}
+
+.features-card-reset .features-card-icon {
+    background: #fff0e7;
+
+    color: #e28b4c;
+}
+
+.reset-info {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.reset-info span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #a56b4d;
+
+    font-size: 0.59rem;
+
+    font-weight: 500;
+}
+
+.reset-info i {
+    font-size: 0.65rem;
+}
+
+
+/* ========================================
+   JOURNEY SECTION
+======================================== */
+
+.features-journey {
+    background: #fff;
+}
+
+.journey-flow {
+    padding: 28px;
+
+    border-radius: 24px;
+
+    background: #faf8f2;
+
+    box-shadow:
+        0 12px 35px rgba(
+            0,
+            0,
+            0,
+            0.05
+        );
+}
+
+.journey-flow-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.journey-flow-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #edf8e8;
+
+    color: #6baf5b;
+
+    font-size: 1rem;
+}
+
+.journey-flow-item span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #9aaa95;
+
+    font-size: 0.58rem;
+
+    font-weight: 600;
+}
+
+.journey-flow-item h4 {
+    margin: 0 0 3px;
+
+    color: #2c2c2c;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+}
+
+.journey-flow-item p {
+    margin: 0;
+
+    color: #888;
+
+    font-size: 0.62rem;
+}
+
+.journey-flow-line {
+    width: 1px;
+
+    height: 28px;
+
+    margin: 5px 0 5px 24px;
+
+    background: #dcebd7;
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.features-cta {
+    background: #faf8f2;
+}
+
+.features-cta-card {
+    position: relative;
+
+    padding: 65px 40px;
+
+    overflow: hidden;
+
+    border-radius: 32px;
+
+    background: #2f5130;
+
+    text-align: center;
+
+    color: white;
+}
+
+.features-cta-decoration {
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    top: -130px;
+    right: -60px;
+
+    border-radius: 50%;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.05
+    );
+}
+
+.features-cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.features-cta-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #b7d7ad;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.features-cta h2 {
+    margin: 0;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3.2rem
+    );
+
+    line-height: 1.15;
+}
+
+.features-cta h2 span {
+    display: block;
+
+    color: #b9dfa9;
+}
+
+.features-cta p {
+    max-width: 520px;
+
+    margin: 18px auto 0;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.72
+    );
+
+    font-size: 0.76rem;
+
+    line-height: 1.8;
+}
+
+.features-cta-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+    padding: 12px 21px;
+
+    border-radius: 18px;
+
+    background: white;
+
+    color: #497c3a;
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+
+    transition: all 300ms ease;
+}
+
+.features-cta-button:hover {
+    background: #edf8e8;
+
+    color: #497c3a;
+
+    transform: translateY(-2px);
+}
+
+.features-cta-button i {
+    transition: transform 200ms ease;
+}
+
+.features-cta-button:hover i {
+    transform: translateX(3px);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 991px) {
+
+    .features-hero {
+        padding: 100px 0;
+    }
+
+    .features-card-large {
+        min-height: 0;
+    }
+
+    .features-journey {
+        text-align: center;
+    }
+
+    .features-journey .section-title,
+    .features-journey .section-description {
+        text-align: center !important;
+    }
+
+    .journey-flow {
+        margin-top: 15px;
+
+        text-align: left;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .features-hero {
+        padding: 80px 0;
+    }
+
+    .features-hero-title {
+        font-size: 2.45rem;
+    }
+
+    .features-hero-description {
+        font-size: 0.78rem;
+    }
+
+    .features-card {
+        padding: 25px;
+    }
+
+    .features-card-number {
+        top: 23px;
+        right: 23px;
+
+        font-size: 2.3rem;
+    }
+
+    .features-cta-card {
+        padding: 50px 25px;
+
+        border-radius: 24px;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .features-hero {
+        padding: 120px 0;
+    }
+
+    .features-hero-title {
+        font-size: 2rem;
+    }
+
+    .features-badge {
+        font-size: 0.62rem;
+    }
+
+    .features-card {
+        padding: 22px;
+    }
+
+    .features-card-icon {
+        width: 48px;
+        height: 48px;
+
+        margin-bottom: 20px;
+
+        border-radius: 14px;
+    }
+
+    .features-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .features-card p {
+        font-size: 0.7rem;
+    }
+
+    .features-output,
+    .education-topics,
+    .reset-info {
+        gap: 6px;
+    }
+
+    .journey-flow {
+        padding: 20px;
+    }
+
+    .journey-flow-item {
+        gap: 12px;
+    }
+
+    .journey-flow-icon {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+    }
+
+    .features-cta-card {
+        padding: 42px 20px;
+    }
+
+    .features-cta h2 {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .features-journey {
+        overflow: hidden;
+    }
+
+    .features-journey .row {
+        --bs-gutter-x: 0;
+    }
+
+    .features-journey .col-lg-5,
+    .features-journey .col-lg-7 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .journey-flow {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    .journey-flow-item {
+        width: 100%;
+        max-width: 100%;
+
+        min-width: 0;
+    }
+
+    .journey-flow-item > div:last-child {
+        min-width: 0;
+
+        max-width: 100%;
+    }
+
+    .journey-flow-item h4,
+    .journey-flow-item p,
+    .journey-flow-item span {
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .journey-flow-line {
+        margin-left: 21px;
+    }
+
+    .features-decoration-one,
+    .features-decoration-two,
+    .features-cta-decoration {
+        pointer-events: none;
+    }
+
+}

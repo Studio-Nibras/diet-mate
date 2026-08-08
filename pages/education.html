@@ -1,0 +1,243 @@
+```html
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Education | DietMate</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Layout -->
+
+    <link rel="stylesheet" href="../css/layout.css" />
+
+    <link rel="stylesheet" href="../css/sidebar.css" />
+
+    <link rel="stylesheet" href="../css/topbar.css" />
+
+    <!-- Education -->
+
+    <link rel="stylesheet" href="../css/education.css" />
+  </head>
+
+  <body>
+    <div class="app-layout">
+      <!-- Sidebar -->
+
+      <div id="appSidebar"></div>
+
+      <!-- Main -->
+
+      <div class="app-main">
+        <!-- Topbar -->
+
+        <div id="appTopbar"></div>
+
+        <!-- Content -->
+
+        <main class="app-content">
+          <!-- ========================================
+                 EDUCATION HERO
+            ======================================== -->
+
+          <section class="education-hero">
+            <div class="education-hero-content">
+              <span class="education-label">
+                <i class="bi bi-book-half"></i>
+
+                EDUCATION CENTER
+              </span>
+
+              <h1>
+                Learn Better,
+                <span>Live Healthier.</span>
+              </h1>
+
+              <p>
+                Temukan informasi sederhana dan mudah dipahami untuk membantu
+                kamu membangun pola hidup yang lebih sehat.
+              </p>
+            </div>
+
+            <div class="education-hero-decoration">
+              <div class="education-leaf leaf-one">
+                <i class="bi bi-leaf-fill"></i>
+              </div>
+
+              <div class="education-leaf leaf-two">
+                <i class="bi bi-heart-fill"></i>
+              </div>
+
+              <div class="education-leaf leaf-three">
+                <i class="bi bi-apple"></i>
+              </div>
+            </div>
+          </section>
+
+          <!-- ========================================
+                 FEATURED ARTICLE
+            ======================================== -->
+
+          <section class="education-featured-section">
+            <div class="section-heading education-heading">
+              <div>
+                <span class="section-label"> FEATURED </span>
+
+                <h2>Pilihan untukmu</h2>
+              </div>
+            </div>
+
+            <article class="featured-article" id="featuredArticle">
+              <!-- Rendered by JavaScript -->
+            </article>
+          </section>
+
+          <!-- ========================================
+                 CATEGORY FILTER
+            ======================================== -->
+
+          <section class="education-library-section">
+            <div class="section-heading education-heading">
+              <div>
+                <span class="section-label"> EXPLORE </span>
+
+                <h2>Jelajahi Edukasi</h2>
+              </div>
+            </div>
+
+            <div class="education-filters" id="educationFilters">
+              <button
+                type="button"
+                class="education-filter active"
+                data-category="all"
+              >
+                Semua
+              </button>
+
+              <button
+                type="button"
+                class="education-filter"
+                data-category="healthy-tips"
+              >
+                Healthy Tips
+              </button>
+
+              <button
+                type="button"
+                class="education-filter"
+                data-category="nutrition"
+              >
+                Nutrition Basics
+              </button>
+
+              <button
+                type="button"
+                class="education-filter"
+                data-category="lifestyle"
+              >
+                Healthy Lifestyle
+              </button>
+
+              <button
+                type="button"
+                class="education-filter"
+                data-category="myth-fact"
+              >
+                Myth vs Fact
+              </button>
+            </div>
+
+            <!-- Article Grid -->
+
+            <div class="row g-4" id="educationArticleGrid">
+              <!-- Rendered by JavaScript -->
+            </div>
+
+            <!-- Empty State -->
+
+            <div id="educationEmpty" class="education-empty d-none">
+              <i class="bi bi-search"></i>
+
+              <h4>Belum ada artikel</h4>
+
+              <p>Coba pilih kategori lainnya.</p>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- ========================================
+     ARTICLE DETAIL MODAL
+======================================== -->
+
+    <div
+      class="modal fade"
+      id="educationDetailModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content education-modal">
+          <div class="modal-header">
+            <div>
+              <span id="modalArticleCategory" class="modal-category">
+                Category
+              </span>
+
+              <h4 id="modalArticleTitle" class="modal-title mt-2">
+                Article Title
+              </h4>
+            </div>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="modalArticleImage" class="modal-article-image"></div>
+
+            <div id="modalArticleContent" class="modal-article-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../components/app-sidebar.js"></script>
+
+    <script src="../components/app-topbar.js"></script>
+
+    <script src="../js/data/educations.js"></script>
+
+    <script src="../js/education/education.js"></script>
+  </body>
+</html>
+```

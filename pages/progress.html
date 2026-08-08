@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Progress | DietMate</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Layout -->
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/topbar.css" />
+
+    <!-- Progress -->
+    <link rel="stylesheet" href="../css/progress.css" />
+  </head>
+
+  <body>
+    <div class="app-layout">
+      <!-- Sidebar -->
+      <div id="appSidebar"></div>
+
+      <!-- Main -->
+      <div class="app-main">
+        <!-- Topbar -->
+        <div id="appTopbar"></div>
+
+        <!-- Content -->
+        <main class="app-content">
+          <!-- Progress Header -->
+          <section class="progress-header mb-5">
+            <div>
+              <span class="badge bg-success-subtle text-success mb-3">
+                📈 Progress Tracker
+              </span>
+
+              <h2 id="progressGreeting">Pantau Perjalananmu</h2>
+
+              <p class="text-secondary">
+                Lihat perkembangan kesehatanmu dan tetap konsisten menuju
+                tujuanmu.
+              </p>
+            </div>
+          </section>
+
+          <!-- Weight Overview -->
+          <section class="mb-5">
+            <div class="row g-4">
+              <!-- Current Weight -->
+              <div class="col-xl-3 col-md-6">
+                <div class="progress-overview-card">
+                  <div class="progress-card-icon weight-icon">
+                    <i class="bi bi-person-standing"></i>
+                  </div>
+                  <div>
+                    <small> Berat Saat Ini </small>
+                    <h3 id="currentWeight">--</h3>
+                    <span> kg </span>
+                  </div>
+                </div>
+              </div>
+              <!-- Weight Change -->
+              <div class="col-xl-3 col-md-6">
+                <div class="progress-overview-card">
+                  <div class="progress-card-icon change-icon">
+                    <i class="bi bi-arrow-down-up" id="weightChangeIcon"></i>
+                  </div>
+                  <div>
+                    <small> Perubahan </small>
+                    <h3 id="weightChange">--</h3>
+                    <span id="weightChangeLabel">
+                      dari check-in sebelumnya
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- BMI -->
+              <div class="col-xl-3 col-md-6">
+                <div class="progress-overview-card">
+                  <div class="progress-card-icon bmi-icon">
+                    <i class="bi bi-heart-pulse-fill"></i>
+                  </div>
+                  <div>
+                    <small> Body Mass Index </small>
+                    <h3 id="bmiValue">--</h3>
+                    <span id="bmiStatus"> - </span>
+                  </div>
+                </div>
+              </div>
+              <!-- Check-ins -->
+              <div class="col-xl-3 col-md-6">
+                <div class="progress-overview-card">
+                  <div class="progress-card-icon goal-icon">
+                    <i class="bi bi-calendar-check"></i>
+                  </div>
+                  <div>
+                    <small> Total Check-in </small>
+                    <h3 id="checkInCount">0</h3>
+                    <span> kali tercatat </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Goal Progress -->
+          <section class="mb-5">
+            <div class="progress-section-card">
+              <div class="section-heading">
+                <div>
+                  <span class="section-label"> YOUR JOURNEY </span>
+
+                  <h4>Perjalanan Progress</h4>
+                </div>
+
+                <i class="bi bi-flag-fill"></i>
+              </div>
+
+              <div class="journey-info">
+                <div>
+                  <small> Berat Saat Ini </small>
+
+                  <strong id="journeyCurrentWeight"> -- kg </strong>
+                </div>
+
+                <div class="journey-arrow">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+
+                <div>
+                  <small> Target </small>
+
+                  <strong id="journeyGoal"> -- </strong>
+                </div>
+              </div>
+
+              <div class="journey-progress">
+                <div class="progress-track">
+                  <div class="progress-bar-custom" id="goalProgressBar"></div>
+                </div>
+
+                <div class="progress-track-info">
+                  <span> Konsistensi tracking </span>
+
+                  <strong id="goalProgressText"> 0% </strong>
+                </div>
+              </div>
+
+              <div class="progress-note" id="progressNote">
+                Progress akan semakin akurat setelah kamu mulai mencatat
+                perubahan berat badan.
+              </div>
+            </div>
+          </section>
+
+          <!-- Chart + Update -->
+          <section class="mb-5">
+            <div class="row g-4">
+              <!-- Chart -->
+              <div class="col-lg-8">
+                <div class="progress-section-card chart-card">
+                  <div class="section-heading">
+                    <div>
+                      <span class="section-label"> WEEKLY TRACKER </span>
+
+                      <h4>Perkembangan Berat Badan</h4>
+                    </div>
+
+                    <i class="bi bi-graph-up-arrow"></i>
+                  </div>
+
+                  <div class="chart-summary">
+                    <div>
+                      <small> Rentang 7 check-in terakhir </small>
+                      <strong id="weeklyChange"> -- </strong>
+                    </div>
+                    <div id="weeklyTrend" class="weekly-trend">
+                      <i class="bi bi-dash"></i> Belum ada perubahan
+                    </div>
+                  </div>
+                  <div class="chart-wrapper">
+                    <canvas id="weightChart"></canvas>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Update Weight -->
+              <div class="col-lg-4">
+                <div class="progress-section-card update-weight-card">
+                  <div class="update-icon">
+                    <i class="bi bi-plus-lg"></i>
+                  </div>
+
+                  <span class="section-label"> UPDATE PROGRESS </span>
+
+                  <h4>Catat Berat Badanmu</h4>
+
+                  <p>
+                    Catat berat badan terbaru untuk membantu memantau
+                    perkembanganmu.
+                  </p>
+
+                  <label for="weightInput" class="form-label">
+                    Berat badan
+                  </label>
+
+                  <div class="weight-input-wrapper">
+                    <input
+                      type="number"
+                      id="weightInput"
+                      class="form-control"
+                      placeholder="Contoh: 65.5"
+                      min="1"
+                      max="500"
+                      step="0.1"
+                    />
+
+                    <span> kg </span>
+                  </div>
+
+                  <button
+                    type="button"
+                    id="updateWeightBtn"
+                    class="btn btn-success w-100 mt-3"
+                  >
+                    <i class="bi bi-check2-circle me-2"></i>
+                    Update Berat
+                  </button>
+
+                  <div id="updateMessage" class="update-message"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Achievements -->
+          <section>
+            <div class="progress-section-card">
+              <div class="section-heading">
+                <div>
+                  <span class="section-label"> MILESTONES </span>
+
+                  <h4>Pencapaianmu</h4>
+                </div>
+
+                <i class="bi bi-trophy-fill"></i>
+              </div>
+
+              <div class="row g-4" id="achievementsContainer"></div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Components -->
+    <script src="../components/app-sidebar.js"></script>
+    <script src="../components/app-topbar.js"></script>
+
+    <!-- Core -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/calculation.js"></script>
+    <script src="../js/helper.js"></script>
+
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Progress -->
+    <script src="../js/progress/progress.js"></script>
+  </body>
+</html>
