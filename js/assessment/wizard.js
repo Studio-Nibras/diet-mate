@@ -26,7 +26,7 @@ const steps = [
     },
 
     {
-        title: "Body Information 📏",
+        title: "Body Information",
         subtitle: "Tell us about your body.",
 
         content: `
@@ -53,7 +53,7 @@ const steps = [
     },
 
     {
-        title: "Lifestyle 🚶",
+        title: "Lifestyle",
         subtitle: "Choose your daily activity.",
 
         content: `
@@ -104,7 +104,7 @@ onclick="selectCard('activity-group','1.725',this)">
     },
 
     {
-        title: "Your Goal 🎯",
+        title: "Your Goal",
         subtitle: "What's your target?",
 
         content:`
@@ -115,7 +115,7 @@ onclick="selectCard('activity-group','1.725',this)">
 class="option-card"
 onclick="selectCard('goal-group','lose',this)">
 
-<h5>🔥 Lose Weight</h5>
+<h5>Lose Weight</h5>
 
 <p>Reduce body fat safely.</p>
 
@@ -125,7 +125,7 @@ onclick="selectCard('goal-group','lose',this)">
 class="option-card"
 onclick="selectCard('goal-group','maintain',this)">
 
-<h5>💪 Maintain</h5>
+<h5>Maintain</h5>
 
 <p>Keep your current body.</p>
 
@@ -135,7 +135,7 @@ onclick="selectCard('goal-group','maintain',this)">
 class="option-card"
 onclick="selectCard('goal-group','gain',this)">
 
-<h5>🚀 Gain Weight</h5>
+<h5>Gain Weight</h5>
 
 <p>Increase muscle and weight.</p>
 

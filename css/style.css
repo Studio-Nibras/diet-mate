@@ -17,6 +17,14 @@ body{
 
     color:var(--text);
 
+    overflow-x: hidden;
+
+}
+
+* {
+
+    box-sizing:border-box;
+
 }
 
 section{
@@ -108,7 +116,9 @@ section{
 
     gap:8px;
 
-    background:#fff;
+    background:#E8F6E4;
+
+    color:#6BAF5B;
 
     padding:12px 20px;
 
@@ -392,6 +402,26 @@ transform:translateY(-20px);
 
 }
 
+.feature-icon i,
+.step-icon i,
+.benefit-icon i {
+    font-size: 1.5rem;
+
+    line-height: 1;
+
+    background:#E8F6E4;
+
+    color:#6BAF5B;
+}
+
+.floating-card i{
+    font-size: 1.5rem;
+
+    line-height: 1;
+
+    color:#6BAF5B;
+}
+
 .section-heading{
 
     max-width:700px;
@@ -486,7 +516,7 @@ transform:translateY(-20px);
 
     height:75px;
 
-    background:#6BAF5B;
+    background: #edf8e8;
 
     color:white;
 
@@ -582,9 +612,9 @@ transform:translateY(-20px);
 
     margin:0 auto 25px;
 
-    background:#6BAF5B;
+    background: #edf8e8;
 
-    color:#fff;
+    color: #6baf5b;
 
     border-radius:20px;
 
@@ -660,13 +690,9 @@ transform:translateY(-20px);
 
     height:70px;
 
-    background:linear-gradient(
-        135deg,
-        #6BAF5B,
-        #89D177
-    );
+    background: #edf8e8;
 
-    color:#fff;
+    color: #6baf5b;
 
     display:flex;
 
@@ -878,10 +904,6 @@ transform:translateY(-20px);
     z-index:2;
 
 }
-
-/* ===========================
-   FAQ SECTION
-=========================== */
 
 .faq-section{
 
