@@ -128,11 +128,6 @@
     line-height: 1.8;
 }
 
-
-/* ========================================
-   FAQ SECTION
-======================================== */
-
 .faq-section {
     background: #fff;
 }
@@ -580,6 +575,7 @@
 
     .faq-hero-description {
         font-size: 16px;
+        line-height: 1.8;
     }
 
     .faq-categories {
@@ -591,29 +587,39 @@
     .faq-category {
         padding: 9px 14px;
 
-        font-size: 0.58rem;
+        font-size: 0.7rem;
     }
 
     .faq-question {
         padding: 19px;
+
+        gap: 12px;
     }
 
     .faq-question-text {
-        font-size: 0.72rem;
+        font-size: 15px;
+
+        line-height: 1.5;
     }
 
     .faq-answer p {
         padding: 0 19px 19px;
 
-        font-size: 16px;
+        font-size: 15px;
+
+        line-height: 1.8;
     }
 
     .faq-empty p {
-        font-size: 16px;
+        font-size: 15px;
+
+        line-height: 1.8;
     }
 
     .faq-cta p {
         font-size: 16px;
+
+        line-height: 1.8;
     }
 
     .faq-cta-card {
@@ -656,7 +662,7 @@
     }
 
     .faq-question-text {
-        font-size: 0.68rem;
+        font-size: 14px;
     }
 
     .faq-cta-card {
