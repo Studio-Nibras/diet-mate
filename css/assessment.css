@@ -1,277 +1,920 @@
 :root {
-
     --primary: #6BAF5B;
     --primary-dark: #497C3A;
-    --bg: #FAF8F2;
+    --primary-light: #EDF8E8;
 
+    --cream: #FAF8F2;
+    --cream-light: #F8F8F2;
+
+    --text-dark: #2C2C2C;
+    --text-body: #666;
+    --text-muted: #888;
+
+    --border: #E5E5E5;
+
+    --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.08);
 }
+
+
+/* ========================================
+   BODY
+   ======================================== */
 
 body {
+    min-height: 100vh;
+    margin: 0;
 
-    background: linear-gradient(
-        180deg,
-        #F8F8F2,
-        #EDF8E8
-    );
+    background:
+        linear-gradient(
+            180deg,
+            var(--cream-light),
+            var(--primary-light)
+        );
 
+    color: var(--text-body);
+
+    font-family:
+        "Poppins",
+        sans-serif;
+}
+
+
+/* ========================================
+   ASSESSMENT SECTION
+   ======================================== */
+
+.assessment-section {
     min-height: 100vh;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 0;
+
+    position: relative;
+    overflow: hidden;
 }
 
-.assessment-section{
 
-    min-height:100vh;
+/* Decorative background circles */
 
-    display:flex;
+.assessment-section::before,
+.assessment-section::after {
+    content: "";
 
-    justify-content:center;
+    position: absolute;
 
-    align-items:center;
+    border-radius: 50%;
 
-    padding:80px 0;
-
+    pointer-events: none;
 }
 
-.assessment-card{
+.assessment-section::before {
+    width: 280px;
+    height: 280px;
 
-    background:#fff;
+    top: -120px;
+    left: -100px;
 
-    border-radius:28px;
-
-    padding:50px;
-
-    max-width:700px;
-
-    margin:auto;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.08);
-
+    background: rgba(107, 175, 91, 0.08);
 }
 
-.progress-wrapper{
+.assessment-section::after {
+    width: 220px;
+    height: 220px;
 
-    display:flex;
+    right: -90px;
+    bottom: -90px;
 
-    gap:15px;
-
-    justify-content:center;
-
-    margin-bottom:45px;
-
+    background: rgba(244, 162, 97, 0.08);
 }
 
-.step{
 
-    width:14px;
+/* ========================================
+   ASSESSMENT CARD
+   ======================================== */
 
-    height:14px;
+.assessment-card {
+    position: relative;
+    z-index: 2;
 
-    border-radius:50%;
+    width: 100%;
+    max-width: 700px;
 
-    background:#dcdcdc;
+    margin: auto;
 
-    transition:.3s;
+    padding: 50px;
 
+    background: #fff;
+
+    border-radius: 28px;
+
+    box-shadow: var(--shadow-md);
 }
 
-.step.active{
 
-    background:var(--primary);
+/* ========================================
+   PROGRESS
+   ======================================== */
 
-    transform:scale(1.2);
+.progress-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    gap: 14px;
+
+    margin-bottom: 42px;
 }
 
-#wizard-content{
+.step {
+    width: 11px;
+    height: 11px;
 
-    min-height:320px;
+    flex-shrink: 0;
 
+    border-radius: 50%;
+
+    background: #DCDCDC;
+
+    transition:
+        background 250ms ease,
+        transform 250ms ease,
+        box-shadow 250ms ease;
 }
 
-.wizard-navigation{
+.step.active {
+    background: var(--primary);
 
-    display:flex;
+    transform: scale(1.35);
 
-    justify-content:space-between;
-
-    margin-top:40px;
-
+    box-shadow:
+        0 0 0 5px rgba(107, 175, 91, 0.12);
 }
+
+
+/* ========================================
+   WIZARD CONTENT
+   ======================================== */
+
+#step-content {
+    min-height: 320px;
+
+    animation: stepFade 300ms ease;
+}
+
+@keyframes stepFade {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   STEP HEADING
+   ======================================== */
+
+#step-content h2 {
+    margin-bottom: 10px !important;
+
+    color: var(--text-dark);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 2rem;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+#step-content > p {
+    margin-bottom: 32px !important;
+
+    color: var(--text-muted) !important;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   FORM GROUP
+   ======================================== */
+
+#step-content .mb-4 {
+    margin-bottom: 24px !important;
+}
+
+
+/* ========================================
+   FORM LABEL
+   ======================================== */
+
+.form-label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--text-dark);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   FORM INPUT & SELECT
+   ======================================== */
 
 .form-control,
-.form-select{
+.form-select {
+    width: 100%;
 
-    height:58px;
+    height: 56px;
 
-    border-radius:16px;
+    padding: 0 17px;
 
-    border:1px solid #e3e3e3;
+    border: 1px solid var(--border);
 
+    border-radius: 16px;
+
+    background: #fff;
+
+    color: var(--text-dark);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        border-color 200ms ease,
+        box-shadow 200ms ease,
+        background 200ms ease;
+}
+
+.form-control::placeholder {
+    color: #B5B5B5;
+}
+
+.form-control:hover,
+.form-select:hover {
+    border-color: #CFCFCF;
 }
 
 .form-control:focus,
-.form-select:focus{
+.form-select:focus {
+    border-color: var(--primary);
 
-    border-color:#6BAF5B;
+    background: #fff;
 
-    box-shadow:0 0 0 .15rem rgba(107,175,91,.25);
+    box-shadow:
+        0 0 0 4px rgba(107, 175, 91, 0.12);
 
+    outline: none;
 }
 
-.form-label{
 
-    font-weight:600;
+/* ========================================
+   OPTION GRID
+   ======================================== */
 
-    margin-bottom:10px;
+.option-grid {
+    display: grid;
 
+    grid-template-columns: 1fr;
+
+    gap: 14px;
 }
 
-/* ==========================================
+
+/* ========================================
    OPTION CARD
-========================================== */
+   ======================================== */
 
-.option-grid{
+.option-card {
+    position: relative;
 
-    display:grid;
+    padding: 20px 21px;
 
-    grid-template-columns:1fr;
+    border: 1.5px solid #E9E9E9;
 
-    gap:18px;
+    border-radius: 19px;
 
+    background: #fff;
+
+    cursor: pointer;
+
+    transition:
+        transform 250ms ease,
+        border-color 250ms ease,
+        background 250ms ease,
+        box-shadow 250ms ease;
 }
 
-.option-card{
+.option-card:hover {
+    border-color: #A8CC9D;
 
-    border:2px solid #ececec;
+    background: #FCFEFB;
 
-    border-radius:20px;
+    transform: translateY(-2px);
 
-    padding:22px;
-
-    cursor:pointer;
-
-    transition:.25s;
-
-    background:#fff;
-
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-.option-card:hover{
+.option-card.active {
+    border-color: var(--primary);
 
-    border-color:#6BAF5B;
+    background: var(--primary-light);
 
-    transform:translateY(-3px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-
+    box-shadow:
+        0 8px 24px rgba(107, 175, 91, 0.10);
 }
 
-.option-card.active{
 
-    border-color:#6BAF5B;
+/* Selected indicator */
 
-    background:#EDF8E8;
+.option-card.active::after {
+    content: "✓";
 
+    position: absolute;
+
+    top: 15px;
+    right: 17px;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: #fff;
+
+    font-size: 12px;
+
+    font-weight: 700;
 }
 
-.option-card h5{
 
-    margin-bottom:6px;
+/* ========================================
+   OPTION CARD TYPOGRAPHY
+   ======================================== */
 
-    font-weight:700;
+.option-card h5 {
+    margin: 0 30px 6px 0;
 
+    color: var(--text-dark);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.3;
+
+    font-weight: 600;
 }
 
-.option-card p{
+.option-card p {
+    margin: 0;
 
-    margin:0;
+    color: #777;
 
-    color:#666;
+    font-size: 13px;
 
-    font-size:.95rem;
-
+    line-height: 1.7;
 }
 
-.loading-overlay{
 
-    position:fixed;
+/* ========================================
+   WIZARD NAVIGATION
+   ======================================== */
 
-    inset:0;
+.wizard-navigation {
+    display: flex;
 
-    background:rgba(255,255,255,.92);
+    align-items: center;
+    justify-content: space-between;
 
-    display:flex;
+    gap: 15px;
 
-    justify-content:center;
+    margin-top: 35px;
 
-    align-items:center;
+    padding-top: 25px;
 
-    z-index:9999;
-
-    backdrop-filter:blur(8px);
-
+    border-top: 1px solid #F0F0F0;
 }
 
-.loading-card{
 
-    width:500px;
+/* ========================================
+   NAVIGATION BUTTONS
+   ======================================== */
 
-    background:white;
+.wizard-navigation .btn {
+    min-width: 105px;
 
-    border-radius:24px;
+    display: inline-flex;
 
-    padding:45px;
+    align-items: center;
+    justify-content: center;
 
-    text-align:center;
+    gap: 8px;
 
-    box-shadow:0 20px 60px rgba(0,0,0,.08);
+    padding: 11px 18px;
 
+    border-radius: 15px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        transform 200ms ease,
+        background 200ms ease,
+        border-color 200ms ease,
+        color 200ms ease,
+        box-shadow 200ms ease;
 }
 
-.analysis-list{
 
-    text-align:left;
+/* Back */
 
+#wizard-navigation #prevBtn {
+    color: var(--primary-dark);
 }
 
-.analysis-list div{
 
-    padding:12px 0;
+/* Override Bootstrap outline button */
 
-    font-size:17px;
+#prevBtn {
+    border: 1px solid #D8E5D3;
 
-    border-bottom:1px solid #eee;
+    background: transparent;
 
+    color: var(--primary-dark);
 }
 
-.analysis-list{
+#prevBtn:hover:not(:disabled) {
+    border-color: var(--primary);
 
-    margin-top:35px;
+    background: var(--primary-light);
 
+    color: var(--primary-dark);
+
+    transform: translateY(-2px);
 }
 
-.analysis-list div{
 
-    padding:14px 0;
+/* Next / Analyze */
 
-    font-size:16px;
+#nextBtn {
+    border: 1px solid var(--primary);
 
-    transition:.3s;
+    background: var(--primary);
 
-    border-bottom:1px solid #F0F0F0;
+    color: #fff;
 
+    box-shadow:
+        0 8px 20px rgba(107, 175, 91, 0.18);
 }
 
-.analysis-list div.active{
+#nextBtn:hover {
+    border-color: var(--primary-dark);
 
-    color:#6BAF5B;
+    background: var(--primary-dark);
 
-    font-weight:700;
+    color: #fff;
 
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(73, 124, 58, 0.20);
 }
 
-#loadingMessage{
-
-    min-height:28px;
-
+#nextBtn i {
+    transition: transform 200ms ease;
 }
+
+#nextBtn:hover i {
+    transform: translateX(3px);
+}
+
+#prevBtn:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   LOADING OVERLAY
+   ======================================== */
+
+.loading-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(250, 248, 242, 0.88);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* ========================================
+   LOADING CARD
+   ======================================== */
+
+.loading-card {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 45px 40px;
+
+    border-radius: 28px;
+
+    background: #fff;
+
+    text-align: center;
+
+    box-shadow: var(--shadow-md);
+
+    animation: loadingCardIn 350ms ease;
+}
+
+@keyframes loadingCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ========================================
+   LOADING SPINNER
+   ======================================== */
+
+.loading-card .spinner-border {
+    width: 42px;
+    height: 42px;
+
+    border-width: 3px;
+
+    color: var(--primary) !important;
+}
+
+
+/* ========================================
+   LOADING TYPOGRAPHY
+   ======================================== */
+
+.loading-card h3 {
+    margin: 0;
+
+    color: var(--text-dark);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 1.65rem;
+
+    font-weight: 700;
+}
+
+#loadingMessage {
+    min-height: 28px;
+
+    margin-bottom: 0;
+
+    color: var(--primary-dark) !important;
+
+    font-size: 13px;
+}
+
+.loading-card > p.text-secondary {
+    color: #888 !important;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   ANALYSIS LIST
+   ======================================== */
+
+.analysis-list {
+    margin-top: 30px !important;
+
+    padding: 18px 20px;
+
+    border-radius: 18px;
+
+    background: #FAF8F2;
+
+    text-align: left;
+}
+
+.analysis-list div {
+    display: flex;
+
+    align-items: center;
+
+    min-height: 43px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #EDEBE4;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    transition:
+        color 250ms ease,
+        font-weight 250ms ease;
+}
+
+.analysis-list div:last-child {
+    border-bottom: none;
+}
+
+.analysis-list div.active {
+    color: var(--primary);
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 991px) {
+
+    .assessment-section {
+        padding: 60px 0;
+    }
+
+    .assessment-card {
+        max-width: 650px;
+
+        padding: 42px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .assessment-section {
+        min-height: 100vh;
+
+        padding: 40px 15px;
+    }
+
+    .assessment-card {
+        padding: 32px 24px;
+
+        border-radius: 24px;
+    }
+
+    .progress-wrapper {
+        margin-bottom: 35px;
+
+        gap: 12px;
+    }
+
+    .step {
+        width: 10px;
+        height: 10px;
+    }
+
+    #wizard-content,
+    #step-content {
+        min-height: 0;
+    }
+
+    #step-content h2 {
+        font-size: 1.75rem;
+    }
+
+    #step-content > p {
+        font-size: 13px;
+
+        margin-bottom: 26px !important;
+    }
+
+    .form-control,
+    .form-select {
+        height: 54px;
+    }
+
+    .option-card {
+        padding: 18px;
+    }
+
+    .wizard-navigation {
+        margin-top: 28px;
+
+        padding-top: 20px;
+    }
+
+    .wizard-navigation .btn {
+        min-width: 95px;
+
+        padding: 10px 15px;
+
+        font-size: 13px;
+    }
+
+    .loading-card {
+        padding: 35px 25px;
+
+        border-radius: 24px;
+    }
+}
+
+
+@media (max-width: 575px) {
+
+    .assessment-section {
+        padding: 25px 12px;
+    }
+
+    .assessment-card {
+        padding: 28px 20px;
+
+        border-radius: 22px;
+    }
+
+    .assessment-section::before {
+        width: 190px;
+        height: 190px;
+
+        top: -80px;
+        left: -80px;
+    }
+
+    .assessment-section::after {
+        width: 160px;
+        height: 160px;
+
+        right: -70px;
+        bottom: -70px;
+    }
+
+    .progress-wrapper {
+        gap: 10px;
+
+        margin-bottom: 30px;
+    }
+
+    #step-content h2 {
+        font-size: 1.6rem;
+    }
+
+    #step-content > p {
+        font-size: 12px;
+    }
+
+    .form-label {
+        font-size: 12px;
+    }
+
+    .form-control,
+    .form-select {
+        height: 52px;
+
+        padding: 0 15px;
+
+        border-radius: 14px;
+
+        font-size: 13px;
+    }
+
+    .option-card {
+        padding: 17px;
+
+        border-radius: 17px;
+    }
+
+    .option-card h5 {
+        font-size: 0.98rem;
+    }
+
+    .option-card p {
+        font-size: 12px;
+    }
+
+    .option-card.active::after {
+        top: 13px;
+        right: 13px;
+
+        width: 22px;
+        height: 22px;
+
+        font-size: 11px;
+    }
+
+    .wizard-navigation {
+        gap: 10px;
+    }
+
+    .wizard-navigation .btn {
+        flex: 1;
+
+        min-width: 0;
+
+        padding: 10px 12px;
+
+        border-radius: 14px;
+    }
+
+    .loading-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .analysis-list {
+        padding: 15px 16px;
+    }
+
+    .analysis-list div {
+        font-size: 12px;
+    }
+}
+
+
+/* ========================================
+   MOBILE OVERFLOW PROTECTION
+   ======================================== */
+
+@media (max-width: 767px) {
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .assessment-section,
+    .assessment-card,
+    .loading-overlay,
+    .loading-card {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .assessment-card {
+        overflow: hidden;
+    }
+
+    .option-card,
+    .form-control,
+    .form-select {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+

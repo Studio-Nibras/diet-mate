@@ -1,7 +1,3 @@
-/**
- * DietMate FAQ Data
- */
-
 const faqData = [
 
   {
@@ -9,7 +5,7 @@ const faqData = [
     category: "general",
     question: "Apa itu DietMate?",
     answer:
-      "DietMate adalah pendamping digital yang membantu pengguna memahami kondisi kesehatan dasar, menjalani perjalanan diet yang lebih personal, memonitor progres, dan mendapatkan edukasi mengenai gaya hidup sehat."
+      "DietMate adalah pendamping digital yang membantumu mengenali kondisi kesehatan dasar, menjalani proses diet yang lebih personal, memantau progres, sekaligus belajar soal gaya hidup sehat."
   },
 
   {

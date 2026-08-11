@@ -3,83 +3,53 @@
   <head>
     <meta charset="UTF-8" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>FAQ | DietMate</title>
 
-    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- AOS -->
-    <link
-      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-    <!-- Global CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/responsive.css" />
 
-    <!-- Page CSS -->
     <link rel="stylesheet" href="css/faq.css" />
   </head>
 
   <body>
-
-    <!-- Navbar -->
     <div id="navbar"></div>
 
     <main>
-
-      <!-- ========================================
-           HERO
-      ======================================== -->
-
       <section class="faq-hero">
-
         <div class="faq-hero-decoration faq-decoration-one"></div>
         <div class="faq-hero-decoration faq-decoration-two"></div>
 
         <div class="container">
-
           <div class="row justify-content-center text-center">
-
             <div class="col-lg-8">
-
-              <span
-                class="faq-badge"
-                data-aos="fade-up"
-              >
+              <span class="faq-badge" data-aos="fade-up">
                 <i class="bi bi-chat-square-text"></i>
-                Frequently Asked Questions
+                Pertanyaan yang Sering Diajukan
               </span>
 
               <h1
@@ -87,8 +57,8 @@
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                Got Questions?
-                <span>We've Got Answers.</span>
+                Ada Pertanyaan?
+                <span>Kami Punya Jawabannya.</span>
               </h1>
 
               <p
@@ -96,73 +66,38 @@
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                Find answers to common questions about DietMate,
-                your assessment, meal plans, progress, and education.
+                Temukan jawaban atas pertanyaan umum seputar DietMate,
+                assessment, rencana menu, progres, dan edukasi.
               </p>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
-
-      <!-- ========================================
-           FAQ CONTENT
-      ======================================== -->
-
       <section class="faq-section">
-
         <div class="container">
 
-          <!-- Category Filter -->
-
-          <div
-            class="faq-categories"
-            data-aos="fade-up"
-          >
-
-            <button
-              class="faq-category active"
-              data-category="all"
-            >
-              All Questions
+          <div class="faq-categories" data-aos="fade-up">
+            <button class="faq-category active" data-category="all">
+              Semua Pertanyaan
             </button>
 
-            <button
-              class="faq-category"
-              data-category="general"
-            >
-              General
+            <button class="faq-category" data-category="general">
+              Umum
             </button>
 
-            <button
-              class="faq-category"
-              data-category="assessment"
-            >
+            <button class="faq-category" data-category="assessment">
               Assessment
             </button>
 
-            <button
-              class="faq-category"
-              data-category="journey"
-            >
+            <button class="faq-category" data-category="journey">
               Health Journey
             </button>
 
-            <button
-              class="faq-category"
-              data-category="privacy"
-            >
-              Data & Privacy
+            <button class="faq-category" data-category="privacy">
+              Data & Privasi
             </button>
-
           </div>
-
-
-          <!-- FAQ List -->
 
           <div
             id="faq-list"
@@ -170,92 +105,49 @@
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <!-- FAQ items rendered by JavaScript -->
           </div>
 
-
-          <!-- Empty State -->
-
-          <div
-            id="faq-empty"
-            class="faq-empty d-none"
-          >
-
+          <div id="faq-empty" class="faq-empty d-none">
             <div class="faq-empty-icon">
               <i class="bi bi-search"></i>
             </div>
 
-            <h3>
-              No questions found
-            </h3>
+            <h3>Pertanyaan tidak ditemukan </h3>
 
-            <p>
-              Try selecting another category.
-            </p>
-
+            <p>Coba pilih kategori lain.</p>
           </div>
-
         </div>
-
       </section>
 
-
-      <!-- ========================================
-           CTA
-      ======================================== -->
-
       <section class="faq-cta">
-
         <div class="container">
-
-          <div
-            class="faq-cta-card"
-            data-aos="fade-up"
-          >
-
+          <div class="faq-cta-card" data-aos="fade-up">
             <div class="faq-cta-content">
-
-              <span>
-                READY TO GET STARTED?
-              </span>
+              <span> SIAP UNTUK MEMULAI? </span>
 
               <h2>
-                Still Have Questions?
-                <span>Start Your Journey.</span>
+                Masih Ada Pertanyaan? 
+                <span>Mulai Perjalananmu Saja.</span>
               </h2>
 
               <p>
-                Begin with the DietMate assessment and discover
-                your personal health information.
+                Mulai dengan assessment DietMate dan temukan informasi kesehatan personalmu.
               </p>
 
-              <a
-                href="pages/assessment.html"
-                class="btn faq-cta-button"
-              >
-                Start Free Assessment
+              <a href="pages/assessment.html" class="btn faq-cta-button">
+                Mulai Assessment Gratis
                 <i class="bi bi-arrow-right"></i>
               </a>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
-
     </main>
 
-
-    <!-- Footer -->
     <div id="footer"></div>
 
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <script>
@@ -265,13 +157,10 @@
       });
     </script>
 
-    <!-- Components -->
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
 
-    <!-- FAQ -->
     <script src="js/data/faqs.js"></script>
     <script src="js/faq/faq.js"></script>
-
   </body>
 </html>
