@@ -1,16 +1,8 @@
 document.getElementById("appSidebar").innerHTML = `
 
-<!-- =====================================================
-     DESKTOP SIDEBAR
-     ===================================================== -->
-
 <aside class="sidebar">
 
     <div class="sidebar-brand">
-        <div class="brand-mark">
-            🥗
-        </div>
-
         <span>
             DietMate
         </span>
@@ -35,11 +27,6 @@ document.getElementById("appSidebar").innerHTML = `
 
 </aside>
 
-
-<!-- =====================================================
-     MOBILE BOTTOM NAVIGATION
-     ===================================================== -->
-
 <nav class="mobile-bottom-nav">
 
     ${mobileMenu()}
@@ -47,11 +34,6 @@ document.getElementById("appSidebar").innerHTML = `
 </nav>
 
 `;
-
-
-/* =========================================================
-   DESKTOP MENU
-   ========================================================= */
 
 function desktopMenu() {
 
@@ -116,10 +98,6 @@ function desktopMenu() {
 
 }
 
-
-/* =========================================================
-   MOBILE MENU
-   ========================================================= */
 
 function mobileMenu() {
 
@@ -198,10 +176,6 @@ function mobileMenu() {
 
 }
 
-
-/* =========================================================
-   ACTIVE PAGE
-   ========================================================= */
 
 (function setActivePage() {
 
