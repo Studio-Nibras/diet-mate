@@ -320,13 +320,8 @@
 
     color: #999;
 
-    font-size: 0.68rem;
+    font-size: 0.8rem;
 }
-
-
-/* ========================================
-   HEALTH CARD
-======================================== */
 
 .profile-health-card {
     min-height: 120px;

@@ -25,14 +25,14 @@ function renderStep() {
 if (currentStep === steps.length - 1) {
 
     nextBtn.innerHTML = `
-        Analyze
+        Analisis
         <i class="bi bi-arrow-right"></i>
     `;
 
 } else {
 
     nextBtn.innerHTML = `
-        Next
+        Lanjut
         <i class="bi bi-arrow-right"></i>
     `;
 
