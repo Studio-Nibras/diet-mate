@@ -1,0 +1,273 @@
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8faf7;
+
+  overflow: hidden;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    opacity 0.7s ease,
+    visibility 0.7s ease;
+}
+
+.page-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-content {
+  position: relative;
+
+  width: 360px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.loader-orbit {
+  position: absolute;
+
+  border: 1px solid rgba(82, 139, 73, 0.12);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.orbit-one {
+  width: 260px;
+  height: 260px;
+
+  animation: rotate-orbit 12s linear infinite;
+}
+
+.orbit-two {
+  width: 340px;
+  height: 340px;
+
+  border-style: dashed;
+
+  animation: rotate-orbit-reverse 18s linear infinite;
+}
+
+@keyframes rotate-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-orbit-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.loader-food {
+  position: relative;
+
+  width: 82px;
+  height: 82px;
+
+  margin-bottom: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: food-float 3s ease-in-out infinite;
+}
+
+@keyframes food-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.food-circle {
+  width: 62px;
+  height: 62px;
+
+  border-radius: 50%;
+
+  background: #6fa866;
+
+  position: relative;
+
+  box-shadow: 0 12px 30px rgba(82, 139, 73, 0.18);
+}
+
+.food-leaf {
+  position: absolute;
+
+  width: 24px;
+  height: 12px;
+
+  background: #8fbd7f;
+
+  border-radius: 100% 0 100% 0;
+
+  z-index: 2;
+}
+
+.leaf-one {
+  top: 3px;
+  right: 13px;
+
+  transform: rotate(-25deg);
+}
+
+.leaf-two {
+  top: 11px;
+  right: 1px;
+
+  transform: rotate(25deg) scale(0.8);
+}
+
+.loader-brand {
+  position: relative;
+  z-index: 5;
+
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: 600;
+
+  letter-spacing: -1px;
+
+  color: #263b2a;
+}
+
+.loader-brand span {
+  color: #6fa866;
+}
+
+
+.loader-tagline {
+  position: relative;
+  z-index: 5;
+
+  margin: 8px 0 30px;
+
+  font-size: 14px;
+
+  color: #7b887d;
+
+  letter-spacing: 0.2px;
+}
+
+/* ========================================
+   PROGRESS
+======================================== */
+
+.loader-progress {
+  position: relative;
+  z-index: 5;
+
+  width: 180px;
+  height: 4px;
+
+  overflow: hidden;
+
+  border-radius: 100px;
+
+  background: #e2e9e0;
+}
+
+.loader-progress-bar {
+  width: 40%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #6fa866;
+
+  animation: loading-progress 1.6s ease-in-out infinite;
+}
+
+@keyframes loading-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+/* ========================================
+   STATUS
+======================================== */
+
+.loader-status {
+  position: relative;
+  z-index: 5;
+
+  margin-top: 14px;
+
+  font-size: 11px;
+
+  color: #9ba69c;
+
+  letter-spacing: 0.4px;
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 576px) {
+  .loader-content {
+    width: 300px;
+  }
+
+  .orbit-one {
+    width: 220px;
+    height: 220px;
+  }
+
+  .orbit-two {
+    width: 290px;
+    height: 290px;
+  }
+
+  .loader-food {
+    margin-bottom: 24px;
+  }
+
+  .loader-brand {
+    font-size: 32px;
+  }
+
+  .loader-tagline {
+    font-size: 13px;
+  }
+}
