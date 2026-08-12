@@ -2,273 +2,585 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="Personalized daily meal plan from DietMate."
+    />
 
     <title>Meal Plan | DietMate</title>
 
-    <!-- Bootstrap -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
 
-    <!-- Layout -->
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/sidebar.css" />
-    <link rel="stylesheet" href="../css/topbar.css" />
+    <link
+      rel="stylesheet"
+      href="../css/layout.css"
+    />
 
-    <!-- Page -->
-    <link rel="stylesheet" href="../css/meal-plan.css" />
+    <link
+      rel="stylesheet"
+      href="../css/sidebar.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../css/meal-plan.css"
+    />
   </head>
 
+
   <body>
+
     <div class="app-layout">
-      <!-- Sidebar -->
+
       <div id="appSidebar"></div>
 
-      <!-- Main -->
+
       <div class="app-main">
-        <!-- Topbar -->
-        <div id="appTopbar"></div>
 
-        <!-- Content -->
-        <main class="app-content">
-          <!-- Hero -->
+        <main class="app-content meal-page">
 
-          <section class="meal-hero">
-            <div class="row align-items-center">
-              <div class="col-lg-8">
-                <span class="badge bg-success-subtle text-success mb-3">
-                  🍽 Meal Plan
+          <section class="meal-intro">
+
+            <div class="meal-intro-copy">
+
+              <span class="page-eyebrow">
+                Kebutuhan gizi harianmu
+              </span>
+
+              <h1>
+                Rencana makan<br />
+                <em>yang lebih terarah.</em>
+              </h1>
+
+              <p>
+                Pilihan menu yang disesuaikan dengan target kesehatanmu.
+                Kamu bisa mengganti pilihan menu kapan saja.
+              </p>
+
+            </div>
+
+
+            <div class="daily-calorie">
+
+              <div class="calorie-icon">
+                <i class="bi bi-fire"></i>
+              </div>
+
+              <div class="calorie-copy">
+
+                <span>
+                  TARGET HARIAN
                 </span>
 
-                <h2 class="fw-bold">Rencana Makan Harian</h2>
+                <div class="calorie-value">
 
-                <p class="text-secondary mb-0">
-                  Rekomendasi menu yang dipersonalisasi berdasarkan hasil
-                  assessment dan target dietmu.
+                  <strong id="targetCalories">
+                    --
+                  </strong>
+
+                  <small>
+                    kcal
+                  </small>
+
+                </div>
+
+                <p>
+                  Rekomendasi kalori per hari
                 </p>
+
               </div>
 
-              <div class="col-lg-4 mt-4 mt-lg-0">
-                <div class="calorie-card">
-                  <small>Target Kalori Hari Ini</small>
-
-                  <h2 id="targetCalories">--</h2>
-
-                  <span>kcal / hari</span>
-                </div>
-              </div>
             </div>
+
           </section>
 
-          <!-- Meal Cards -->
+          <section class="meal-section">
 
-          <section class="mt-5">
-            <div class="row g-4">
-              <!-- Breakfast -->
+            <div class="section-heading">
 
-              <div class="col-lg-6">
-                <div class="meal-card breakfast">
-                  <div class="meal-icon">🥣</div>
+              <div>
 
-                  <h4>Sarapan</h4>
+                <span class="section-kicker">
+                  MENU HARI INI
+                </span>
 
-                  <h5 id="breakfastName">-</h5>
+                <h2>
+                  Pilihan menu hari ini
+                </h2>
 
-                  <p class="meal-calories">
-                    <span id="breakfastCalories"> -- </span>
-
-                    kcal
-                  </p>
-
-                  <small id="breakfastMacro">
-                    Protein - • Karbo - • Lemak -
-                  </small>
-
-                  <p class="text-secondary">3 Menu Sehat</p>
-
-                  <div class="d-grid gap-2">
-                    <button
-                      class="btn btn-outline-success"
-                      onclick="randomMeal('breakfast')"
-                    >
-                      <i class="bi bi-arrow-repeat"></i>
-
-                      Acak Menu
-                    </button>
-
-                    <button
-                      class="btn btn-success"
-                      onclick="showMealDetail('breakfast')"
-                    >
-                      Lihat Detail
-                    </button>
-                  </div>
-                </div>
               </div>
 
-              <!-- Lunch -->
+              <span class="meal-count">
+                4 waktu makan
+              </span>
 
-              <div class="col-lg-6">
-                <div class="meal-card lunch">
-                  <div class="meal-icon">🍛</div>
-
-                  <h4>Makan Siang</h4>
-
-                  <h5 id="lunchName">-</h5>
-
-                  <p class="meal-calories">
-                    <span id="lunchCalories">--</span>
-
-                    kcal
-                  </p>
-
-                  <small id="lunchMacro"> Protein - • Karbo - • Lemak - </small>
-
-                  <div class="d-grid gap-2 mt-3">
-                    <button
-                      class="btn btn-outline-success"
-                      onclick="randomMeal('lunch')"
-                    >
-                      <i class="bi bi-arrow-repeat"></i>
-
-                      Acak Menu
-                    </button>
-
-                    <button
-                      class="btn btn-success"
-                      onclick="showMealDetail('lunch')"
-                    >
-                      Lihat Detail
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Snack -->
-
-              <div class="col-lg-6">
-                <div class="meal-card snack">
-                  <div class="meal-icon">🍎</div>
-
-                  <h4>Snack</h4>
-
-                  <h5 id="snackName">-</h5>
-
-                  <p class="meal-calories">
-                    <span id="snackCalories">--</span>
-
-                    kcal
-                  </p>
-
-                  <small id="snackMacro"> Protein - • Karbo - • Lemak - </small>
-
-                  <div class="d-grid gap-2 mt-3">
-                    <button
-                      class="btn btn-outline-success"
-                      onclick="randomMeal('snack')"
-                    >
-                      <i class="bi bi-arrow-repeat"></i>
-
-                      Acak Menu
-                    </button>
-
-                    <button
-                      class="btn btn-success"
-                      onclick="showMealDetail('snack')"
-                    >
-                      Lihat Detail
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Dinner -->
-
-              <div class="col-lg-6">
-                <div class="meal-card dinner">
-                  <div class="meal-icon">🍲</div>
-
-                  <h4>Makan Malam</h4>
-
-                  <h5 id="dinnerName">-</h5>
-
-                  <p class="meal-calories">
-                    <span id="dinnerCalories">--</span>
-
-                    kcal
-                  </p>
-
-                  <small id="dinnerMacro">
-                    Protein - • Karbo - • Lemak -
-                  </small>
-
-                  <div class="d-grid gap-2 mt-3">
-                    <button
-                      class="btn btn-outline-success"
-                      onclick="randomMeal('dinner')"
-                    >
-                      <i class="bi bi-arrow-repeat"></i>
-
-                      Acak Menu
-                    </button>
-
-                    <button
-                      class="btn btn-success"
-                      onclick="showMealDetail('dinner')"
-                    >
-                      Lihat Detail
-                    </button>
-                  </div>
-                </div>
-              </div>
             </div>
+
+
+            <!-- =================================================
+                 MEAL GRID
+                 ================================================= -->
+
+            <div class="meal-grid">
+
+
+              <!-- =================================================
+                   BREAKFAST
+                   ================================================= -->
+
+              <article class="meal-card breakfast">
+
+                <div class="meal-card-top">
+
+                  <div class="meal-icon">
+                    🥣
+                  </div>
+
+                  <span class="meal-time">
+                    07:00 — 09:00
+                  </span>
+
+                </div>
+
+
+                <div class="meal-card-content">
+
+                  <span class="meal-label">
+                    SARAPAN
+                  </span>
+
+                  <h3 id="breakfastName">
+                    -
+                  </h3>
+
+                  <div class="meal-calorie-row">
+
+                    <strong id="breakfastCalories">
+                      --
+                    </strong>
+
+                    <span>
+                      kcal
+                    </span>
+
+                  </div>
+
+                  <p
+                    class="meal-macro"
+                    id="breakfastMacro"
+                  >
+                    Protein - • Karbo - • Lemak -
+                  </p>
+
+                </div>
+
+
+                <div class="meal-actions">
+
+                  <button
+                    type="button"
+                    class="btn-random"
+                    onclick="randomMeal('breakfast')"
+                  >
+                    <i class="bi bi-arrow-repeat"></i>
+
+                    Acak
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn-detail"
+                    onclick="showMealDetail('breakfast')"
+                  >
+                    Detail
+
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+
+                </div>
+
+              </article>
+
+
+              <article class="meal-card lunch">
+
+                <div class="meal-card-top">
+
+                  <div class="meal-icon">
+                    🍛
+                  </div>
+
+                  <span class="meal-time">
+                    12:00 — 14:00
+                  </span>
+
+                </div>
+
+
+                <div class="meal-card-content">
+
+                  <span class="meal-label">
+                    MAKAN SIANG
+                  </span>
+
+                  <h3 id="lunchName">
+                    -
+                  </h3>
+
+                  <div class="meal-calorie-row">
+
+                    <strong id="lunchCalories">
+                      --
+                    </strong>
+
+                    <span>
+                      kcal
+                    </span>
+
+                  </div>
+
+                  <p
+                    class="meal-macro"
+                    id="lunchMacro"
+                  >
+                    Protein - • Karbo - • Lemak -
+                  </p>
+
+                </div>
+
+
+                <div class="meal-actions">
+
+                  <button
+                    type="button"
+                    class="btn-random"
+                    onclick="randomMeal('lunch')"
+                  >
+                    <i class="bi bi-arrow-repeat"></i>
+
+                    Acak
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn-detail"
+                    onclick="showMealDetail('lunch')"
+                  >
+                    Detail
+
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+
+                </div>
+
+              </article>
+
+              <article class="meal-card snack">
+
+                <div class="meal-card-top">
+
+                  <div class="meal-icon">
+                    🍎
+                  </div>
+
+                  <span class="meal-time">
+                    15:00 — 17:00
+                  </span>
+
+                </div>
+
+
+                <div class="meal-card-content">
+
+                  <span class="meal-label">
+                    SNACK
+                  </span>
+
+                  <h3 id="snackName">
+                    -
+                  </h3>
+
+                  <div class="meal-calorie-row">
+
+                    <strong id="snackCalories">
+                      --
+                    </strong>
+
+                    <span>
+                      kcal
+                    </span>
+
+                  </div>
+
+                  <p
+                    class="meal-macro"
+                    id="snackMacro"
+                  >
+                    Protein - • Karbo - • Lemak -
+                  </p>
+
+                </div>
+
+
+                <div class="meal-actions">
+
+                  <button
+                    type="button"
+                    class="btn-random"
+                    onclick="randomMeal('snack')"
+                  >
+                    <i class="bi bi-arrow-repeat"></i>
+
+                    Acak
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn-detail"
+                    onclick="showMealDetail('snack')"
+                  >
+                    Detail
+
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+
+                </div>
+
+              </article>
+
+
+              <!-- =================================================
+                   DINNER
+                   ================================================= -->
+
+              <article class="meal-card dinner">
+
+                <div class="meal-card-top">
+
+                  <div class="meal-icon">
+                    🍲
+                  </div>
+
+                  <span class="meal-time">
+                    18:00 — 20:00
+                  </span>
+
+                </div>
+
+
+                <div class="meal-card-content">
+
+                  <span class="meal-label">
+                    MAKAN MALAM
+                  </span>
+
+                  <h3 id="dinnerName">
+                    -
+                  </h3>
+
+                  <div class="meal-calorie-row">
+
+                    <strong id="dinnerCalories">
+                      --
+                    </strong>
+
+                    <span>
+                      kcal
+                    </span>
+
+                  </div>
+
+                  <p
+                    class="meal-macro"
+                    id="dinnerMacro"
+                  >
+                    Protein - • Karbo - • Lemak -
+                  </p>
+
+                </div>
+
+
+                <div class="meal-actions">
+
+                  <button
+                    type="button"
+                    class="btn-random"
+                    onclick="randomMeal('dinner')"
+                  >
+                    <i class="bi bi-arrow-repeat"></i>
+
+                    Acak
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn-detail"
+                    onclick="showMealDetail('dinner')"
+                  >
+                    Detail
+
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+
+                </div>
+
+              </article>
+
+            </div>
+
           </section>
+
+
+          <!-- =================================================
+               NUTRITION NOTE
+               ================================================= -->
+
+          <section class="nutrition-note">
+
+            <div class="nutrition-note-icon">
+              <i class="bi bi-stars"></i>
+            </div>
+
+            <div>
+
+              <span>
+                DIETMATE TIP
+              </span>
+
+              <h3>
+                Fokus pada keseimbangan, bukan kesempurnaan.
+              </h3>
+
+              <p>
+                Gunakan meal plan ini sebagai panduan. Dengarkan kebutuhan
+                tubuhmu dan tetap pastikan makananmu beragam serta bergizi.
+              </p>
+
+            </div>
+
+          </section>
+
         </main>
+
       </div>
+
     </div>
 
-    <div class="modal fade" id="mealModal" tabindex="-1">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="mealModalTitle">Detail Menu</h5>
 
-            <button class="btn-close" data-bs-dismiss="modal"></button>
+    <!-- =====================================================
+         MEAL DETAIL MODAL
+         ===================================================== -->
+
+    <div
+      class="modal fade"
+      id="mealModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered"
+      >
+
+        <div class="modal-content meal-modal">
+
+          <div class="modal-header">
+
+            <div>
+
+              <span class="modal-kicker">
+                MENU OPTIONS
+              </span>
+
+              <h5
+                class="modal-title"
+                id="mealModalTitle"
+              >
+                Detail Menu
+              </h5>
+
+            </div>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+
           </div>
 
-          <div class="modal-body" id="mealModalBody"></div>
+
+          <div
+            class="modal-body"
+            id="mealModalBody"
+          ></div>
+
         </div>
+
       </div>
+
     </div>
 
-    <!-- Bootstrap -->
+
+    <!-- =====================================================
+         BOOTSTRAP
+         ===================================================== -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Components -->
+
+    <!-- =====================================================
+         COMPONENTS
+         ===================================================== -->
 
     <script src="../components/app-sidebar.js"></script>
 
-    <script src="../components/app-topbar.js"></script>
 
-    <!-- Data -->
+    <!-- =====================================================
+         DATA
+         ===================================================== -->
 
     <script src="../js/data/meal-plans.js"></script>
 
-    <!-- JS -->
+
+    <!-- =====================================================
+         JS
+         ===================================================== -->
 
     <script src="../js/storage.js"></script>
 
     <script src="../js/meal-plan/meal-plan.js"></script>
 
-    <!-- Meal Detail Modal -->
   </body>
 </html>

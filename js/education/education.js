@@ -14,11 +14,6 @@ document.addEventListener(
     }
 );
 
-
-/* ========================================
-   FEATURED ARTICLE
-======================================== */
-
 function renderFeaturedArticle() {
 
     const container =
@@ -80,11 +75,6 @@ function renderFeaturedArticle() {
 
 }
 
-
-/* ========================================
-   ARTICLE LIST
-======================================== */
-
 function renderEducationArticles() {
 
     const container =
@@ -143,10 +133,6 @@ function renderEducationArticles() {
 
 }
 
-
-/* ========================================
-   ARTICLE CARD
-======================================== */
 
 function createArticleCard(article) {
 
@@ -221,10 +207,6 @@ function createArticleCard(article) {
 }
 
 
-/* ========================================
-   ARTICLE CLICK
-======================================== */
-
 function setupArticleClick() {
 
     const cards =
@@ -252,11 +234,6 @@ function setupArticleClick() {
     });
 
 }
-
-
-/* ========================================
-   CATEGORY FILTER
-======================================== */
 
 function setupCategoryFilter() {
 
@@ -297,10 +274,6 @@ function setupCategoryFilter() {
 
 }
 
-
-/* ========================================
-   ARTICLE DETAIL
-======================================== */
 
 function openArticleDetail(id) {
 

@@ -1,3 +1,8 @@
+/* =========================================================
+   DIETMATE — ASSESSMENT
+   Modern Organic Minimalism
+   ========================================================= */
+
 :root {
     --primary: #6BAF5B;
     --primary-dark: #497C3A;
@@ -7,58 +12,81 @@
     --cream-light: #F8F8F2;
 
     --text-dark: #2C2C2C;
-    --text-body: #666;
-    --text-muted: #888;
+    --text-body: #666666;
+    --text-muted: #8F8F8F;
 
-    --border: #E5E5E5;
+    --border: #EAEAE6;
+    --border-green: #D9ECD3;
 
-    --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.08);
+    --orange: #F4A261;
+
+    --shadow-soft:
+        0 12px 35px rgba(0, 0, 0, 0.08);
+
+    --shadow-hover:
+        0 20px 50px rgba(0, 0, 0, 0.12);
+
+    --radius-card: 24px;
+    --radius-input: 18px;
+    --radius-button: 18px;
+
+    --transition: 300ms ease;
 }
 
 
-/* ========================================
-   BODY
-   ======================================== */
+/* =========================================================
+   BASE
+   ========================================================= */
+
+html {
+    min-height: 100%;
+}
 
 body {
     min-height: 100vh;
+
     margin: 0;
 
     background:
         linear-gradient(
             180deg,
-            var(--cream-light),
-            var(--primary-light)
+            #F8F8F2 0%,
+            #FAF8F2 48%,
+            #EDF8E8 100%
         );
 
     color: var(--text-body);
 
-    font-family:
-        "Poppins",
-        sans-serif;
+    font-family: "Poppins", sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+
+    overflow-x: hidden;
 }
 
 
-/* ========================================
+/* =========================================================
    ASSESSMENT SECTION
-   ======================================== */
+   ========================================================= */
 
 .assessment-section {
+    position: relative;
+
     min-height: 100vh;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 80px 0;
+    padding: 70px 0;
 
-    position: relative;
     overflow: hidden;
 }
 
 
-/* Decorative background circles */
+/* =========================================================
+   ORGANIC BACKGROUND SHAPES
+   ========================================================= */
 
 .assessment-section::before,
 .assessment-section::after {
@@ -69,58 +97,86 @@ body {
     border-radius: 50%;
 
     pointer-events: none;
+
+    filter: blur(2px);
 }
 
 .assessment-section::before {
-    width: 280px;
-    height: 280px;
+    width: 360px;
+    height: 360px;
 
-    top: -120px;
-    left: -100px;
+    top: -170px;
+    left: -130px;
 
-    background: rgba(107, 175, 91, 0.08);
+    background:
+        rgba(107, 175, 91, 0.08);
 }
 
 .assessment-section::after {
-    width: 220px;
-    height: 220px;
+    width: 300px;
+    height: 300px;
 
-    right: -90px;
-    bottom: -90px;
+    right: -130px;
+    bottom: -130px;
 
-    background: rgba(244, 162, 97, 0.08);
+    background:
+        rgba(244, 162, 97, 0.07);
 }
 
 
-/* ========================================
-   ASSESSMENT CARD
-   ======================================== */
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.assessment-section .container {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
 
 .assessment-card {
     position: relative;
-    z-index: 2;
 
     width: 100%;
+
     max-width: 700px;
 
     margin: auto;
 
-    padding: 50px;
+    padding: 48px;
 
-    background: #fff;
+    background: #FFFFFF;
 
-    border-radius: 28px;
+    border:
+        1px solid rgba(107, 175, 91, 0.08);
 
-    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-card);
+
+    box-shadow: var(--shadow-soft);
+
+    transition:
+        box-shadow var(--transition),
+        transform var(--transition);
+}
+
+.assessment-card:hover {
+    box-shadow:
+        0 16px 42px rgba(0, 0, 0, 0.09);
 }
 
 
-/* ========================================
-   PROGRESS
-   ======================================== */
+/* =========================================================
+   PROGRESS INDICATOR
+   ========================================================= */
 
 .progress-wrapper {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -130,19 +186,21 @@ body {
 }
 
 .step {
-    width: 11px;
-    height: 11px;
+    position: relative;
+
+    width: 10px;
+    height: 10px;
 
     flex-shrink: 0;
 
     border-radius: 50%;
 
-    background: #DCDCDC;
+    background: #DCDCD6;
 
     transition:
-        background 250ms ease,
-        transform 250ms ease,
-        box-shadow 250ms ease;
+        background var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
 }
 
 .step.active {
@@ -151,39 +209,46 @@ body {
     transform: scale(1.35);
 
     box-shadow:
-        0 0 0 5px rgba(107, 175, 91, 0.12);
+        0 0 0 5px rgba(107, 175, 91, 0.11);
 }
 
 
-/* ========================================
-   WIZARD CONTENT
-   ======================================== */
+/* =========================================================
+   STEP CONTENT
+   ========================================================= */
 
 #step-content {
     min-height: 320px;
 
-    animation: stepFade 300ms ease;
+    animation:
+        stepFade 300ms ease;
 }
 
 @keyframes stepFade {
+
     from {
         opacity: 0;
-        transform: translateY(6px);
+
+        transform:
+            translateY(8px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
 
 
-/* ========================================
+/* =========================================================
    STEP HEADING
-   ======================================== */
+   ========================================================= */
 
 #step-content h2 {
-    margin-bottom: 10px !important;
+    margin:
+        0 0 10px !important;
 
     color: var(--text-dark);
 
@@ -194,34 +259,37 @@ body {
 
     font-size: 2rem;
 
+    font-weight: 700;
+
     line-height: 1.2;
 
-    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 #step-content > p {
-    margin-bottom: 32px !important;
+    margin:
+        0 0 32px !important;
 
     color: var(--text-muted) !important;
 
     font-size: 14px;
 
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 
-/* ========================================
+/* =========================================================
    FORM GROUP
-   ======================================== */
+   ========================================================= */
 
 #step-content .mb-4 {
     margin-bottom: 24px !important;
 }
 
 
-/* ========================================
-   FORM LABEL
-   ======================================== */
+/* =========================================================
+   LABEL
+   ========================================================= */
 
 .form-label {
     display: block;
@@ -230,15 +298,19 @@ body {
 
     color: var(--text-dark);
 
+    font-family: "Poppins", sans-serif;
+
     font-size: 13px;
 
     font-weight: 600;
+
+    letter-spacing: 0.01em;
 }
 
 
-/* ========================================
-   FORM INPUT & SELECT
-   ======================================== */
+/* =========================================================
+   INPUT + SELECT
+   ========================================================= */
 
 .form-control,
 .form-select {
@@ -246,51 +318,74 @@ body {
 
     height: 56px;
 
-    padding: 0 17px;
+    padding:
+        0 17px;
 
-    border: 1px solid var(--border);
+    background: #FFFFFF;
 
-    border-radius: 16px;
+    border:
+        1px solid var(--border);
 
-    background: #fff;
+    border-radius:
+        var(--radius-input);
 
     color: var(--text-dark);
 
-    font-family: "Poppins", sans-serif;
+    font-family:
+        "Poppins",
+        sans-serif;
 
     font-size: 14px;
 
+    box-shadow: none;
+
     transition:
-        border-color 200ms ease,
-        box-shadow 200ms ease,
-        background 200ms ease;
+        border-color var(--transition),
+        background-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
 }
 
 .form-control::placeholder {
-    color: #B5B5B5;
+    color: #B6B6B1;
 }
 
 .form-control:hover,
 .form-select:hover {
-    border-color: #CFCFCF;
+    border-color: #CFCFC9;
+
+    background: #FEFEFD;
 }
 
 .form-control:focus,
 .form-select:focus {
     border-color: var(--primary);
 
-    background: #fff;
+    background: #FFFFFF;
 
     box-shadow:
-        0 0 0 4px rgba(107, 175, 91, 0.12);
+        0 0 0 4px rgba(107, 175, 91, 0.11);
 
     outline: none;
 }
 
+.form-control:focus::placeholder {
+    color: #C8C8C3;
+}
 
-/* ========================================
+
+/* =========================================================
+   SELECT ARROW
+   ========================================================= */
+
+.form-select {
+    cursor: pointer;
+}
+
+
+/* =========================================================
    OPTION GRID
-   ======================================== */
+   ========================================================= */
 
 .option-grid {
     display: grid;
@@ -301,63 +396,112 @@ body {
 }
 
 
-/* ========================================
+/* =========================================================
    OPTION CARD
-   ======================================== */
+   ========================================================= */
 
 .option-card {
     position: relative;
 
-    padding: 20px 21px;
+    padding: 21px 22px;
 
-    border: 1.5px solid #E9E9E9;
+    background: #FFFFFF;
 
-    border-radius: 19px;
+    border:
+        1px solid var(--border);
 
-    background: #fff;
+    border-radius:
+        var(--radius-input);
 
     cursor: pointer;
 
+    overflow: hidden;
+
     transition:
-        transform 250ms ease,
-        border-color 250ms ease,
-        background 250ms ease,
-        box-shadow 250ms ease;
+        transform var(--transition),
+        border-color var(--transition),
+        background-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.option-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: var(--primary);
+
+    opacity: 0;
+
+    transform:
+        scaleY(0.4);
+
+    transition:
+        opacity var(--transition),
+        transform var(--transition);
 }
 
 .option-card:hover {
-    border-color: #A8CC9D;
+    border-color:
+        #B9D9B0;
 
-    background: #FCFEFB;
+    background:
+        #FCFEFB;
 
-    transform: translateY(-2px);
+    transform:
+        translateY(-3px);
 
     box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.05);
+        0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.option-card:hover::before {
+    opacity: 0.5;
+
+    transform:
+        scaleY(0.65);
 }
 
 .option-card.active {
-    border-color: var(--primary);
+    border-color:
+        var(--primary);
 
-    background: var(--primary-light);
+    background:
+        var(--primary-light);
 
     box-shadow:
-        0 8px 24px rgba(107, 175, 91, 0.10);
+        0 10px 28px
+        rgba(107, 175, 91, 0.11);
+}
+
+.option-card.active::before {
+    opacity: 1;
+
+    transform:
+        scaleY(1);
 }
 
 
-/* Selected indicator */
+/* =========================================================
+   SELECTED CHECK
+   ========================================================= */
 
 .option-card.active::after {
     content: "✓";
 
     position: absolute;
 
-    top: 15px;
+    top: 16px;
     right: 17px;
 
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 25px;
 
     display: flex;
     align-items: center;
@@ -365,51 +509,95 @@ body {
 
     border-radius: 50%;
 
-    background: var(--primary);
+    background:
+        var(--primary);
 
-    color: #fff;
+    color:
+        #FFFFFF;
 
     font-size: 12px;
 
     font-weight: 700;
+
+    box-shadow:
+        0 4px 10px
+        rgba(107, 175, 91, 0.18);
+
+    animation:
+        checkPop 200ms ease;
+}
+
+@keyframes checkPop {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
 }
 
 
-/* ========================================
-   OPTION CARD TYPOGRAPHY
-   ======================================== */
+/* =========================================================
+   OPTION TYPOGRAPHY
+   ========================================================= */
 
 .option-card h5 {
-    margin: 0 30px 6px 0;
+    margin:
+        0 35px 7px 0;
 
-    color: var(--text-dark);
+    color:
+        var(--text-dark);
 
     font-family:
         "Playfair Display",
         Georgia,
         serif;
 
-    font-size: 1.05rem;
+    font-size:
+        1.05rem;
 
-    line-height: 1.3;
+    font-weight:
+        600;
 
-    font-weight: 600;
+    line-height:
+        1.3;
 }
 
 .option-card p {
     margin: 0;
 
-    color: #777;
+    color:
+        var(--text-body);
 
-    font-size: 13px;
+    font-size:
+        13px;
 
-    line-height: 1.7;
+    line-height:
+        1.7;
+}
+
+.option-card.active h5 {
+    color:
+        var(--primary-dark);
+}
+
+.option-card.active p {
+    color:
+        #5E7658;
 }
 
 
-/* ========================================
+/* =========================================================
    WIZARD NAVIGATION
-   ======================================== */
+   ========================================================= */
 
 .wizard-navigation {
     display: flex;
@@ -419,20 +607,23 @@ body {
 
     gap: 15px;
 
-    margin-top: 35px;
+    margin-top: 30px;
 
     padding-top: 25px;
 
-    border-top: 1px solid #F0F0F0;
+    border-top:
+        1px solid #F0F0EC;
 }
 
 
-/* ========================================
-   NAVIGATION BUTTONS
-   ======================================== */
+/* =========================================================
+   NAVIGATION BUTTON BASE
+   ========================================================= */
 
 .wizard-navigation .btn {
-    min-width: 105px;
+    min-width: 110px;
+
+    min-height: 48px;
 
     display: inline-flex;
 
@@ -441,97 +632,128 @@ body {
 
     gap: 8px;
 
-    padding: 11px 18px;
+    padding:
+        11px 20px;
 
-    border-radius: 15px;
+    border-radius:
+        var(--radius-button);
 
-    font-family: "Poppins", sans-serif;
+    font-family:
+        "Poppins",
+        sans-serif;
 
-    font-size: 14px;
+    font-size:
+        13px;
 
-    font-weight: 600;
+    font-weight:
+        600;
 
     transition:
-        transform 200ms ease,
-        background 200ms ease,
-        border-color 200ms ease,
-        color 200ms ease,
-        box-shadow 200ms ease;
+        transform var(--transition),
+        background-color var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        box-shadow var(--transition);
 }
 
 
-/* Back */
-
-#wizard-navigation #prevBtn {
-    color: var(--primary-dark);
-}
-
-
-/* Override Bootstrap outline button */
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
 
 #prevBtn {
-    border: 1px solid #D8E5D3;
+    border:
+        1px solid #D8E5D3;
 
-    background: transparent;
+    background:
+        transparent;
 
-    color: var(--primary-dark);
+    color:
+        var(--primary-dark);
 }
 
 #prevBtn:hover:not(:disabled) {
-    border-color: var(--primary);
+    border-color:
+        var(--primary);
 
-    background: var(--primary-light);
+    background:
+        var(--primary-light);
 
-    color: var(--primary-dark);
+    color:
+        var(--primary-dark);
 
-    transform: translateY(-2px);
-}
-
-
-/* Next / Analyze */
-
-#nextBtn {
-    border: 1px solid var(--primary);
-
-    background: var(--primary);
-
-    color: #fff;
-
-    box-shadow:
-        0 8px 20px rgba(107, 175, 91, 0.18);
-}
-
-#nextBtn:hover {
-    border-color: var(--primary-dark);
-
-    background: var(--primary-dark);
-
-    color: #fff;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 10px 25px rgba(73, 124, 58, 0.20);
-}
-
-#nextBtn i {
-    transition: transform 200ms ease;
-}
-
-#nextBtn:hover i {
-    transform: translateX(3px);
+    transform:
+        translateY(-2px);
 }
 
 #prevBtn:disabled {
-    opacity: 0.45;
+    opacity:
+        0.42;
 
-    cursor: not-allowed;
+    cursor:
+        not-allowed;
+
+    box-shadow:
+        none;
 }
 
 
-/* ========================================
+/* =========================================================
+   NEXT / ANALYZE
+   ========================================================= */
+
+#nextBtn {
+    border:
+        1px solid var(--primary);
+
+    background:
+        var(--primary);
+
+    color:
+        #FFFFFF;
+
+    box-shadow:
+        0 8px 20px
+        rgba(107, 175, 91, 0.17);
+}
+
+#nextBtn:hover {
+    border-color:
+        var(--primary-dark);
+
+    background:
+        var(--primary-dark);
+
+    color:
+        #FFFFFF;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 26px
+        rgba(73, 124, 58, 0.20);
+}
+
+#nextBtn:active {
+    transform:
+        translateY(0);
+}
+
+#nextBtn i {
+    transition:
+        transform var(--transition);
+}
+
+#nextBtn:hover i {
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
    LOADING OVERLAY
-   ======================================== */
+   ========================================================= */
 
 .loading-overlay {
     position: fixed;
@@ -547,49 +769,72 @@ body {
 
     padding: 20px;
 
-    background: rgba(250, 248, 242, 0.88);
+    background:
+        rgba(250, 248, 242, 0.90);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
 }
 
 
-/* ========================================
+/* =========================================================
    LOADING CARD
-   ======================================== */
+   ========================================================= */
 
 .loading-card {
     width: 100%;
+
     max-width: 500px;
 
-    padding: 45px 40px;
+    padding:
+        44px 40px;
 
-    border-radius: 28px;
+    background:
+        #FFFFFF;
 
-    background: #fff;
+    border:
+        1px solid
+        rgba(107, 175, 91, 0.08);
 
-    text-align: center;
+    border-radius:
+        var(--radius-card);
 
-    box-shadow: var(--shadow-md);
+    text-align:
+        center;
 
-    animation: loadingCardIn 350ms ease;
+    box-shadow:
+        var(--shadow-hover);
+
+    animation:
+        loadingCardIn 350ms ease;
 }
 
 @keyframes loadingCardIn {
+
     from {
         opacity: 0;
-        transform: translateY(12px) scale(0.98);
+
+        transform:
+            translateY(12px)
+            scale(0.98);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0) scale(1);
+
+        transform:
+            translateY(0)
+            scale(1);
     }
 }
 
 
-/* ========================================
+/* =========================================================
    LOADING SPINNER
-   ======================================== */
+   ========================================================= */
 
 .loading-card .spinner-border {
     width: 42px;
@@ -597,182 +842,265 @@ body {
 
     border-width: 3px;
 
-    color: var(--primary) !important;
+    color:
+        var(--primary) !important;
 }
 
 
-/* ========================================
+/* =========================================================
    LOADING TYPOGRAPHY
-   ======================================== */
+   ========================================================= */
 
 .loading-card h3 {
     margin: 0;
 
-    color: var(--text-dark);
+    color:
+        var(--text-dark);
 
     font-family:
         "Playfair Display",
         Georgia,
         serif;
 
-    font-size: 1.65rem;
+    font-size:
+        1.65rem;
 
-    font-weight: 700;
+    font-weight:
+        700;
+
+    line-height:
+        1.25;
 }
 
 #loadingMessage {
-    min-height: 28px;
+    min-height:
+        28px;
 
-    margin-bottom: 0;
+    margin:
+        14px 0 0;
 
-    color: var(--primary-dark) !important;
+    color:
+        var(--primary-dark) !important;
 
-    font-size: 13px;
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.6;
 }
 
 .loading-card > p.text-secondary {
-    color: #888 !important;
+    margin-top:
+        8px;
 
-    font-size: 13px;
+    color:
+        var(--text-muted) !important;
 
-    line-height: 1.7;
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
 }
 
 
-/* ========================================
+/* =========================================================
    ANALYSIS LIST
-   ======================================== */
+   ========================================================= */
 
 .analysis-list {
-    margin-top: 30px !important;
+    margin-top:
+        28px !important;
 
-    padding: 18px 20px;
+    padding:
+        17px 20px;
 
-    border-radius: 18px;
+    background:
+        var(--cream);
 
-    background: #FAF8F2;
+    border:
+        1px solid
+        #EEECE5;
 
-    text-align: left;
+    border-radius:
+        18px;
+
+    text-align:
+        left;
 }
 
 .analysis-list div {
-    display: flex;
+    min-height:
+        42px;
 
-    align-items: center;
+    display:
+        flex;
 
-    min-height: 43px;
+    align-items:
+        center;
 
-    padding: 10px 0;
+    padding:
+        9px 0;
 
-    border-bottom: 1px solid #EDEBE4;
+    border-bottom:
+        1px solid #EDEBE4;
 
-    color: #777;
+    color:
+        #88877F;
 
-    font-size: 13px;
+    font-size:
+        12.5px;
 
-    line-height: 1.5;
+    line-height:
+        1.5;
 
     transition:
         color 250ms ease,
-        font-weight 250ms ease;
+        font-weight 250ms ease,
+        transform 250ms ease;
 }
 
 .analysis-list div:last-child {
-    border-bottom: none;
+    border-bottom:
+        none;
 }
 
 .analysis-list div.active {
-    color: var(--primary);
+    color:
+        var(--primary-dark);
 
-    font-weight: 600;
+    font-weight:
+        600;
+
+    transform:
+        translateX(2px);
 }
 
 
-/* ========================================
-   RESPONSIVE
-   ======================================== */
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 991px) {
 
     .assessment-section {
-        padding: 60px 0;
+        padding:
+            55px 0;
     }
 
     .assessment-card {
-        max-width: 650px;
+        max-width:
+            650px;
 
-        padding: 42px;
+        padding:
+            42px;
     }
 }
 
 
 @media (max-width: 767px) {
 
-    .assessment-section {
-        min-height: 100vh;
+    html,
+    body {
+        max-width:
+            100%;
 
-        padding: 40px 15px;
+        overflow-x:
+            hidden;
+    }
+
+    .assessment-section {
+        min-height:
+            100vh;
+
+        padding:
+            38px 15px;
     }
 
     .assessment-card {
-        padding: 32px 24px;
+        padding:
+            32px 24px;
 
-        border-radius: 24px;
+        border-radius:
+            24px;
     }
 
     .progress-wrapper {
-        margin-bottom: 35px;
+        gap:
+            12px;
 
-        gap: 12px;
+        margin-bottom:
+            34px;
     }
 
     .step {
-        width: 10px;
-        height: 10px;
+        width:
+            10px;
+
+        height:
+            10px;
     }
 
-    #wizard-content,
     #step-content {
-        min-height: 0;
+        min-height:
+            0;
     }
 
     #step-content h2 {
-        font-size: 1.75rem;
+        font-size:
+            1.75rem;
     }
 
     #step-content > p {
-        font-size: 13px;
+        font-size:
+            13px;
 
-        margin-bottom: 26px !important;
+        margin-bottom:
+            26px !important;
     }
 
     .form-control,
     .form-select {
-        height: 54px;
+        height:
+            54px;
     }
 
     .option-card {
-        padding: 18px;
+        padding:
+            18px;
     }
 
     .wizard-navigation {
-        margin-top: 28px;
+        margin-top:
+            28px;
 
-        padding-top: 20px;
+        padding-top:
+            20px;
     }
 
     .wizard-navigation .btn {
-        min-width: 95px;
+        min-width:
+            95px;
 
-        padding: 10px 15px;
+        min-height:
+            46px;
 
-        font-size: 13px;
+        padding:
+            10px 15px;
+
+        font-size:
+            13px;
     }
 
     .loading-card {
-        padding: 35px 25px;
+        padding:
+            35px 25px;
 
-        border-radius: 24px;
+        border-radius:
+            24px;
     }
 }
 
@@ -780,141 +1108,207 @@ body {
 @media (max-width: 575px) {
 
     .assessment-section {
-        padding: 25px 12px;
+        padding:
+            25px 12px;
     }
 
     .assessment-card {
-        padding: 28px 20px;
+        padding:
+            28px 20px;
 
-        border-radius: 22px;
+        border-radius:
+            22px;
     }
 
     .assessment-section::before {
-        width: 190px;
-        height: 190px;
+        width:
+            190px;
 
-        top: -80px;
-        left: -80px;
+        height:
+            190px;
+
+        top:
+            -80px;
+
+        left:
+            -80px;
     }
 
     .assessment-section::after {
-        width: 160px;
-        height: 160px;
+        width:
+            160px;
 
-        right: -70px;
-        bottom: -70px;
+        height:
+            160px;
+
+        right:
+            -70px;
+
+        bottom:
+            -70px;
     }
 
     .progress-wrapper {
-        gap: 10px;
+        gap:
+            10px;
 
-        margin-bottom: 30px;
+        margin-bottom:
+            30px;
     }
 
     #step-content h2 {
-        font-size: 1.6rem;
+        font-size:
+            1.6rem;
     }
 
     #step-content > p {
-        font-size: 12px;
+        font-size:
+            12px;
     }
 
     .form-label {
-        font-size: 12px;
+        font-size:
+            12px;
     }
 
     .form-control,
     .form-select {
-        height: 52px;
+        height:
+            52px;
 
-        padding: 0 15px;
+        padding:
+            0 15px;
 
-        border-radius: 14px;
+        border-radius:
+            16px;
 
-        font-size: 13px;
+        font-size:
+            13px;
     }
 
     .option-card {
-        padding: 17px;
+        padding:
+            17px;
 
-        border-radius: 17px;
+        border-radius:
+            17px;
     }
 
     .option-card h5 {
-        font-size: 0.98rem;
+        font-size:
+            0.98rem;
     }
 
     .option-card p {
-        font-size: 12px;
+        font-size:
+            12px;
     }
 
     .option-card.active::after {
-        top: 13px;
-        right: 13px;
+        top:
+            13px;
 
-        width: 22px;
-        height: 22px;
+        right:
+            13px;
 
-        font-size: 11px;
+        width:
+            22px;
+
+        height:
+            22px;
+
+        font-size:
+            11px;
     }
 
     .wizard-navigation {
-        gap: 10px;
+        gap:
+            10px;
     }
 
     .wizard-navigation .btn {
-        flex: 1;
+        flex:
+            1;
 
-        min-width: 0;
+        min-width:
+            0;
 
-        padding: 10px 12px;
+        min-height:
+            46px;
 
-        border-radius: 14px;
+        padding:
+            10px 12px;
+
+        border-radius:
+            16px;
     }
 
     .loading-card h3 {
-        font-size: 1.4rem;
+        font-size:
+            1.4rem;
     }
 
     .analysis-list {
-        padding: 15px 16px;
+        padding:
+            15px 16px;
     }
 
     .analysis-list div {
-        font-size: 12px;
+        font-size:
+            12px;
     }
 }
 
 
-/* ========================================
-   MOBILE OVERFLOW PROTECTION
-   ======================================== */
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
 
-@media (max-width: 767px) {
-
-    html,
-    body {
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    .assessment-section,
-    .assessment-card,
-    .loading-overlay,
-    .loading-card {
-        max-width: 100%;
-        box-sizing: border-box;
-    }
+@media (max-width: 390px) {
 
     .assessment-card {
-        overflow: hidden;
+        padding:
+            25px 17px;
     }
 
-    .option-card,
-    .form-control,
-    .form-select {
-        max-width: 100%;
-        box-sizing: border-box;
+    #step-content h2 {
+        font-size:
+            1.48rem;
+    }
+
+    .wizard-navigation .btn {
+        font-size:
+            12px;
+    }
+
+    .option-card h5 {
+        font-size:
+            0.94rem;
+    }
+
+    .option-card p {
+        font-size:
+            11.5px;
     }
 }
 
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+}

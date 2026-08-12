@@ -39,7 +39,8 @@
         Georgia,
         serif;
 
-    font-size: 2rem;
+    font-size: 
+        clamp(2.2rem, 4vw, 3.2rem);
 
     font-weight: 700;
 }
@@ -49,13 +50,11 @@
 
     color: #777;
 
-    font-size: 0.82rem;
+    font-size: 14px;
+
+    line-height: 1.7;
 }
 
-
-/* ========================================
-   PROFILE HERO
-======================================== */
 
 .profile-hero {
     position: relative;
@@ -165,7 +164,8 @@
         Georgia,
         serif;
 
-    font-size: 1.7rem;
+    font-size: 
+        clamp(1.6rem, 3vw, 1.9rem);
 
     font-weight: 700;
 }
@@ -175,7 +175,7 @@
 
     color: #6BAF5B;
 
-    font-size: 0.8rem;
+    font-size: 14px;
 
     font-weight: 600;
 }
@@ -257,7 +257,7 @@
 
     color: #2C2C2C;
 
-    font-size: 1rem;
+    font-size: 1.45rem;
 
     font-weight: 700;
 }
@@ -267,13 +267,9 @@
 
     color: #888;
 
-    font-size: 0.72rem;
+    font-size: 0.85rem;
 }
 
-
-/* ========================================
-   INFO CARD
-======================================== */
 
 .profile-info-card {
     position: relative;
@@ -306,7 +302,7 @@
 
     color: #888;
 
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 
     font-weight: 500;
 }
@@ -314,7 +310,7 @@
 .profile-info-card strong {
     color: #2C2C2C;
 
-    font-size: 1rem;
+    font-size: 1.1rem;
 
     font-weight: 600;
 }
@@ -385,7 +381,7 @@
 
     color: #888;
 
-    font-size: 0.68rem;
+    font-size: 0.9rem;
 }
 
 .profile-health-card strong {
@@ -393,7 +389,7 @@
 
     color: #2C2C2C;
 
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 
     font-weight: 700;
 }
@@ -405,13 +401,9 @@
 
     color: #999;
 
-    font-size: 0.65rem;
+    font-size: 0.9rem;
 }
 
-
-/* ========================================
-   GOAL CARD
-======================================== */
 
 .profile-goal-card {
     position: relative;
@@ -505,7 +497,7 @@
         0.65
     );
 
-    font-size: 0.62rem;
+    font-size: 0.75rem;
 
     font-weight: 700;
 
@@ -520,7 +512,7 @@
         Georgia,
         serif;
 
-    font-size: 1.3rem;
+    font-size: 1.45rem;
 }
 
 .profile-goal-content p {
@@ -533,13 +525,9 @@
         0.72
     );
 
-    font-size: 0.72rem;
+    font-size: 0.85rem;
 }
 
-
-/* ========================================
-   DANGER ZONE
-======================================== */
 
 .profile-danger-zone {
     display: flex;
@@ -566,7 +554,7 @@
 
     color: #9B4A4A;
 
-    font-size: 0.82rem;
+    font-size: 0.9rem;
 
     font-weight: 700;
 }
@@ -576,7 +564,7 @@
 
     color: #999;
 
-    font-size: 0.7rem;
+    font-size: 0.85rem;
 }
 
 .profile-reset-btn {
@@ -600,7 +588,7 @@
 
     font-family: inherit;
 
-    font-size: 0.72rem;
+    font-size: 0.9rem;
 
     font-weight: 600;
 
@@ -676,7 +664,7 @@
 
     color: #777;
 
-    font-size: 0.78rem;
+    font-size: 0.9rem;
 
     line-height: 1.7;
 }
@@ -697,7 +685,7 @@
 
     font-family: inherit;
 
-    font-size: 0.73rem;
+    font-size: 0.85rem;
 
     font-weight: 600;
 
@@ -720,10 +708,6 @@
     color: white;
 }
 
-
-/* ========================================
-   RESPONSIVE
-======================================== */
 
 @media (max-width: 768px) {
 

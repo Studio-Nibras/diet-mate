@@ -1,10 +1,5 @@
 const STORAGE_KEY = "dietmate-user";
 
-
-/* ========================================
-   SAVE ASSESSMENT
-======================================== */
-
 function saveAssessment(data) {
 
     localStorage.setItem(
@@ -13,11 +8,6 @@ function saveAssessment(data) {
     );
 
 }
-
-
-/* ========================================
-   GET ASSESSMENT
-======================================== */
 
 function getAssessment() {
 
@@ -31,20 +21,12 @@ function getAssessment() {
 }
 
 
-/* ========================================
-   CLEAR ASSESSMENT
-======================================== */
-
 function clearAssessment() {
 
     localStorage.removeItem(STORAGE_KEY);
 
 }
 
-
-/* ========================================
-   PROGRESS HISTORY
-======================================== */
 
 /**
  * Get weight history from user data.
@@ -69,11 +51,6 @@ function getProgressHistory() {
 
 }
 
-
-/* ========================================
-   SAVE PROGRESS ENTRY
-======================================== */
-
 function saveProgressEntry(weight) {
 
     const user = getAssessment();
@@ -91,12 +68,6 @@ function saveProgressEntry(weight) {
         new Date().toISOString().split("T")[0];
 
 
-    /*
-        Kalau user update beberapa kali
-        di hari yang sama, kita update
-        entry hari tersebut daripada
-        membuat duplikat.
-    */
 
     const existingIndex =
         history.findIndex(
@@ -149,10 +120,6 @@ function saveProgressEntry(weight) {
 }
 
 
-/* ========================================
-   INITIALIZE PROGRESS HISTORY
-======================================== */
-
 function initializeProgressHistory() {
 
     const user = getAssessment();
@@ -162,10 +129,6 @@ function initializeProgressHistory() {
     }
 
 
-    /*
-        Kalau history sudah ada,
-        jangan dibuat ulang.
-    */
 
     if (
         user.progressHistory &&

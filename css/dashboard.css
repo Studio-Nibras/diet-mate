@@ -1,225 +1,1228 @@
-body{
+]:root {
+    --primary: #6BAF5B;
+    --primary-dark: #497C3A;
+    --primary-light: #EDF8E8;
 
-    background:#F8FAF7;
+    --cream: #FAF8F2;
+    --background: #F8FAF7;
 
+    --text-dark: #2C2C2C;
+    --text-body: #666666;
+    --text-muted: #92928B;
+
+    --border: #E8E9E4;
+
+    --shadow-soft:
+        0 12px 35px rgba(0, 0, 0, 0.055);
+
+    --shadow-hover:
+        0 18px 45px rgba(0, 0, 0, 0.09);
+
+    --radius-card: 24px;
+
+    --transition:
+        300ms ease;
 }
 
-.dashboard{
 
-    padding:70px 0;
-
+html {
+    min-height: 100%;
 }
 
-.greeting h2{
+body {
+    min-height: 100vh;
 
-    font-size:2.2rem;
+    margin: 0;
 
-    font-weight:700;
+    background:
+        var(--background);
 
+    color:
+        var(--text-body);
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    -webkit-font-smoothing:
+        antialiased;
+
+    overflow-x:
+        hidden;
 }
 
-.overview-card{
-
-    background:white;
-
-    border-radius:22px;
-
-    padding:28px;
-
-    min-height:220px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:space-between;
-
-    box-shadow:0 10px 35px rgba(0,0,0,.06);
-
-    transition:.25s;
-
-    border-top:5px solid transparent;
-
+.app-main {
+    min-height:
+        100vh;
 }
 
-.bmi-card{
+.app-content.dashboard {
+    width:
+        100%;
 
-    border-top-color:#4CAF50;
+    max-width:
+        1320px;
 
+    margin:
+        0 auto;
+
+    padding:
+        64px 52px 90px;
 }
 
-.bmi-card i{
 
-    color:#4CAF50;
-
+.greeting {
+    margin-bottom:
+        58px;
 }
 
-.calorie-card{
+.dashboard-eyebrow {
+    display:
+        inline-flex;
 
-    border-top-color:#FF9800;
+    align-items:
+        center;
 
+    margin-bottom:
+        15px;
+
+    color:
+        var(--primary-dark);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.14em;
+
+    text-transform:
+        uppercase;
 }
 
-.calorie-card i{
+.dashboard-eyebrow::before {
+    content:
+        "";
 
-    color:#FF9800;
+    width:
+        22px;
 
+    height:
+        2px;
+
+    margin-right:
+        9px;
+
+    background:
+        var(--primary);
+
+    border-radius:
+        10px;
 }
 
-.weight-card{
+.greeting h1 {
+    margin:
+        0 0 8px;
 
-    border-top-color:#2196F3;
+    color:
+        var(--text-dark);
 
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(2.2rem, 4vw, 3.2rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        1.1;
+
+    letter-spacing:
+        -0.025em;
 }
 
-.weight-card i{
+.greeting p {
+    margin:
+        0;
 
-    color:#2196F3;
+    color:
+        var(--text-muted);
 
+    font-size:
+        14px;
+
+    line-height:
+        1.7;
 }
 
-.goal-card{
 
-    border-top-color:#9C27B0;
+/* =========================================================
+   SECTION
+   ========================================================= */
 
+.dashboard-section {
+    margin-top:
+        58px;
 }
 
-.goal-card i{
+.section-heading {
+    display:
+        flex;
 
-    color:#9C27B0;
+    align-items:
+        flex-end;
 
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        22px;
 }
 
-.overview-card:hover{
+.section-kicker {
+    display:
+        block;
 
-    transform:translateY(-6px);
+    margin-bottom:
+        7px;
 
+    color:
+        var(--primary-dark);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.15em;
 }
 
-.overview-card i{
+.section-heading h2 {
+    margin:
+        0;
 
-    font-size:30px;
+    color:
+        var(--text-dark);
 
-    color:#6BAF5B;
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
 
+    font-size:
+        1.55rem;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.25;
 }
 
-.overview-card small{
 
-    display:block;
+/* =========================================================
+   OVERVIEW GRID
+   ========================================================= */
 
-    margin-top:15px;
+.overview-grid {
+    display:
+        grid;
 
-    color:#888;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
 
+    gap:
+        16px;
 }
 
-.overview-card h3{
 
-    font-size:2rem;
+/* =========================================================
+   OVERVIEW CARD
+   ========================================================= */
 
-    font-weight:700;
+.overview-card {
+    position:
+        relative;
 
-    margin:10px 0;
+    min-height:
+        230px;
 
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        space-between;
+
+    padding:
+        25px;
+
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-card);
+
+    box-shadow:
+        var(--shadow-soft);
+
+    overflow:
+        hidden;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
 }
 
-#bmiStatus{
+.overview-card::after {
+    content:
+        "";
 
-    display:inline-block;
+    position:
+        absolute;
 
-    width:fit-content;
+    width:
+        110px;
 
-    padding:6px 14px;
+    height:
+        110px;
 
-    border-radius:50px;
+    right:
+        -55px;
 
-    background:#E8F5E9;
+    bottom:
+        -55px;
 
-    color:#4CAF50;
+    border-radius:
+        50%;
 
-    font-size:14px;
+    background:
+        currentColor;
 
-    font-weight:600;
+    opacity:
+        0.035;
 
+    pointer-events:
+        none;
 }
 
-.menu-card{
+.overview-card:hover {
+    transform:
+        translateY(-5px);
 
-    background:white;
+    box-shadow:
+        var(--shadow-hover);
 
-    border-radius:22px;
-
-    padding:35px;
-
-    text-align:center;
-
-    box-shadow:0 10px 35px rgba(0,0,0,.06);
-
-    transition:.25s;
-
-    cursor:pointer;
-
+    border-color:
+        #D9E4D5;
 }
 
-.menu-card:hover{
 
-    transform:translateY(-6px);
+/* =========================================================
+   CARD TOP
+   ========================================================= */
 
+.card-top {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
 }
 
-.menu-card{
+.card-icon {
+    width:
+        42px;
 
-    font-size:18px;
+    height:
+        42px;
 
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        14px;
+
+    font-size:
+        18px;
 }
 
-.menu-card h5{
+.card-label {
+    color:
+        var(--text-muted);
 
-    margin-top:20px;
+    font-size:
+        11px;
 
-    font-weight:700;
+    font-weight:
+        600;
 
+    letter-spacing:
+        0.01em;
+
+    text-align:
+        right;
 }
 
-.recommendation-card{
 
-    background:linear-gradient(
-        135deg,
-        #6BAF5B,
-        #8BCF7C
-    );
+/* =========================================================
+   CARD VALUES
+   ========================================================= */
 
-    border-radius:24px;
+.card-value-row {
+    display:
+        flex;
 
-    padding:35px;
+    align-items:
+        baseline;
 
-    color:white;
+    gap:
+        7px;
 
-    margin-top:45px;
-
-    box-shadow:0 20px 45px rgba(107,175,91,.25);
-
+    margin-top:
+        25px;
 }
 
-.recommendation-card h3{
+.overview-card h3 {
+    margin:
+        0;
 
-    font-weight:700;
+    color:
+        var(--text-dark);
 
-    margin-bottom:15px;
+    font-family:
+        "Poppins",
+        sans-serif;
 
+    font-size:
+        2.15rem;
+
+    font-weight:
+        700;
+
+    line-height:
+        1;
 }
 
-.recommendation-card p{
+.value-unit {
+    color:
+        var(--text-muted);
 
-    max-width:600px;
+    font-size:
+        12px;
 
-    opacity:.95;
-
+    font-weight:
+        500;
 }
 
-.recommendation-card .btn{
+.card-description {
+    margin:
+        13px 0 0;
 
-    border-radius:14px;
+    color:
+        var(--text-muted);
 
+    font-size:
+        11px;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   BMI
+   ========================================================= */
+
+.bmi-card {
+    color:
+        #4CAF50;
+}
+
+.bmi-card .card-icon {
+    background:
+        #EAF6E7;
+
+    color:
+        #4CAF50;
+}
+
+#bmiStatus {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    padding:
+        6px 11px;
+
+    background:
+        #EAF6E7;
+
+    border-radius:
+        50px;
+
+    color:
+        #4F8D43;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================================
+   CALORIE
+   ========================================================= */
+
+.calorie-card {
+    color:
+        #F4A261;
+}
+
+.calorie-card .card-icon {
+    background:
+        #FFF1E6;
+
+    color:
+        #E68B48;
+}
+
+
+/* =========================================================
+   WEIGHT
+   ========================================================= */
+
+.weight-card {
+    color:
+        #5A9BDB;
+}
+
+.weight-card .card-icon {
+    background:
+        #EAF3FC;
+
+    color:
+        #4D91D3;
+}
+
+
+/* =========================================================
+   GOAL
+   ========================================================= */
+
+.goal-card {
+    color:
+        #A477C6;
+}
+
+.goal-card .card-icon {
+    background:
+        #F3ECF8;
+
+    color:
+        #9467B9;
+}
+
+.goal-value {
+    margin-top:
+        25px;
+}
+
+.goal-value h3 {
+    max-width:
+        100%;
+
+    font-size:
+        1.55rem;
+
+    line-height:
+        1.25;
+}
+
+
+/* =========================================================
+   RECOMMENDATION
+   ========================================================= */
+
+.recommendation-card {
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        35px;
+
+    padding:
+        30px 32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6BAF5B 0%,
+            #82C873 100%
+        );
+
+    border-radius:
+        var(--radius-card);
+
+    color:
+        #FFFFFF;
+
+    box-shadow:
+        0 18px 42px
+        rgba(107, 175, 91, 0.20);
+
+    overflow:
+        hidden;
+}
+
+.recommendation-card::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        240px;
+
+    height:
+        240px;
+
+    right:
+        -90px;
+
+    top:
+        -130px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255, 255, 255, 0.10);
+}
+
+.recommendation-card::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        150px;
+
+    height:
+        150px;
+
+    left:
+        40%;
+
+    bottom:
+        -110px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+}
+
+.recommendation-content {
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        17px;
+}
+
+.recommendation-icon {
+    width:
+        46px;
+
+    height:
+        46px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255, 255, 255, 0.17);
+
+    font-size:
+        19px;
+}
+
+.recommendation-copy {
+    max-width:
+        680px;
+}
+
+.recommendation-label {
+    display:
+        block;
+
+    margin-bottom:
+        7px;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.08em;
+
+    text-transform:
+        uppercase;
+}
+
+.recommendation-card h3 {
+    margin:
+        0 0 7px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        1.55rem;
+
+    font-weight:
+        700;
+}
+
+.recommendation-card p {
+    margin:
+        0;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+}
+
+.recommendation-button {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    flex-shrink:
+        0;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    padding:
+        12px 17px;
+
+    background:
+        #FFFFFF;
+
+    border:
+        0;
+
+    border-radius:
+        15px;
+
+    color:
+        var(--primary-dark);
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    cursor:
+        pointer;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.recommendation-button:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.12);
+}
+
+.recommendation-button i {
+    transition:
+        transform var(--transition);
+}
+
+.recommendation-button:hover i {
+    transform:
+        translateX(3px);
+}
+
+
+/* =========================================================
+   QUICK GRID
+   ========================================================= */
+
+.quick-grid {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap:
+        16px;
+}
+
+
+/* =========================================================
+   MENU CARD
+   ========================================================= */
+
+.menu-card {
+    position:
+        relative;
+
+    min-height:
+        190px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+
+    padding:
+        24px;
+
+    background:
+        #FFFFFF;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-card);
+
+    text-decoration:
+        none;
+
+    box-shadow:
+        var(--shadow-soft);
+
+    overflow:
+        hidden;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+.menu-card:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow-hover);
+
+    border-color:
+        #D5E3D1;
+}
+
+.menu-icon {
+    width:
+        44px;
+
+    height:
+        44px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-bottom:
+        24px;
+
+    border-radius:
+        14px;
+
+    font-size:
+        18px;
+}
+
+.meal-icon {
+    background:
+        #FFF1E7;
+
+    color:
+        #E58B48;
+}
+
+.progress-icon {
+    background:
+        #EAF3FC;
+
+    color:
+        #4E91D1;
+}
+
+.education-icon {
+    background:
+        #F3ECF8;
+
+    color:
+        #9164B8;
+}
+
+.menu-copy {
+    max-width:
+        270px;
+}
+
+.menu-copy h3 {
+    margin:
+        0 0 7px;
+
+    color:
+        var(--text-dark);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        1.15rem;
+
+    font-weight:
+        700;
+}
+
+.menu-copy p {
+    margin:
+        0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+}
+
+.menu-arrow {
+    position:
+        absolute;
+
+    top:
+        24px;
+
+    right:
+        24px;
+
+    color:
+        #B6B6AF;
+
+    font-size:
+        17px;
+
+    transition:
+        color var(--transition),
+        transform var(--transition);
+}
+
+.menu-card:hover .menu-arrow {
+    color:
+        var(--primary);
+
+    transform:
+        translate(
+            2px,
+            -2px
+        );
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .app-content.dashboard {
+        padding:
+            52px 35px 80px;
+    }
+
+    .overview-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .quick-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .app-content.dashboard {
+        padding:
+            35px 20px 70px;
+    }
+
+    .greeting {
+        margin-bottom:
+            42px;
+    }
+
+    .greeting h1 {
+        font-size:
+            2.25rem;
+    }
+
+    .dashboard-section {
+        margin-top:
+            44px;
+    }
+
+    .section-heading {
+        margin-bottom:
+            17px;
+    }
+
+    .section-heading h2 {
+        font-size:
+            1.35rem;
+    }
+
+    .overview-grid {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            13px;
+    }
+
+    .overview-card {
+        min-height:
+            200px;
+    }
+
+    .recommendation-card {
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            24px;
+
+        padding:
+            24px;
+    }
+
+    .recommendation-button {
+        justify-content:
+            center;
+
+        width:
+            100%;
+    }
+
+    .quick-grid {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            13px;
+    }
+
+    .menu-card {
+        min-height:
+            160px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .app-content.dashboard {
+        padding:
+            30px 15px 60px;
+    }
+
+    .greeting h1 {
+        font-size:
+            2rem;
+    }
+
+    .greeting p {
+        font-size:
+            12px;
+    }
+
+    .overview-card {
+        padding:
+            22px;
+
+        border-radius:
+            20px;
+    }
+
+    .overview-card h3 {
+        font-size:
+            2rem;
+    }
+
+    .recommendation-card {
+        border-radius:
+            21px;
+    }
+
+    .recommendation-content {
+        gap:
+            13px;
+    }
+
+    .recommendation-icon {
+        width:
+            40px;
+
+        height:
+            40px;
+
+        border-radius:
+            12px;
+    }
+
+    .recommendation-card h3 {
+        font-size:
+            1.3rem;
+    }
+
+    .menu-card {
+        border-radius:
+            20px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        transition:
+            none !important;
+
+        animation:
+            none !important;
+    }
 }

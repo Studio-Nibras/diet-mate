@@ -570,11 +570,6 @@ function renderChart() {
         canvas.getContext("2d");
 
 
-    /*
-        Destroy chart lama kalau
-        render ulang.
-    */
-
     if (weightChart) {
 
         weightChart.destroy();
@@ -704,11 +699,6 @@ function renderChart() {
     });
 
 }
-
-
-/* ========================================
-   DATE FORMAT
-======================================== */
 
 function formatDate(dateString) {
 
@@ -874,11 +864,6 @@ function showUpdateMessage(
 
 }
 
-
-/* ========================================
-   ACHIEVEMENTS
-======================================== */
-
 function renderAchievements(user) {
 
     const container =
@@ -962,7 +947,7 @@ function renderAchievements(user) {
 
                         <p>
                             ${item.unlocked
-                    ? "Achievement unlocked! 🎉"
+                    ? "Achievement unlocked!"
                     : item.description
                 }
                         </p>

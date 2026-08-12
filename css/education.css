@@ -1,13 +1,6 @@
-```css
-/* ========================================
-   EDUCATION
-   DietMate Modern Organic Minimalism
-======================================== */
-
-
-/* ========================================
-   HERO
-======================================== */
+body {
+  font-family: "Poppins", sans-serif;
+}
 
 .education-hero {
 
@@ -82,11 +75,8 @@
         Georgia,
         serif;
 
-    font-size: clamp(
-        2rem,
-        4vw,
-        3rem
-    );
+    font-size: 
+        clamp(2.2rem, 4vw, 3.2rem);
 
     font-weight: 700;
 
@@ -110,16 +100,12 @@
 
     color: #666666;
 
-    font-size: 0.9rem;
+    font-size: 14px;
 
-    line-height: 1.8;
+    line-height: 1.7;
 
 }
 
-
-/* ========================================
-   HERO DECORATION
-======================================== */
 
 .education-hero-decoration {
 
@@ -222,10 +208,6 @@
 }
 
 
-/* ========================================
-   SECTION
-======================================== */
-
 .education-heading {
 
     margin-bottom: 25px;
@@ -239,7 +221,7 @@
 
     color: #2C2C2C;
 
-    font-size: 1.35rem;
+    font-size: 1.55rem;
 
     font-weight: 700;
 
@@ -254,18 +236,13 @@
 
     color: #6BAF5B;
 
-    font-size: 0.7rem;
+    font-size: 12px;
 
     font-weight: 700;
 
     letter-spacing: 1.4px;
 
 }
-
-
-/* ========================================
-   FEATURED
-======================================== */
 
 .education-featured-section {
 
@@ -451,10 +428,6 @@
 }
 
 
-/* ========================================
-   FILTER
-======================================== */
-
 .education-library-section {
 
     margin-bottom: 50px;
@@ -489,7 +462,7 @@
 
     font-family: inherit;
 
-    font-size: 0.76rem;
+    font-size: 0.85rem;
 
     font-weight: 600;
 
@@ -519,10 +492,6 @@
 
 }
 
-
-/* ========================================
-   ARTICLE CARD
-======================================== */
 
 .education-card {
 
@@ -642,7 +611,7 @@
         Georgia,
         serif;
 
-    font-size: 1.15rem;
+    font-size: 1.35rem;
 
     font-weight: 700;
 
@@ -661,7 +630,7 @@
 
     color: #666666;
 
-    font-size: 0.78rem;
+    font-size: 0.88rem;
 
     line-height: 1.7;
 
@@ -706,10 +675,6 @@
 }
 
 
-/* ========================================
-   CARD BACKGROUNDS
-======================================== */
-
 .card-bg-green {
 
     background: #EDF8E8;
@@ -745,10 +710,6 @@
 
 }
 
-
-/* ========================================
-   EMPTY STATE
-======================================== */
 
 .education-empty {
 
@@ -793,14 +754,9 @@
 
     color: #8F8F8F;
 
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 
 }
-
-
-/* ========================================
-   MODAL
-======================================== */
 
 .education-modal {
 
@@ -898,7 +854,7 @@
 
     color: #666666;
 
-    font-size: 0.88rem;
+    font-size: 1rem;
 
     line-height: 1.9;
 
@@ -939,11 +895,6 @@
     margin-bottom: 8px;
 
 }
-
-
-/* ========================================
-   RESPONSIVE
-======================================== */
 
 @media (max-width: 992px) {
 
@@ -1119,4 +1070,4 @@
     }
 
 }
-```
+

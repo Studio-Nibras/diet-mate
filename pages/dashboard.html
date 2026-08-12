@@ -2,177 +2,247 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Your personalized DietMate health dashboard."
+    />
 
     <title>Dashboard | DietMate</title>
 
-    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- Bootstrap Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
 
-    <!-- Layout -->
     <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/sidebar.css" />
-    <link rel="stylesheet" href="../css/topbar.css" />
 
-    <!-- Dashboard -->
+    <link rel="stylesheet" href="../css/sidebar.css" />
+
     <link rel="stylesheet" href="../css/dashboard.css" />
   </head>
 
   <body>
     <div class="app-layout">
-      <!-- Sidebar -->
+
       <div id="appSidebar"></div>
 
       <div class="app-main">
-        <div id="appTopbar"></div>
-        <!-- Content -->
-        <main class="app-content">
-          <!-- Greeting -->
-          <section class="greeting mb-5">
-            <span class="badge bg-success-subtle text-success mb-3">
-              DietMate Dashboard
-            </span>
+        <main class="app-content dashboard">
 
-            <h2 id="greetingTitle">Selamat Datang</h2>
+          <section class="greeting">
+            <div class="greeting-copy">
+              <span class="dashboard-eyebrow"> Perjalanan Sehatmu </span>
 
-            <p id="greetingSubtitle" class="text-secondary">
-              Mari lanjutkan perjalanan hidup sehatmu.
-            </p>
+              <h1 id="greetingTitle">Selamat Datang</h1>
+
+              <p id="greetingSubtitle">
+                Mari lanjutkan perjalanan hidup sehatmu.
+              </p>
+            </div>
           </section>
 
-          <!-- Overview -->
-          <div class="row g-4">
-            <!-- BMI -->
-            <div class="col-xl-3 col-md-6">
-              <div class="overview-card bmi-card">
-                <i class="bi bi-heart-pulse-fill"></i>
+          <section class="dashboard-section">
+            <div class="section-heading">
+              <div>
+                <span class="section-kicker"> RINGKASAN KESEHATAN </span>
 
-                <small>Body Mass Index</small>
-
-                <h3 id="bmiValue">--</h3>
-
-                <span id="bmiStatus">-</span>
+                <h2>Sekilas gambaran kesehatanmu</h2>
               </div>
             </div>
 
-            <!-- Calories -->
-            <div class="col-xl-3 col-md-6">
-              <div class="overview-card calorie-card">
-                <i class="bi bi-fire"></i>
+            <div class="overview-grid">
 
-                <small>Target Kalori</small>
+              <article class="overview-card bmi-card">
+                <div class="card-top">
+                  <div class="card-icon">
+                    <i class="bi bi-heart-pulse-fill"></i>
+                  </div>
 
-                <h3 id="calories">--</h3>
+                  <span class="card-label"> Indeks Massa Tubuh </span>
+                </div>
 
-                <span>kcal / hari</span>
+                <div class="card-value-row">
+                  <h3 id="bmiValue">--</h3>
+
+                  <span id="bmiStatus"> - </span>
+                </div>
+
+                <p class="card-description">Indeks massa tubuhmu saat ini.</p>
+              </article>
+
+              <article class="overview-card calorie-card">
+                <div class="card-top">
+                  <div class="card-icon">
+                    <i class="bi bi-fire"></i>
+                  </div>
+
+                  <span class="card-label"> Kalori Harian </span>
+                </div>
+
+                <div class="card-value-row">
+                  <h3 id="calories">--</h3>
+
+                  <span class="value-unit"> kkal </span>
+                </div>
+
+                <p class="card-description">Kalori yang direkomendasikan untuk hari ini.</p>
+              </article>
+
+              <article class="overview-card weight-card">
+                <div class="card-top">
+                  <div class="card-icon">
+                    <i class="bi bi-person-standing"></i>
+                  </div>
+
+                  <span class="card-label"> Berat Badan Saat Ini </span>
+                </div>
+
+                <div class="card-value-row">
+                  <h3 id="weight">--</h3>
+
+                  <span class="value-unit"> kg </span>
+                </div>
+
+                <p class="card-description">Berat badan terakhir yang tercatat.</p>
+              </article>
+
+
+              <article class="overview-card goal-card">
+                <div class="card-top">
+                  <div class="card-icon">
+                    <i class="bi bi-bullseye"></i>
+                  </div>
+
+                  <span class="card-label"> Tujuan Saat Ini </span>
+                </div>
+
+                <div class="goal-value">
+                  <h3 id="goal">--</h3>
+                </div>
+
+                <p class="card-description">
+                  Tujuan yang kamu pilih saat assessment.
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="dashboard-section">
+            <div class="section-heading">
+              <div>
+                <span class="section-kicker"> HARI INI </span>
+
+                <h2>Panduan singkat untuk hari ini</h2>
               </div>
             </div>
 
-            <!-- Weight -->
-            <div class="col-xl-3 col-md-6">
-              <div class="overview-card weight-card">
-                <i class="bi bi-person-standing"></i>
+            <article class="recommendation-card">
+              <div class="recommendation-content">
 
-                <small>Berat Badan</small>
-
-                <h3 id="weight">--</h3>
-
-                <span>kg</span>
-              </div>
-            </div>
-
-            <!-- Goal -->
-            <div class="col-xl-3 col-md-6">
-              <div class="overview-card goal-card">
-                <i class="bi bi-bullseye"></i>
-
-                <small>Target</small>
-
-                <h3 id="goal">--</h3>
-              </div>
-            </div>
-          </div>
-
-          <section class="mt-5">
-            <div class="recommendation-card">
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span class="badge bg-success-subtle text-success mb-3">
-                    ✨ Rekomendasi Hari Ini
+                <div class="recommendation-copy">
+                  <span class="recommendation-label">
+                    Rekomendasi DietMate
                   </span>
 
                   <h3 id="recommendationTitle">Target Kalori Harian</h3>
 
                   <p id="recommendationText">Memuat rekomendasi...</p>
                 </div>
-
-                <button class="btn btn-success px-4">Lihat Meal Plan</button>
               </div>
-            </div>
+
+              <button
+                type="button"
+                class="recommendation-button"
+                onclick="window.location.href = 'meal-plan.html'"
+              >
+                <span> Lihat Meal Plan </span>
+
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </article>
           </section>
 
-          <!-- Quick Menu -->
-          <section class="mt-5">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <h4 class="fw-bold">Quick Menu</h4>
+          <section class="dashboard-section quick-section">
+            <div class="section-heading">
+              <div>
+                <span class="section-kicker"> JELAJAHI </span>
+
+                <h2>Lanjutkan perjalananmu</h2>
+              </div>
             </div>
 
-            <div class="row g-4">
-              <div class="col-lg-4">
-                <div class="menu-card">
-                  <div class="display-5 mb-3">🍽️</div>
+            <div class="quick-grid">
 
-                  <h5>Meal Plan</h5>
+              <a href="meal-plan.html" class="menu-card">
+                <div class="menu-icon meal-icon">
+                  <i class="bi bi-egg-fried"></i>
+                </div>
+
+                <div class="menu-copy">
+                  <h3>Meal Plan</h3>
 
                   <p>Lihat rekomendasi makanan harian sesuai target dietmu.</p>
                 </div>
-              </div>
 
-              <div class="col-lg-4">
-                <div class="menu-card">
-                  <div class="display-5 mb-3">📈</div>
+                <i class="bi bi-arrow-up-right menu-arrow"></i>
+              </a>
 
-                  <h5>Progress</h5>
+              <a href="progress.html" class="menu-card">
+                <div class="menu-icon progress-icon">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+
+                <div class="menu-copy">
+                  <h3>Progress</h3>
 
                   <p>Pantau perkembangan berat badan dan BMI setiap minggu.</p>
                 </div>
-              </div>
 
-              <div class="col-lg-4">
-                <div class="menu-card">
-                  <div class="display-5 mb-3">📚</div>
+                <i class="bi bi-arrow-up-right menu-arrow"></i>
+              </a>
 
-                  <h5>Edukasi</h5>
-
-                  <p>
-                    Pelajari tips nutrisi dan gaya hidup sehat dari DietMate.
-                  </p>
+              <a href="education.html" class="menu-card">
+                <div class="menu-icon education-icon">
+                  <i class="bi bi-book"></i>
                 </div>
-              </div>
+
+                <div class="menu-copy">
+                  <h3>Edukasi</h3>
+
+                  <p>Pelajari tips nutrisi dan gaya hidup sehat.</p>
+                </div>
+
+                <i class="bi bi-arrow-up-right menu-arrow"></i>
+              </a>
             </div>
           </section>
         </main>
       </div>
     </div>
 
-    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Components -->
     <script src="../components/app-sidebar.js"></script>
-    <script src="../components/app-topbar.js"></script>
 
-    <!-- JS -->
     <script src="../js/storage.js"></script>
+
     <script src="../js/dashboard/dashboard.js"></script>
   </body>
 </html>

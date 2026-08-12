@@ -1,60 +1,60 @@
 const steps = [
     {
-        title: "Welcome",
-        subtitle: "Let's get to know your body first.",
+        title: "Selamat Datang di DietMate",
+        subtitle: "Mari mulai dengan mengenal tubuhmu.",
         content: `
             <div class="mb-4">
-                <label class="form-label">Full Name</label>
-                <input class="form-control" id="name" type="text" placeholder="Enter your name">
+                <label class="form-label">Nama Lengkap</label>
+                <input class="form-control" id="name" type="text" placeholder="Tulis nama lengkapmu">
             </div>
 
             <div class="mb-4">
-                <label class="form-label">Age</label>
-                <input class="form-control" id="age" type="number" placeholder="20">
+                <label class="form-label">Usia</label>
+                <input class="form-control" id="age" type="number" placeholder="Tulis usiamu">
             </div>
 
             <div>
-                <label class="form-label">Gender</label>
+                <label class="form-label">Jenis Kelamin</label>
 
                 <select class="form-select" id="gender">
-                    <option value="">Choose Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="">Pilih Jenis Kelamin</option>
+                    <option value="male">Laki-laki</option>
+                    <option value="female">Perempuan</option>
                 </select>
             </div>
         `
     },
 
     {
-        title: "Body Information",
-        subtitle: "Tell us about your body.",
+        title: "Informasi Tubuh",
+        subtitle: "Beri tahu kami tentang kondisi tubuhmu.",
 
         content: `
             <div class="mb-4">
-                <label class="form-label">Height (cm)</label>
+                <label class="form-label">Tinggi Badan (cm)</label>
 
                 <input
                     class="form-control"
                     id="height"
                     type="number"
-                    placeholder="170">
+                    placeholder="Tulis tinggi badanmu">
             </div>
 
             <div>
-                <label class="form-label">Weight (kg)</label>
+                <label class="form-label">Berat Badan (kg)</label>
 
                 <input
                     class="form-control"
                     id="weight"
                     type="number"
-                    placeholder="65">
+                    placeholder="Tulis berat badanmu">
             </div>
         `
     },
 
     {
-        title: "Lifestyle",
-        subtitle: "Choose your daily activity.",
+        title: "Tingkat Aktivitas",
+        subtitle: "Pilih tingkat aktivitas harianmu.",
 
         content: `
 
@@ -64,9 +64,9 @@ const steps = [
 class="option-card"
 onclick="selectCard('activity-group','1.2',this)">
 
-<h5>Sedentary</h5>
+<h5>Minim Gerak</h5>
 
-<p>Most of the day sitting.</p>
+<p>Sebagian besar waktu dihabiskan duduk.</p>
 
 </div>
 
@@ -74,9 +74,9 @@ onclick="selectCard('activity-group','1.2',this)">
 class="option-card"
 onclick="selectCard('activity-group','1.375',this)">
 
-<h5>Light Active</h5>
+<h5>Aktif Ringan</h5>
 
-<p>Light activity 1-3 days/week.</p>
+<p>Aktivitas ringan 1-3 hari/minggu.</p>
 
 </div>
 
@@ -84,9 +84,9 @@ onclick="selectCard('activity-group','1.375',this)">
 class="option-card"
 onclick="selectCard('activity-group','1.55',this)">
 
-<h5>Moderately Active</h5>
+<h5>Cukup Aktif</h5>
 
-<p>Exercise 3-5 days/week.</p>
+<p>Olahraga 3–5 hari/minggu.</p>
 
 </div>
 
@@ -94,9 +94,9 @@ onclick="selectCard('activity-group','1.55',this)">
 class="option-card"
 onclick="selectCard('activity-group','1.725',this)">
 
-<h5>Very Active</h5>
+<h5>Sangat Aktif</h5>
 
-<p>Exercise almost every day.</p>
+<p>Olahraga hampir setiap hari.</p>
 
 </div>
 
@@ -104,8 +104,8 @@ onclick="selectCard('activity-group','1.725',this)">
     },
 
     {
-        title: "Your Goal",
-        subtitle: "What's your target?",
+        title: "Tujuan",
+        subtitle: "Apa targetmu?",
 
         content:`
 
@@ -115,9 +115,9 @@ onclick="selectCard('activity-group','1.725',this)">
 class="option-card"
 onclick="selectCard('goal-group','lose',this)">
 
-<h5>Lose Weight</h5>
+<h5>Turun Berat Badan</h5>
 
-<p>Reduce body fat safely.</p>
+<p>Kurangi lemak tubuh secara aman.</p>
 
 </div>
 
@@ -125,9 +125,9 @@ onclick="selectCard('goal-group','lose',this)">
 class="option-card"
 onclick="selectCard('goal-group','maintain',this)">
 
-<h5>Maintain</h5>
+<h5>Pertahankan Berat Badan</h5>
 
-<p>Keep your current body.</p>
+<p>Jaga kondisi tubuhmu saat ini.</p>
 
 </div>
 
@@ -135,9 +135,9 @@ onclick="selectCard('goal-group','maintain',this)">
 class="option-card"
 onclick="selectCard('goal-group','gain',this)">
 
-<h5>Gain Weight</h5>
+<h5>Naik Berat Badan</h5>
 
-<p>Increase muscle and weight.</p>
+<p>Tambah massa otot dan berat badan.</p>
 
 </div>
 

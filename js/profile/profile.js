@@ -1,8 +1,3 @@
-/* ========================================
-   DIETMATE PROFILE
-======================================== */
-
-
 document.addEventListener(
     "DOMContentLoaded",
     () => {
@@ -13,11 +8,6 @@ document.addEventListener(
 
     }
 );
-
-
-/* ========================================
-   LOAD PROFILE
-======================================== */
 
 function loadProfile() {
 
@@ -37,11 +27,6 @@ function loadProfile() {
     renderProfile(user);
 
 }
-
-
-/* ========================================
-   RENDER PROFILE
-======================================== */
 
 function renderProfile(user) {
 
@@ -65,10 +50,6 @@ function renderProfile(user) {
         formatNumber(user.bmi);
 
 
-    /* ------------------------------------
-       HERO
-    ------------------------------------ */
-
     setText(
         "profileName",
         name
@@ -86,10 +67,6 @@ function renderProfile(user) {
         getInitial(name)
     );
 
-
-    /* ------------------------------------
-       PERSONAL
-    ------------------------------------ */
 
     setText(
         "profileInfoName",
@@ -110,10 +87,6 @@ function renderProfile(user) {
         gender
     );
 
-
-    /* ------------------------------------
-       BODY
-    ------------------------------------ */
 
     setText(
         "profileHeight",
@@ -139,10 +112,6 @@ function renderProfile(user) {
     );
 
 
-    /* ------------------------------------
-       HEALTH
-    ------------------------------------ */
-
     setText(
         "profileBMR",
         formatNumber(user.bmr)
@@ -161,10 +130,6 @@ function renderProfile(user) {
     );
 
 
-    /* ------------------------------------
-       GOAL
-    ------------------------------------ */
-
     setText(
         "profileGoalDetail",
         goal
@@ -172,10 +137,6 @@ function renderProfile(user) {
 
 }
 
-
-/* ========================================
-   RESET JOURNEY
-======================================== */
 
 function setupResetJourney() {
 
@@ -224,14 +185,6 @@ function setupResetJourney() {
 
             clearAssessment();
 
-            /*
-             * Progress currently uses its own
-             * storage if available.
-             *
-             * We clear it as part of the
-             * Reset Journey flow.
-             */
-
             clearProgressStorage();
 
 
@@ -244,19 +197,7 @@ function setupResetJourney() {
 }
 
 
-/* ========================================
-   CLEAR PROGRESS
-======================================== */
-
 function clearProgressStorage() {
-
-    /*
-     * Remove only known progress-related
-     * keys if they exist.
-     *
-     * This prevents us from deleting
-     * unrelated localStorage data.
-     */
 
     const progressKeys = [
 
@@ -278,11 +219,6 @@ function clearProgressStorage() {
     );
 
 }
-
-
-/* ========================================
-   HELPERS
-======================================== */
 
 function setText(
     id,
@@ -352,13 +288,13 @@ function formatGoal(goal) {
     const goals = {
 
         lose:
-            "Lose Weight",
+            "Turun Berat Badan",
 
         gain:
-            "Gain Weight",
+            "Naik Berat Badan",
 
         maintain:
-            "Maintain Weight"
+            "Pertahankan Berat Badan"
 
     };
 

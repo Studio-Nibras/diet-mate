@@ -1,84 +1,238 @@
 document.getElementById("appSidebar").innerHTML = `
 
-<!-- Desktop Sidebar -->
+<!-- =====================================================
+     DESKTOP SIDEBAR
+     ===================================================== -->
 
-<aside class="sidebar d-none d-lg-flex">
+<aside class="sidebar">
 
-    ${menu()}
+    <div class="sidebar-brand">
+        <div class="brand-mark">
+            🥗
+        </div>
 
-</aside>
+        <span>
+            DietMate
+        </span>
+    </div>
 
-<!-- Mobile Sidebar -->
 
-<div
-    class="offcanvas offcanvas-start"
-    tabindex="-1"
-    id="mobileSidebar">
+    <nav class="sidebar-nav">
 
-    <div class="offcanvas-body">
+        ${desktopMenu()}
 
-        ${menu()}
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a href="profile.html">
+            <i class="bi bi-person"></i>
+            <span>Profil</span>
+        </a>
 
     </div>
 
-</div>
+</aside>
+
+
+<!-- =====================================================
+     MOBILE BOTTOM NAVIGATION
+     ===================================================== -->
+
+<nav class="mobile-bottom-nav">
+
+    ${mobileMenu()}
+
+</nav>
 
 `;
 
-function menu(){
+
+/* =========================================================
+   DESKTOP MENU
+   ========================================================= */
+
+function desktopMenu() {
 
     return `
 
-        <div class="logo">
+        <a
+            href="dashboard.html"
+            data-page="dashboard"
+        >
 
-            🥗 DietMate
+            <i class="bi bi-grid"></i>
 
-        </div>
-
-        <nav>
-
-            <a href="dashboard.html">
-
-                <i class="bi bi-grid"></i>
-
+            <span>
                 Dashboard
+            </span>
 
-            </a>
+        </a>
 
-            <a href="meal-plan.html">
 
-                <i class="bi bi-egg-fried"></i>
+        <a
+            href="meal-plan.html"
+            data-page="meal-plan"
+        >
 
+            <i class="bi bi-egg-fried"></i>
+
+            <span>
                 Meal Plan
+            </span>
 
-            </a>
+        </a>
 
-            <a href="progress.html">
 
-                <i class="bi bi-graph-up"></i>
+        <a
+            href="progress.html"
+            data-page="progress"
+        >
 
+            <i class="bi bi-graph-up"></i>
+
+            <span>
                 Progress
+            </span>
 
-            </a>
+        </a>
 
-            <a href="education.html">
 
-                <i class="bi bi-book"></i>
+        <a
+            href="education.html"
+            data-page="education"
+        >
 
+            <i class="bi bi-book"></i>
+
+            <span>
                 Edukasi
+            </span>
 
-            </a>
-
-            <a href="profile.html">
-
-                <i class="bi bi-person"></i>
-
-                Profil
-
-            </a>
-
-        </nav>
+        </a>
 
     `;
 
 }
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+function mobileMenu() {
+
+    return `
+
+        <a
+            href="dashboard.html"
+            data-page="dashboard"
+        >
+
+            <i class="bi bi-grid"></i>
+
+            <span>
+                Home
+            </span>
+
+        </a>
+
+
+        <a
+            href="meal-plan.html"
+            data-page="meal-plan"
+        >
+
+            <i class="bi bi-egg-fried"></i>
+
+            <span>
+                Meal
+            </span>
+
+        </a>
+
+
+        <a
+            href="progress.html"
+            data-page="progress"
+        >
+
+            <i class="bi bi-graph-up"></i>
+
+            <span>
+                Progress
+            </span>
+
+        </a>
+
+
+        <a
+            href="education.html"
+            data-page="education"
+        >
+
+            <i class="bi bi-book"></i>
+
+            <span>
+                Edukasi
+            </span>
+
+        </a>
+
+
+        <a
+            href="profile.html"
+            data-page="profile"
+        >
+
+            <i class="bi bi-person"></i>
+
+            <span>
+                Profil
+            </span>
+
+        </a>
+
+    `;
+
+}
+
+
+/* =========================================================
+   ACTIVE PAGE
+   ========================================================= */
+
+(function setActivePage() {
+
+    const currentFile =
+        window.location.pathname
+            .split("/")
+            .pop()
+            .replace(".html", "");
+
+    const links =
+        document.querySelectorAll(
+            "#appSidebar a[data-page]"
+        );
+
+    links.forEach((link) => {
+
+        const page =
+            link.dataset.page;
+
+        if (
+            currentFile === page ||
+            (
+                currentFile === "" &&
+                page === "dashboard"
+            )
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+})();

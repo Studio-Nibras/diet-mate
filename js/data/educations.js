@@ -5,7 +5,7 @@ const educationArticles = [
 
         category: "healthy-tips",
 
-        categoryLabel: "Healthy Tips",
+        categoryLabel: "Tips Kesehatan",
 
         title: "Mulai Hidup Sehat dari Kebiasaan Kecil",
 
@@ -57,7 +57,7 @@ const educationArticles = [
 
         category: "nutrition",
 
-        categoryLabel: "Nutrition Basics",
+        categoryLabel: "Dasar-Dasar Gizi",
 
         title: "Memahami Kebutuhan Kalori Harian",
 
@@ -100,7 +100,7 @@ const educationArticles = [
 
         category: "nutrition",
 
-        categoryLabel: "Nutrition Basics",
+        categoryLabel: "Dasar-Dasar Gizi",
 
         title: "Mengenal Makronutrien",
 
@@ -149,7 +149,7 @@ const educationArticles = [
 
         category: "lifestyle",
 
-        categoryLabel: "Healthy Lifestyle",
+        categoryLabel: "Gaya Hidup Sehat",
 
         title: "Pentingnya Aktivitas Fisik",
 
@@ -192,7 +192,7 @@ const educationArticles = [
 
         category: "lifestyle",
 
-        categoryLabel: "Healthy Lifestyle",
+        categoryLabel: "Gaya Hidup Sehat",
 
         title: "Membangun Pola Hidup yang Konsisten",
 
@@ -236,7 +236,7 @@ const educationArticles = [
 
         category: "myth-fact",
 
-        categoryLabel: "Myth vs Fact",
+        categoryLabel: "Mitos vs Fakta",
 
         title: "Mitos: Semua Karbohidrat Harus Dihindari",
 
@@ -274,7 +274,7 @@ const educationArticles = [
 
         category: "myth-fact",
 
-        categoryLabel: "Myth vs Fact",
+        categoryLabel: "Mitos vs Fakta",
 
         title: "Mitos: Makan Sehat Harus Mahal",
 
