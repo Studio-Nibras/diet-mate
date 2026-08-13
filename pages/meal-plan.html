@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
       name="description"
@@ -15,16 +12,9 @@
 
     <title>Meal Plan | DietMate</title>
 
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -43,41 +33,22 @@
 
     <link rel="icon" type="image/x-icon" href="assets/images/logo.jpg" />
 
-    <link
-      rel="stylesheet"
-      href="../css/layout.css"
-    />
+    <link rel="stylesheet" href="../css/layout.css" />
 
-    <link
-      rel="stylesheet"
-      href="../css/sidebar.css"
-    />
+    <link rel="stylesheet" href="../css/sidebar.css" />
 
-    <link
-      rel="stylesheet"
-      href="../css/meal-plan.css"
-    />
+    <link rel="stylesheet" href="../css/meal-plan.css" />
   </head>
 
-
   <body>
-
     <div class="app-layout">
-
       <div id="appSidebar"></div>
 
-
       <div class="app-main">
-
         <main class="app-content meal-page">
-
           <section class="meal-intro">
-
             <div class="meal-intro-copy">
-
-              <span class="page-eyebrow">
-                Kebutuhan gizi harianmu
-              </span>
+              <span class="page-eyebrow"> Kebutuhan gizi harianmu </span>
 
               <h1>
                 Rencana makan<br />
@@ -85,130 +56,68 @@
               </h1>
 
               <p>
-                Pilihan menu yang disesuaikan dengan target kesehatanmu.
-                Kamu bisa mengganti pilihan menu kapan saja.
+                Pilihan menu yang disesuaikan dengan target kesehatanmu. Kamu
+                bisa mengganti pilihan menu kapan saja.
               </p>
-
             </div>
 
-
             <div class="daily-calorie">
-
               <div class="calorie-icon">
                 <i class="bi bi-fire"></i>
               </div>
 
               <div class="calorie-copy">
-
-                <span>
-                  TARGET HARIAN
-                </span>
+                <span> TARGET HARIAN </span>
 
                 <div class="calorie-value">
+                  <strong id="targetCalories"> -- </strong>
 
-                  <strong id="targetCalories">
-                    --
-                  </strong>
-
-                  <small>
-                    kcal
-                  </small>
-
+                  <small> kcal </small>
                 </div>
 
-                <p>
-                  Rekomendasi kalori per hari
-                </p>
-
+                <p>Rekomendasi kalori per hari</p>
               </div>
-
             </div>
-
           </section>
 
           <section class="meal-section">
-
             <div class="section-heading">
-
               <div>
+                <span class="section-kicker"> MENU HARI INI </span>
 
-                <span class="section-kicker">
-                  MENU HARI INI
-                </span>
-
-                <h2>
-                  Pilihan menu hari ini
-                </h2>
-
+                <h2>Pilihan menu hari ini</h2>
               </div>
 
-              <span class="meal-count">
-                4 waktu makan
-              </span>
-
+              <span class="meal-count"> 4 waktu makan </span>
             </div>
 
-
-            <!-- =================================================
-                 MEAL GRID
-                 ================================================= -->
-
             <div class="meal-grid">
-
-
-              <!-- =================================================
-                   BREAKFAST
-                   ================================================= -->
-
               <article class="meal-card breakfast">
-
                 <div class="meal-card-top">
-
                   <div class="meal-icon">
-                    🥣
+                    <i class="bi bi-cup-hot"></i>
                   </div>
 
-                  <span class="meal-time">
-                    07:00 — 09:00
-                  </span>
-
+                  <span class="meal-time"> 07:00 — 09:00 </span>
                 </div>
-
 
                 <div class="meal-card-content">
+                  <span class="meal-label"> SARAPAN </span>
 
-                  <span class="meal-label">
-                    SARAPAN
-                  </span>
-
-                  <h3 id="breakfastName">
-                    -
-                  </h3>
+                  <h3 id="breakfastName">-</h3>
 
                   <div class="meal-calorie-row">
+                    <strong id="breakfastCalories"> -- </strong>
 
-                    <strong id="breakfastCalories">
-                      --
-                    </strong>
-
-                    <span>
-                      kcal
-                    </span>
-
+                    <span> kcal </span>
                   </div>
 
-                  <p
-                    class="meal-macro"
-                    id="breakfastMacro"
-                  >
+                  <p class="meal-macro" id="breakfastMacro">
                     Protein - • Karbo - • Lemak -
                   </p>
-
                 </div>
 
-
                 <div class="meal-actions">
-
                   <button
                     type="button"
                     class="btn-random"
@@ -228,61 +137,35 @@
 
                     <i class="bi bi-arrow-right"></i>
                   </button>
-
                 </div>
-
               </article>
 
-
               <article class="meal-card lunch">
-
                 <div class="meal-card-top">
-
                   <div class="meal-icon">
-                    🍛
+                    <i class="bi bi-egg-fried"></i>
                   </div>
 
-                  <span class="meal-time">
-                    12:00 — 14:00
-                  </span>
-
+                  <span class="meal-time"> 12:00 — 14:00 </span>
                 </div>
-
 
                 <div class="meal-card-content">
+                  <span class="meal-label"> MAKAN SIANG </span>
 
-                  <span class="meal-label">
-                    MAKAN SIANG
-                  </span>
-
-                  <h3 id="lunchName">
-                    -
-                  </h3>
+                  <h3 id="lunchName">-</h3>
 
                   <div class="meal-calorie-row">
+                    <strong id="lunchCalories"> -- </strong>
 
-                    <strong id="lunchCalories">
-                      --
-                    </strong>
-
-                    <span>
-                      kcal
-                    </span>
-
+                    <span> kcal </span>
                   </div>
 
-                  <p
-                    class="meal-macro"
-                    id="lunchMacro"
-                  >
+                  <p class="meal-macro" id="lunchMacro">
                     Protein - • Karbo - • Lemak -
                   </p>
-
                 </div>
 
-
                 <div class="meal-actions">
-
                   <button
                     type="button"
                     class="btn-random"
@@ -302,60 +185,35 @@
 
                     <i class="bi bi-arrow-right"></i>
                   </button>
-
                 </div>
-
               </article>
 
               <article class="meal-card snack">
-
                 <div class="meal-card-top">
-
                   <div class="meal-icon">
-                    🍎
+                    <i class="bi bi-apple"></i>
                   </div>
 
-                  <span class="meal-time">
-                    15:00 — 17:00
-                  </span>
-
+                  <span class="meal-time"> 15:00 — 17:00 </span>
                 </div>
-
 
                 <div class="meal-card-content">
+                  <span class="meal-label"> SNACK </span>
 
-                  <span class="meal-label">
-                    SNACK
-                  </span>
-
-                  <h3 id="snackName">
-                    -
-                  </h3>
+                  <h3 id="snackName">-</h3>
 
                   <div class="meal-calorie-row">
+                    <strong id="snackCalories"> -- </strong>
 
-                    <strong id="snackCalories">
-                      --
-                    </strong>
-
-                    <span>
-                      kcal
-                    </span>
-
+                    <span> kcal </span>
                   </div>
 
-                  <p
-                    class="meal-macro"
-                    id="snackMacro"
-                  >
+                  <p class="meal-macro" id="snackMacro">
                     Protein - • Karbo - • Lemak -
                   </p>
-
                 </div>
 
-
                 <div class="meal-actions">
-
                   <button
                     type="button"
                     class="btn-random"
@@ -375,65 +233,35 @@
 
                     <i class="bi bi-arrow-right"></i>
                   </button>
-
                 </div>
-
               </article>
 
-
-              <!-- =================================================
-                   DINNER
-                   ================================================= -->
-
               <article class="meal-card dinner">
-
                 <div class="meal-card-top">
-
                   <div class="meal-icon">
-                    🍲
+                    <i class="bi bi-basket3"></i>
                   </div>
 
-                  <span class="meal-time">
-                    18:00 — 20:00
-                  </span>
-
+                  <span class="meal-time"> 18:00 — 20:00 </span>
                 </div>
-
 
                 <div class="meal-card-content">
+                  <span class="meal-label"> MAKAN MALAM </span>
 
-                  <span class="meal-label">
-                    MAKAN MALAM
-                  </span>
-
-                  <h3 id="dinnerName">
-                    -
-                  </h3>
+                  <h3 id="dinnerName">-</h3>
 
                   <div class="meal-calorie-row">
+                    <strong id="dinnerCalories"> -- </strong>
 
-                    <strong id="dinnerCalories">
-                      --
-                    </strong>
-
-                    <span>
-                      kcal
-                    </span>
-
+                    <span> kcal </span>
                   </div>
 
-                  <p
-                    class="meal-macro"
-                    id="dinnerMacro"
-                  >
+                  <p class="meal-macro" id="dinnerMacro">
                     Protein - • Karbo - • Lemak -
                   </p>
-
                 </div>
 
-
                 <div class="meal-actions">
-
                   <button
                     type="button"
                     class="btn-random"
@@ -453,84 +281,43 @@
 
                     <i class="bi bi-arrow-right"></i>
                   </button>
-
                 </div>
-
               </article>
-
             </div>
-
           </section>
 
-
-          <!-- =================================================
-               NUTRITION NOTE
-               ================================================= -->
-
           <section class="nutrition-note">
-
             <div class="nutrition-note-icon">
               <i class="bi bi-stars"></i>
             </div>
 
             <div>
+              <span> DIETMATE TIP </span>
 
-              <span>
-                DIETMATE TIP
-              </span>
-
-              <h3>
-                Fokus pada keseimbangan, bukan kesempurnaan.
-              </h3>
+              <h3>Fokus pada keseimbangan, bukan kesempurnaan.</h3>
 
               <p>
                 Gunakan meal plan ini sebagai panduan. Dengarkan kebutuhan
                 tubuhmu dan tetap pastikan makananmu beragam serta bergizi.
               </p>
-
             </div>
-
           </section>
-
         </main>
-
       </div>
-
     </div>
-
 
     <!-- =====================================================
          MEAL DETAIL MODAL
          ===================================================== -->
 
-    <div
-      class="modal fade"
-      id="mealModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
-
-      <div
-        class="modal-dialog modal-lg modal-dialog-centered"
-      >
-
+    <div class="modal fade" id="mealModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content meal-modal">
-
           <div class="modal-header">
-
             <div>
+              <span class="modal-kicker"> MENU OPTIONS </span>
 
-              <span class="modal-kicker">
-                MENU OPTIONS
-              </span>
-
-              <h5
-                class="modal-title"
-                id="mealModalTitle"
-              >
-                Detail Menu
-              </h5>
-
+              <h5 class="modal-title" id="mealModalTitle">Detail Menu</h5>
             </div>
 
             <button
@@ -539,21 +326,12 @@
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
-
           </div>
 
-
-          <div
-            class="modal-body"
-            id="mealModalBody"
-          ></div>
-
+          <div class="modal-body" id="mealModalBody"></div>
         </div>
-
       </div>
-
     </div>
-
 
     <!-- =====================================================
          BOOTSTRAP
@@ -561,20 +339,17 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-
     <!-- =====================================================
          COMPONENTS
          ===================================================== -->
 
     <script src="../components/app-sidebar.js"></script>
 
-
     <!-- =====================================================
          DATA
          ===================================================== -->
 
     <script src="../js/data/meal-plans.js"></script>
-
 
     <!-- =====================================================
          JS
@@ -583,6 +358,5 @@
     <script src="../js/storage.js"></script>
 
     <script src="../js/meal-plan/meal-plan.js"></script>
-
   </body>
 </html>

@@ -38,13 +38,13 @@ function showMealDetail(mealType){
 
     const titleMap = {
 
-        breakfast: "🥣 Sarapan",
+        breakfast: "Sarapan",
 
-        lunch: "🍛 Makan Siang",
+        lunch: "Makan Siang",
 
-        snack: "🍎 Snack",
+        snack: "Snack",
 
-        dinner: "🍲 Makan Malam"
+        dinner: "Makan Malam"
 
     };
 
@@ -122,7 +122,7 @@ function randomMeal(mealType) {
     document.getElementById(`${mealType}Name`).textContent = random.name;
     document.getElementById(`${mealType}Calories`).textContent = random.calories;
     document.getElementById(`${mealType}Macro`).textContent =
-        `🥩 ${random.protein} g • 🍚 ${random.carbs} g • 🥑 ${random.fat} g`;
+        `Protein ${random.protein} g • Karbo ${random.carbs} g • Lemak ${random.fat} g`;
 }
 
 let currentPlan = null;

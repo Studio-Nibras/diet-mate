@@ -14,15 +14,15 @@ nextBtn.addEventListener("click", () => {
 
     if (currentStep < steps.length - 1) {
 
-    currentStep++;
+        currentStep++;
 
-    renderStep();
+        renderStep();
 
-} else {
+    } else {
 
-    analyzeAssessment();
+        analyzeAssessment();
 
-}
+    }
 
 });
 
@@ -100,7 +100,7 @@ function analyzeAssessment() {
 
     const messages = [
 
-        "DietMate AI sedang menganalisis tubuhmu...",
+        "Sistem DietMate sedang menganalisis tubuhmu...",
 
         "Mengolah informasi kesehatan...",
 
@@ -126,7 +126,8 @@ function analyzeAssessment() {
         item.classList.add("active");
 
         item.innerHTML =
-            "✅ " + item.innerText.substring(2);
+            '<span class="status-mark"><i class="bi bi-check-lg"></i></span> ' +
+            item.innerText.replace(/^○\s*/, "");
 
         index++;
 

@@ -58,24 +58,35 @@ function updateProgress() {
 
 }
 
-function selectCard(group, value, element){
+// function selectCard(group, value, element){
 
+//     document
+//         .querySelectorAll(`.${group} .option-card`)
+//         .forEach(card=>card.classList.remove("active"));
+
+//     element.classList.add("active");
+
+//     if (group === "activity-group") {
+
+//     assessmentData.activity = Number(value);
+
+// }
+
+function selectCard(group, value, element) {
     document
         .querySelectorAll(`.${group} .option-card`)
-        .forEach(card=>card.classList.remove("active"));
+        .forEach(card => card.classList.remove("active", "is-invalid"));
 
     element.classList.add("active");
 
+    const error = document.querySelector(`.${group}`)?.parentElement?.querySelector(".field-error");
+    if (error) error.remove();
+
     if (group === "activity-group") {
+        assessmentData.activity = Number(value);
+    }
 
-    assessmentData.activity = Number(value);
-
-}
-
-if (group === "goal-group") {
-
-    assessmentData.goal = value;
-
-}
-
+    if (group === "goal-group") {
+        assessmentData.goal = value;
+    }
 }

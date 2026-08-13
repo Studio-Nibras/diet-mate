@@ -84,10 +84,6 @@ body {
 }
 
 
-/* =========================================================
-   ORGANIC BACKGROUND SHAPES
-   ========================================================= */
-
 .assessment-section::before,
 .assessment-section::after {
     content: "";
@@ -124,20 +120,12 @@ body {
 }
 
 
-/* =========================================================
-   CONTAINER
-   ========================================================= */
-
 .assessment-section .container {
     position: relative;
 
     z-index: 2;
 }
 
-
-/* =========================================================
-   MAIN CARD
-   ========================================================= */
 
 .assessment-card {
     position: relative;
@@ -169,10 +157,6 @@ body {
         0 16px 42px rgba(0, 0, 0, 0.09);
 }
 
-
-/* =========================================================
-   PROGRESS INDICATOR
-   ========================================================= */
 
 .progress-wrapper {
     display: flex;
@@ -213,10 +197,6 @@ body {
 }
 
 
-/* =========================================================
-   STEP CONTENT
-   ========================================================= */
-
 #step-content {
     min-height: 320px;
 
@@ -241,10 +221,6 @@ body {
     }
 }
 
-
-/* =========================================================
-   STEP HEADING
-   ========================================================= */
 
 #step-content h2 {
     margin:
@@ -298,10 +274,6 @@ body {
     letter-spacing: 0.01em;
 }
 
-
-/* =========================================================
-   INPUT + SELECT
-   ========================================================= */
 
 .form-control,
 .form-select {
@@ -365,18 +337,10 @@ body {
 }
 
 
-/* =========================================================
-   SELECT ARROW
-   ========================================================= */
-
 .form-select {
     cursor: pointer;
 }
 
-
-/* =========================================================
-   OPTION GRID
-   ========================================================= */
 
 .option-grid {
     display: grid;
@@ -386,10 +350,6 @@ body {
     gap: 14px;
 }
 
-
-/* =========================================================
-   OPTION CARD
-   ========================================================= */
 
 .option-card {
     position: relative;
@@ -479,10 +439,6 @@ body {
 }
 
 
-/* =========================================================
-   SELECTED CHECK
-   ========================================================= */
-
 .option-card.active::after {
     content: "✓";
 
@@ -536,10 +492,6 @@ body {
 }
 
 
-/* =========================================================
-   OPTION TYPOGRAPHY
-   ========================================================= */
-
 .option-card h5 {
     margin:
         0 35px 7px 0;
@@ -585,11 +537,6 @@ body {
         #5E7658;
 }
 
-
-/* =========================================================
-   WIZARD NAVIGATION
-   ========================================================= */
-
 .wizard-navigation {
     display: flex;
 
@@ -606,10 +553,6 @@ body {
         1px solid #F0F0EC;
 }
 
-
-/* =========================================================
-   NAVIGATION BUTTON BASE
-   ========================================================= */
 
 .wizard-navigation .btn {
     min-width: 110px;
@@ -647,10 +590,6 @@ body {
         box-shadow var(--transition);
 }
 
-
-/* =========================================================
-   BACK BUTTON
-   ========================================================= */
 
 #prevBtn {
     border:
@@ -898,10 +837,6 @@ body {
 }
 
 
-/* =========================================================
-   ANALYSIS LIST
-   ========================================================= */
-
 .analysis-list {
     margin-top:
         28px !important;
@@ -968,6 +903,94 @@ body {
 
     transform:
         translateX(2px);
+}
+
+.analysis-list div .status-mark {
+    width: 22px;
+    height: 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+    background: rgba(107, 175, 91, 0.12);
+
+    border: 1px solid rgba(107, 175, 91, 0.18);
+
+    color: var(--primary-dark);
+
+    font-size: 0.78rem;
+    line-height: 1;
+
+    flex-shrink: 0;
+}
+
+.analysis-list div.active .status-mark {
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 18px rgba(107, 175, 91, 0.18);
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545 !important;
+    background-color: #fff5f5;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.08);
+}
+
+.option-card.is-invalid {
+    border-color: #dc3545 !important;
+    background: #fff5f5;
+}
+
+.field-error {
+    margin-top: 8px;
+    color: #dc3545;
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.analysis-list div {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px solid #EDEBE4;
+    color: #88877F;
+    font-size: 12.5px;
+    line-height: 1.5;
+    transition: color 250ms ease, font-weight 250ms ease, transform 250ms ease;
+}
+
+.analysis-bullet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 9px;
+    height: 9px;
+
+    margin-right: 10px;
+
+    color: #B7B4AA;
+    font-size: 0.45rem;
+    line-height: 1;
+
+    flex-shrink: 0;
+}
+
+.analysis-list div.active .analysis-bullet {
+    color: var(--primary);
 }
 
 
@@ -1283,10 +1306,6 @@ body {
     }
 }
 
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
