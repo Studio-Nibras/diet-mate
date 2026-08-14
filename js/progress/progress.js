@@ -214,7 +214,7 @@ function renderWeightStatistics() {
     if (changeLabel) {
 
         changeLabel.textContent =
-            "kg dari check-in sebelumnya";
+            "kg dari pencatatan sebelumnya";
 
     }
 
@@ -295,7 +295,7 @@ function renderWeeklySummary() {
 
             trendElement.innerHTML = `
                 <i class="bi bi-dash"></i>
-                Butuh minimal 2 check-in
+                Butuh minimal 2 kali pencatatan
             `;
 
         }

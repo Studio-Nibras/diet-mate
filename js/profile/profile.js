@@ -373,7 +373,7 @@ function getBMIStatus(bmi) {
 
 
     if (value < 18.5) {
-        return "Underweight";
+        return "Berat Badan Kurang";
     }
 
 
@@ -383,11 +383,11 @@ function getBMIStatus(bmi) {
 
 
     if (value < 30) {
-        return "Overweight";
+        return "Kelebihan Berat Badan";
     }
 
 
-    return "Obesity";
+    return "Obesitas";
 
 }
 

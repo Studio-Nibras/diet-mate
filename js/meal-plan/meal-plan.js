@@ -81,7 +81,7 @@ function showMealDetail(mealType){
 
             <span class="badge bg-success">
 
-                ${menu.calories} kcal
+                ${menu.calories} kkal
 
             </span>
 
