@@ -159,7 +159,7 @@
 
   letter-spacing: -1px;
 
-  color: #263b2a;
+  color: #6fa866;
 }
 
 .loader-brand span {
@@ -179,10 +179,6 @@
 
   letter-spacing: 0.2px;
 }
-
-/* ========================================
-   PROGRESS
-======================================== */
 
 .loader-progress {
   position: relative;
@@ -223,10 +219,6 @@
   }
 }
 
-/* ========================================
-   STATUS
-======================================== */
-
 .loader-status {
   position: relative;
   z-index: 5;
@@ -239,10 +231,6 @@
 
   letter-spacing: 0.4px;
 }
-
-/* ========================================
-   MOBILE
-======================================== */
 
 @media (max-width: 576px) {
   .loader-content {
