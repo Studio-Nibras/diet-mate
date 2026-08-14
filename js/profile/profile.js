@@ -313,10 +313,10 @@ function formatGender(gender) {
     const genders = {
 
         male:
-            "Male",
+            "Laki-laki",
 
         female:
-            "Female"
+            "Perempuan"
 
     };
 

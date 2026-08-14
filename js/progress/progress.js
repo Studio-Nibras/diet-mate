@@ -174,7 +174,7 @@ function renderWeightStatistics() {
 
         if (changeLabel) {
             changeLabel.textContent =
-                "butuh 2 check-in";
+                "butuh 2 Pencatatan untuk melihat perubahan";
         }
 
         return;
@@ -388,7 +388,7 @@ function getBMIStatus(bmi) {
 
 
     if (bmi < 18.5) {
-        return "Underweight";
+        return "Berat Badan Kurang";
     }
 
 
@@ -398,11 +398,11 @@ function getBMIStatus(bmi) {
 
 
     if (bmi < 30) {
-        return "Overweight";
+        return "Kelebihan Berat Badan";
     }
 
 
-    return "Obesity";
+    return "Obesitas";
 
 }
 
@@ -830,10 +830,6 @@ function setupWeightUpdate() {
 }
 
 
-/* ========================================
-   UPDATE MESSAGE
-======================================== */
-
 function showUpdateMessage(
     element,
     text,
@@ -888,7 +884,7 @@ function renderAchievements(user) {
         {
             icon: "bi-flag-fill",
 
-            title: "Journey Started",
+            title: "Perjalanan Sehat Dimulai",
 
             description:
                 "Kamu sudah menyelesaikan assessment DietMate.",
@@ -901,7 +897,7 @@ function renderAchievements(user) {
         {
             icon: "bi-calendar-check",
 
-            title: "First Check-in",
+            title: "Pencatatan Pertama",
 
             description:
                 "Catat perkembangan berat badan untuk membuka pencapaian ini.",
@@ -915,7 +911,7 @@ function renderAchievements(user) {
         {
             icon: "bi-trophy-fill",
 
-            title: "Consistency",
+            title: "Konsistensi",
 
             description:
                 "Capai 5 kali pencatatan untuk membuka pencapaian ini.",
