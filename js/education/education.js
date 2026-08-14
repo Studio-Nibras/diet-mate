@@ -189,7 +189,7 @@ function createArticleCard(article) {
                         class="education-card-read"
                     >
 
-                        Read More
+                        Baca artikel
 
                         <i
                             class="bi bi-arrow-right"
