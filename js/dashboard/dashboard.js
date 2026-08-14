@@ -34,7 +34,7 @@ function renderDashboard(user){
         getBMIStatus(user.bmi);
 
     document.getElementById("recommendationText").textContent =
-        `Hari ini target konsumsi kalori kamu sekitar ${user.targetCalories} kcal. Pilih makanan bergizi seimbang dan jangan lupa minum air putih yang cukup.`;
+        `Hari ini target konsumsi kalori kamu sekitar ${user.targetCalories} kkal. Pilih makanan bergizi seimbang dan jangan lupa minum air putih yang cukup.`;
 
 }
 
