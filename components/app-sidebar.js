@@ -3,10 +3,9 @@ document.getElementById("appSidebar").innerHTML = `
 <aside class="sidebar">
 
     <div class="sidebar-brand">
-        <span>
-            DietMate
-        </span>
-    </div>
+    <img src="../assets/images/logoo.png" alt="DietMate logo" class="sidebar-logo">
+    <span>DietMate</span>
+</div>
 
 
     <nav class="sidebar-nav">

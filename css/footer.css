@@ -6,17 +6,40 @@
 }
 
 .footer-logo {
-    text-decoration: none;
-    font-family: "Playfair Display", serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #6BAF5B;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
 
+.footer-brand-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.footer-logo span {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #6BAF5B;
+  letter-spacing: -0.02em;
+}
+
+/* .footer-version {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  color: #7b7b7b;
+} */
+
 .footer-description {
-    color: #666;
-    line-height: 1.8;
-    max-width: 340px;
+  color: #666;
+  line-height: 1.8;
+  max-width: 340px;
 }
 
 .footer-title {
