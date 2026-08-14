@@ -25,13 +25,13 @@
 .navbar-brand.logo-brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 2px;
   text-decoration: none;
 }
 
 .logo-brand .logo-img {
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
   display: block;
   flex-shrink: 0;
