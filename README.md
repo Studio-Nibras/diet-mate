@@ -1,164 +1,35 @@
-# DietMate 🥗
+# DietMate - Teman Setia Menuju Pola Makan Sehat.
 
-> Teman perjalananmu menuju pola hidup yang lebih sehat.
+## Instansi
 
-DietMate adalah aplikasi web berbasis nutrisi yang dirancang untuk membantu pengguna memahami kebutuhan nutrisi mereka dan membangun pola makan yang lebih terstruktur berdasarkan kondisi serta tujuan pribadi.
+Universitas Islam Batik Surakarta
 
-DietMate menyediakan fitur assessment, analisis kebutuhan nutrisi, rekomendasi meal plan, tracking progress, edukasi nutrisi, dan profil pengguna dalam satu platform yang sederhana dan mudah digunakan.
+## Anggota Tim
+- Ketua         : Rosid Hakimudin
+    - Anggota 1 : Ekmal Fauzi Arrosyid
+    - Anggota 2 : Dadang Krisnarto
 
+## Deskripsi Karya
 
-## Fitur Utama
+**DietMate — Teman Setia Menuju Pola Makan Sehat.** adalah platform web yang membantu pengguna menjalani perjalanan hidup sehat secara lebih personal melalui konsep **Health Journey**.
 
-### Personalized Assessment
+Pengguna dapat memulai dengan **health assessment**, mendapatkan perhitungan **BMI, BMR, dan kebutuhan kalori harian**, kemudian melanjutkan perjalanan melalui **personalized dashboard, meal plan, progress tracker, dan nutrition education**.
 
-Pengguna dapat melakukan assessment dengan memasukkan informasi pribadi seperti:
+Dirancang dengan pendekatan **modern, minimalist, organic, dan user-centered**, DietMate bertujuan membuat proses memulai pola hidup sehat menjadi lebih sederhana, informatif, dan mudah diikuti.
 
-- Usia
-- Jenis kelamin
-- Tinggi badan
-- Berat badan
-- Tingkat aktivitas
-- Tujuan nutrisi
+### Key Features
 
-Data tersebut digunakan untuk menghasilkan rekomendasi nutrisi yang lebih sesuai dengan kebutuhan pengguna.
+* **Health Assessment** — Mengumpulkan data dasar dan menganalisis kondisi kesehatan pengguna.
+* **Personalized Dashboard** — Menampilkan ringkasan kesehatan dan progres pengguna.
+* **Meal Plan** — Menyediakan rekomendasi menu berdasarkan tujuan pengguna.
+* **Progress Tracker** — Membantu pengguna memantau perkembangan dari waktu ke waktu.
+* **Education Center** — Menyediakan edukasi mengenai nutrisi dan gaya hidup sehat.
+* **Local Storage** — Menyimpan data perjalanan pengguna secara lokal tanpa backend.
 
-### Nutrition Analysis
+### Built With
 
-DietMate melakukan analisis berdasarkan data assessment pengguna, meliputi:
+`HTML5` · `Bootstrap 5` · `CSS3` · `Vanilla JavaScript` · `Chart.js` · `AOS` · `Local Storage`
 
-- Kebutuhan kalori harian
-- Kebutuhan protein
-- Kebutuhan karbohidrat
-- Kebutuhan lemak
-- BMI
-- Tujuan nutrisi
+## Tautan / Link Deploy Website
 
-### Personalized Meal Plan
-
-DietMate menyediakan rekomendasi makanan berdasarkan tujuan pengguna.
-
-Pilihan tujuan meliputi:
-
-- **Lose Weight** — menurunkan berat badan
-- **Maintain Weight** — mempertahankan berat badan
-- **Gain Weight** — meningkatkan berat badan
-
-Setiap rekomendasi makanan dilengkapi dengan informasi nutrisi seperti:
-
-- Kalori
-- Protein
-- Karbohidrat
-- Lemak
-
-### Random Meal
-
-Pengguna dapat menemukan rekomendasi makanan secara acak melalui fitur Random Meal.
-
-Fitur ini membantu pengguna mendapatkan variasi pilihan makanan sehingga tidak terpaku pada menu yang sama.
-
-### Progress Tracking
-
-Pengguna dapat memantau perjalanan mereka melalui fitur progress tracking.
-
-Informasi yang ditampilkan dapat membantu pengguna melihat perkembangan dan menjaga konsistensi dalam menjalankan pola hidup yang lebih sehat.
-
-### Nutrition Education
-
-DietMate menyediakan halaman edukasi yang berisi informasi seputar:
-
-- Nutrisi
-- Pola makan sehat
-- Kalori
-- Makronutrien
-- Gaya hidup sehat
-
-Tujuannya adalah membantu pengguna memahami alasan di balik rekomendasi yang diberikan oleh aplikasi.
-
-### Profile
-
-Pengguna dapat melihat informasi pribadi dan preferensi nutrisi yang telah mereka masukkan ke dalam aplikasi.
-
-### Responsive Design
-
-DietMate dirancang agar dapat digunakan pada berbagai ukuran perangkat:
-
-- Desktop
-- Tablet
-- Smartphone
-
----
-
-## Teknologi yang Digunakan
-
-### Frontend
-
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5
-- Bootstrap Icons
-
-### Tools
-
-- Visual Studio Code
-- Git
-- GitHub
-- Vercel
-
-### Penyimpanan Data
-
-DietMate menggunakan:
-
-- `localStorage`
-
-untuk menyimpan data assessment dan data pengguna pada browser.
-
----
-
-## Struktur Project
-
-diet-mate/
-│
-├── assets/
-│   ├── images/
-│   └── ...
-│
-├── components/
-│   └── ...
-│
-├── css/
-│   ├── global.css
-│   ├── navbar.css
-│   ├── hero.css
-│   ├── features.css
-│   ├── about.css
-│   ├── faq.css
-│   ├── assessment.css
-│   ├── dashboard.css
-│   └── sidebar.css
-│
-├── js/
-│   ├── storage.js
-│   ├── calculation.js
-│   ├── helper.js
-│   └── ...
-│
-├── assessment/
-│   ├── assessment.js
-│   ├── ui.js
-│   ├── validation.js
-│   └── wizard.js
-│
-├── pages/
-│   ├── assessment.html
-│   ├── dashboard.html
-│   ├── education.html
-│   └── meal-plan.html
-│   └── profile.html
-│   └── progress.html
-├── index.html
-├── features.html
-├── about.html
-├── faq.html
-│
-└── README.md
+https://diet-mate-two.vercel.app/
