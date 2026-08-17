@@ -20,7 +20,7 @@ function renderStep() {
 
     updateProgress();
 
-    prevBtn.disabled = currentStep === 0;
+    // prevBtn.disabled = currentStep === 0;
 
 if (currentStep === steps.length - 1) {
 
