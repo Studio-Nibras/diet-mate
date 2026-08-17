@@ -222,10 +222,6 @@
 }
 
 
-/* =========================================================
-   BOTTOM / PROFILE
-   ========================================================= */
-
 .sidebar-bottom {
     padding-top:
         20px;
@@ -240,24 +236,11 @@
 }
 
 
-/* =========================================================
-   MOBILE NAVIGATION
-   ========================================================= */
-
 .mobile-bottom-nav {
     display:
         none;
 }
 
-
-/* =========================================================
-   DESKTOP CONTENT OFFSET
-   ========================================================= */
-
-/*
-   Sidebar mengambil ruang 250px.
-   app-main harus bergeser ke kanan.
-*/
 
 .app-main {
     margin-left:
@@ -267,10 +250,6 @@
         100vh;
 }
 
-
-/* =========================================================
-   TABLET
-   ========================================================= */
 
 @media (max-width: 991px) {
 
@@ -287,21 +266,12 @@
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
 @media (max-width: 767px) {
-
-    /* Hide desktop sidebar */
 
     .sidebar {
         display:
             none;
     }
-
-
-    /* Remove desktop offset */
 
     .app-main {
         margin-left:
@@ -311,8 +281,6 @@
             82px;
     }
 
-
-    /* Bottom navigation */
 
     .mobile-bottom-nav {
         position:
@@ -367,7 +335,6 @@
     }
 
 
-    /* Mobile link */
 
     .mobile-bottom-nav a {
         height:
@@ -429,15 +396,10 @@
     }
 
 
-    /* Hover */
-
     .mobile-bottom-nav a:hover {
         color:
             var(--primary-dark);
     }
-
-
-    /* Active */
 
     .mobile-bottom-nav a.active {
         background:
@@ -458,10 +420,6 @@
 
 }
 
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
 
 @media (max-width: 400px) {
 

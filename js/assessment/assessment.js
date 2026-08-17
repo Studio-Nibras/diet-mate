@@ -29,7 +29,6 @@ nextBtn.addEventListener("click", () => {
 prevBtn.addEventListener("click", () => {
 
     if (currentStep === 0) {
-        // Jika di step pertama, kembali ke index
         window.location.href = "../index.html";
         return;
     }

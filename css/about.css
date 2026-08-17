@@ -71,9 +71,9 @@
         0.10
     );
 
-    color: #497c3a;
+    color: #6baf5b;
 
-    font-size: 0.72rem;
+    font-size: 0.8rem;
 
     font-weight: 600;
 }
@@ -122,11 +122,6 @@
 
     line-height: 1.8;
 }
-
-
-/* ========================================
-   INTRO
-======================================== */
 
 .about-intro {
     background: #fff;
@@ -904,11 +899,6 @@
     transform: translateX(3px);
 }
 
-
-/* ========================================
-   RESPONSIVE
-======================================== */
-
 @media (max-width: 991px) {
 
     .about-hero {
@@ -1009,7 +999,7 @@
     }
 
     .about-badge {
-        font-size: 0.62rem;
+        font-size: 0.72rem;
     }
 
     .about-intro-visual {
@@ -1069,14 +1059,8 @@
 
 }
 
-/* ========================================
-   MOBILE HORIZONTAL OVERFLOW FIX
-======================================== */
-
 @media (max-width: 767px) {
 
-    /* Prevent About page sections from creating
-       horizontal scroll */
     .about-intro,
     .about-vision,
     .about-mission,
@@ -1086,8 +1070,6 @@
         overflow-x: hidden;
     }
 
-
-    /* Reset Bootstrap row gutter on mobile */
     .about-intro .row,
     .about-vision .row,
     .about-mission .row,
@@ -1096,8 +1078,6 @@
         --bs-gutter-x: 0;
     }
 
-
-    /* Make columns stay inside viewport */
     .about-intro .col-lg-5,
     .about-intro .col-lg-7,
     .about-vision .col-lg-5,
@@ -1117,8 +1097,6 @@
         box-sizing: border-box;
     }
 
-
-    /* Vision card */
     .vision-card {
         width: 100%;
         max-width: 100%;
